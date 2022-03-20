@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Website Design - Easy Tutorials</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+      <nav class="nav">
+            <a href="index.html"><img class="img" src="images/cmalogo.png"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="practise.html">PRACTISE AREAS</a></li>
+                    <li><a href="legaldocuments.html">LEGAL DOCUMENTS</a></li>
+                     <li><a href="resources.html">RESOURCES</a></li>
+                    <li><a href="blog.html">NEWS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><i class="fa fa-shopping-cart"></i></li>
+                    <li><a href="sme.html">SME CLUB</a></li>
+                     <li><a href="contact.html">Our Team</a></li>
+                    <a href="login.html" class="hero-btn">JOIN HERE</a>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>     
+            <h1>Consult us</h1>
+    </section>
+    
+    
+<!---------- course ----------->
+    <div class="billing">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-phone"></i> Phone number</label>
+            <input type="text" id="adr" name="address" placeholder="+2547888888">
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Modes of Payment</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-paypal" style="color:blue;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="cartbilling">
+      <h4>Cart
+        <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i>
+          <b>4</b>
+        </span>
+      </h4>
+      <p><a href="#">Consultation 1</a> <span class="price">kes7,000</span></p>
+      <p><a href="#">Consultation 2</a> <span class="price">kes 15,000</span></p>
+      <p><a href="#">Consultation 3</a> <span class="price">kes 5000</span></p>
+      <p><a href="#">Consultation 4</a> <span class="price">kes 3000</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>kes 30,000</b></span></p>
+    </div>
+     <input type="submit" style="background-color: #1c355e;" value="Book Now" class="btn">
+  </div>
+</div>
+    
+<!-------- footer ---------->
+
+<div class="bottom">    
+   <footer class="footer">
+       <div class="container">
+        <div class="row">
+     <p class="copyright">Copyright CM Advocates LLP &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+   </footer>
+   </div>   
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>  
+ <script type="text/javascript">"js/main.js"</script>   
+</body>
+</html>    

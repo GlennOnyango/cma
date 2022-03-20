@@ -1,0 +1,183 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM Advocates</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cart-outline.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <style type="text/css">
+        @media(max-width: 700px) {
+            #btn-document {
+                width: 100%;
+            }
+        }
+        
+        @media(max-width: 700px) {
+            #btn-document {
+                width: 100%;
+            }
+            #certificate {
+                display: none;
+            }
+        }
+        
+        @keyframes back {
+            100% {
+                background-position: 2000px 0;
+            }
+        }
+        
+        .sme {
+            height: 50vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/Nyundo-01.png);
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+    <section class="sme">
+
+        <nav id="nav" class="nav">
+        </nav>
+        <h5 id="document_name" style="color:transparent; -webkit-text-stroke:1px #fff; background:url(images/back.png);  -webkit-background-clip:text;  background-position:0 0; animation: back 20s linear infinite; font-size:80px;"><i class="fa fa-file" aria-hidden="true"></i> DOCUMENT DETAILS</h5>
+    </section>
+
+    <!---->
+    <div class="row m-5 shadow-lg" id="document_details_custom">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex align-items-start flex-column p-0" style="height: inherit;background-image: url('images/certificate.jpg');background-size: cover;">
+
+            <div class="mt-auto" style="background:rgba(0,0,0,0.5);width: 100%;">
+                <label class="text-white" id="document_description" style="padding-left:2%;padding-right: 2%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                  eaque rerum! Provident similique accusantium nemo autem.</label><br>
+                <label style="padding-left:2%;padding-right: 2%;"><small class="text-white" id="cat">${element.category}</small></label><br>
+                <label class=" text-white" style="padding-left:2%;padding-right: 2%;"><strong id="price">${element.price}</strong> </label>
+                <p class="text-center"><button class="btn btn-info rounded-0 shadow-lg">View Image</button></p>
+
+            </div>
+
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 p-0 ">
+
+            <div class="row  ">
+                <div class="col-12 ">
+
+                    <h3 style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="text-white">Instant Download</h3>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Document Template <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Emailed to you instantly <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Suitable for startups and small-to-medium businesses <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Editable Word Document for you to modify <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Guidance notes included <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;" class="text-center"> Valued at (money) <span class="material-icons">done</span></label>
+
+                    <p id="cart_btn_holder"></p>
+
+
+                </div>
+                <div class="col-12 ">
+                    <h3 style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="text-white">Drafted By A Lawyer</h3>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Document drafted by a lawyer <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Up to five business day turnaround <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Complimentary consultation with a lawyer to discuss changes and answer questions <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;"> Fully personalised for your business and industry <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;">  You are protected under our insurance <span class="material-icons">done</span></label>
+                    <label style="display: block;text-align: center;font-size: .85em;" class="text-center"> Affordable Fixed Price <span class="material-icons">done</span></label>
+
+
+                    <div class="row" style="padding-left:4%;padding-right: 4%;">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <label style="display: block;text-align: center;line-height: 150%;font-size: .85em;"><button class="btn btn-info shadow-lg rounded-0">Make Enquiry</button></label>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <label style="display: block;text-align: center;line-height: 150%;font-size: .85em;"><button class="btn btn-info shadow-lg rounded-0">Get A Quote</button></label>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!---->
+
+
+    <div class="comment-box">
+        <h3>Make an enquiry</h3>
+        <form class="comment-form">
+            <input type="text" placeholder="Enter Name">
+            <input type="email" placeholder="Enter email">
+            <textarea rows="5" placeholder="Your Comment"></textarea>
+            <button type="submit" class="hero-btn red-btn">SUBMIT</button>
+        </form>
+    </div>
+
+
+    <section class="facility">
+        <h1>Meet some of Our Lawyers</h1>
+        <div class="row">
+            <div class="facility-col">
+                <img style="width:200px; height:200px;" src="images/Cyrus-Maina.jpg">
+                <h3>Cyrus Maina</h3>
+                <p style="color:#000;">Managing Partner.</p>
+                <button type="submit" class="hero-btn red-btn">View</button>
+            </div>
+            <div class="facility-col">
+                <img style="width:200px; height:200px;" src="images/Njomo-Kamau.jpg">
+                <h3>Njomo Kamau</h3>
+                <p style="color:#000;">Partner</p>
+                <button type="submit" class="hero-btn red-btn">View</button>
+            </div>
+            <div class="facility-col">
+                <img style="width:200px; height:200px;" src="images/Francis-Kakai.jpg">
+                <h3>Francis Kakai</h3>
+                <p style="color:#000;">Partner</p>
+                <button type="submit" class="hero-btn red-btn">View</button>
+            </div>
+        </div>
+    </section>
+    <div class="subscribe" style="background-color:white">
+        <input type="text" placeholder="Email address" name="mail" required>
+        <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+        <a href="contact.html" style=" border:1px solid #808080; justify-content:center;" class="hero-btn red-btn">Subscribe</a>
+    </div>
+
+    <!----JavaScript for toggle menu---->
+    <div class="bottom">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <p class="copyright">Copyright CM Advocates LLP &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved.</p>
+        </footer>
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/display.js"></script>
+        <script type="text/javascript" src="js/nav-ui.js"></script>
+
+
+
+</body>
+
+</html>

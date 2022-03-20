@@ -1,0 +1,77 @@
+DROP TABLE IF EXISTS `documents`;
+CREATE TABLE `documents` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `document_name` varchar(255) NOT NULL,
+  `document_price` int NOT NULL,
+  
+  `document_preview` varchar(500) NOT NULL,
+  `document` varchar(500) NOT NULL,
+  
+  `category_id` int NOT NULL,
+  `sub_category_id` int NOT NULL,
+  
+  `toc_number` varchar(250) NOT NULL,
+  `toc_introduction` varchar(2000) NOT NULL,
+
+  `document_description` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `category_id` (`category_id`),
+  KEY `sub_category_id` (`sub_category_id`),
+  CONSTRAINT `Documents_ibfk_4` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
+  CONSTRAINT `Documents_ibfk_5` FOREIGN KEY (`sub_category_id`) REFERENCES `sub_category` (`id`)
+);
+
+CREATE TABLE `documents_subscription` (
+  `document_id` int NOT NULL,
+  `subscription_id` int NOT NULL
+);
+
+CREATE TABLE `documents_service` (
+  `document_id` int NOT NULL,
+  `service_id` int NOT NULL
+);
+
+CREATE VIEW vw_document AS SELECT 
+documents.id,document_name,document,subscriptions_name,category_id,subscription_id,category_name,
+sub_category_id,status,downloads_limit,consultaion_hours,review_limit
+FROM documents
+JOIN documents_subscription ON  documents.id = documents_subscription.document_id
+JOIN category ON documents.category_id = category.id
+JOIN subscriptions_new ON  subscriptions_new.id = documents_subscription.subscription_id;
+
+
+CREATE VIEW vw_document_service AS SELECT 
+documents.id, document_name,document,document_price,category_name,service_id,service_name,category_id,service_downloads,document_description,
+service_reviews,service_validity
+FROM documents
+JOIN category ON documents.category_id = category.id
+JOIN documents_service ON documents.id = documents_service.document_id
+JOIN service ON documents_service.service_id = service.id;
+
+
+CREATE TABLE `documents_review` (
+  `document_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `review_status` varchar(10) NOT NULL DEFAULT 'none',
+  `review_count` int NOT NULL DEFAULT 0 
+);
+
+CREATE TABLE `documents_download` (
+  `document_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `download_count` int not null DEFAULT 0,
+  `rm_id` int not null DEFAULT 0;
+);
+
+ALTER TABLE documents_review ADD COLUMN rm_id int not null DEFAULT 0;
+
+
+CREATE VIEW `document_subscription_bought` AS SELECT
+documents.id,document_name,document,category_id,subscription_id,category_name,
+sub_category_id,review_status,review_count,download_count
+FROM documents
+JOIN documents_subscription ON  documents.id = documents_subscription.document_id
+JOIN category ON documents.category_id = category.id
+JOIN documents_review ON documents.id = documents_review.document_id
+JOIN documents_download ON documents.id = documents_download.document_id;
+

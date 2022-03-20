@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CM Advocates</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/cart-outline.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+
+<style type="text/css">
+    /* Style the form element with a border around it */
+ .subscribe form {
+  border: 4px solid #f1f1f1;
+}
+
+/* Add some padding and a grey background color to containers */
+.subscribe {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* Style the input elements and the submit button */
+ .subscribe input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+.subscribe input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+.subscribe input[type=submit] {
+  background-color: #663F17;
+  color: white;
+  border: none;
+}
+
+.subscribe input[type=submit]:hover {
+  opacity: 0.8;
+}
+</style>
+
+    <section class="sub-header">
+        
+    <nav class="nav">
+            <a href="index.html"><img class="img" src="images/cmalogo.png"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+         <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="practise.html">PRACTICE AREAS</a></li>
+                     <li><a href="services.html">CM PORTAL</a></li>
+                     <li><a href="resources.html">RESOURCES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li> 
+                    <li><a href="sme.html">SME CLUB</a></li>
+                     <li><a href="consultation.html">CONSULTATION</a></li>
+                     <li><a href="team.html">Our TEAM</a></li>
+                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><span class='badge badge-warning' id='lblCartCount'> 5 </span></a></li>
+                    <a href="login.html" class="hero-btn">JOIN HERE</a>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>  
+            <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i>Technical Parks</h1>
+    </section>
+    
+    
+<!---------- course ----------->
+
+    <div class="w3-panel w3-green">
+  <h3>Success!</h3>
+  <p style="text-align:center; font-size:25px; font-weight:bold;">Item added to cart.</p>
+</div> 
+    
+ <section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>How To Prepare A Will For A Testator With Cross Border Connections</h1>     
+            <p style="color:#000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus. Donec sit amet nisl non justo malesuada fermentum. Donec eget felis dolor. Suspendisse condimentum vestibulum ex ac cursus. Nam pharetra viverra efficitur. Sed pellentesque luctus arcu, quis finibus nibh luctus mattis.</p>
+            <p style="color:#000; font-size:30px; font-weight:bold;">Price: shs 3000</p>
+            <a class="hero-btn red-btn">CHANGE CURRENCY</a>
+            <a class="hero-btn red-btn">PURCHASE NOW</a>
+        </div>
+        <div class="about-col">
+            <img src="images/about.jpg">
+        </div>
+    </div>    
+</section> 
+
+      <form action="action_page.php">
+  <div class="subscribe">
+    <h2>Subscribe to our Newsletter</h2>
+  </div>
+
+  <div class="subscribe" style="background-color:white">
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+     <a href="contact.html" style=" border:1px solid #808080; justify-content:center;" class="hero-btn red-btn">Subscribe</a>
+  </div>
+
+ 
+</form>
+    
+    
+<!-------- footer ---------->
+
+<div class="bottom">    
+   <footer class="footer">
+       <div class="container">
+        <div class="row">
+     <p class="copyright">Copyright CM Advocates LLP &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+   </footer>
+          <a href="https://wa.me/country_code_and_your_phone_number" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+   </div>
+
+
+
+
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>  
+
+<script>
+  function getText(){
+    fetch('')
+    .then((res)=>res.json())
+    .then((data)=>{
+      let output = '';
+      data.forEach(function(practise){
+        output += `<div class="course-col">
+                <h3>tax lawyer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus Donec sit.</p>
+                  <a href="practiseDetails.html" class="hero-btn red-btn">View</a>
+            </div>`;
+      });
+      document.getElementById('').innerHtml = output;
+    });
+
+  }
+
+getText();
+</script>
+    
+</body>
+</html>    

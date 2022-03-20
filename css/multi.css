@@ -1,0 +1,20 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+}
+
+.body{
+background-image:linear-gradient(rgba(0,0,0,0.8)rgba(0,0,0,0.8)),url(../images/image4.jpg)
+background-position:center;
+background-size:cover;
+}
+
+.step1{
+	width:360px;
+	height:400px;
+	margin:8% auto;
+	background:#fff;
+	border-radius:5px;
+	position:relative;
+}

@@ -1,0 +1,313 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CM Advocates</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/trial-calendar.css">
+<link rel="stylesheet" href="css/cart-outline.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+
+
+.accordion{
+      width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+      margin: auto;
+    }
+    .accordion-item{
+      background-color:#fff3f3;
+      color:#111;
+      margin:1rem 0;
+      border-radius:0.5rem;
+      box-shadow:0 4px 5px 0 rgba(0,0,0,0.5);
+    }
+    .accordion-item-header{
+      padding:0.5rem 3rem 0.5rem 1 rem;
+      min-height:3.5rem;
+      line-height:1.25rem;
+      font-weight:bold;
+      display:flex;
+      align-items:center;
+      position:relative;
+      cursor:pointer;
+    }
+    .accordion-item-header::after{
+      content:"\002B";
+      font-size:2rem;
+      position:absolute;
+      right:1rem;
+    }
+    .accordion-item-header.active::after{
+      content:"\2212";
+      }
+    .accordion-item-body{
+      max-height:0;
+      overflow:hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    .accordion-item-body-content{
+      padding:1rem;
+      line-height:1.5rem;
+      border-top: 1px solid;
+      border-image:linear-gradient(to right,transparent,#1c355e, transparent)1;
+    }
+
+
+
+
+
+
+ @keyframes back{
+  100%{
+    background-position:2000px 0;
+  }
+}
+
+    .sme{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/Nyundo-01.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+</style>
+</head>
+<body>
+    <section class="sme">      
+    <nav id="nav" class="nav">
+        </nav>    
+            <h1 style="color:transparent; -webkit-text-stroke:1px #fff; background:url(images/back.png);  -webkit-background-clip:text;  background-position:0 0; animation: back 20s linear infinite; font-size:80px;"><i class="fa fa-calendar-o" aria-hidden="true"></i> CALENDAR</h1>
+    </section>
+    
+    
+<!------- Consultat ------->
+
+   <section class="course">
+        <h1>FAQs
+        </h1>
+        <p>Here are some frequently asked questions </p>
+   
+    </section>
+
+
+<main id="main">
+  <header>
+    <h1>Appointments Schedule</h1>
+  </header>
+  <div class="calendar" id="calendar"></div>
+</main>
+<div class="modal" id="modal"></div>
+
+
+
+     <section class="course">
+        <h1>FAQs
+        </h1>
+        <p>Here are some frequently asked questions </p>
+   
+    </section>
+
+
+    <div class="accordion"> 
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    What is Lawyer Type?
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    What is Associate Billing?
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    How long will I be attended to?
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  </div>
+    
+<!-------- footer ---------->
+<div class="bottom">    
+   <footer class="footer">
+       <div class="container">
+        <div class="row">
+     <p class="copyright">Copyright CM Advocates LLP &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+   </footer>
+   </div> 
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+
+
+<script type="text/javascript">
+  const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+  accordionItemHeaders.forEach(accordionItemHeader=>{
+    accordionItemHeader.addEventListener("click",event=>{
+      accordionItemHeader.classList.toggle("active");
+  const accordionItemBody = accordionItemHeader.nextElementSibling;
+  if (accordionItemHeader.classList.contains("active")) {
+    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+  }else{
+    accordionItemBody.style.maxHeight=0;
+  }   
+    });
+  });
+</script>
+
+<script type="text/javascript">
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const weekDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
+const today = new Date();
+const thisYear = today.getFullYear();
+const thisMonth = today.getMonth();
+const thisDay = today.getDate();
+const thisWeekDay = today.getDay();
+const numberOfDays = new Date(thisYear, thisMonth + 1, 0).getDate();
+const FirstDayWeekDay = new Date(thisYear, thisMonth, 1).getDay();
+
+const events = {};
+
+printCalendar();
+
+function printCalendar() {
+  // Title
+  let html = '<table><thead><tr><td colspan="7">' + months[thisMonth] + ' ' + thisYear + '</td></tr></thead><tbody>';
+
+  // Week Days
+  html+= '<tr class="weekDays">';
+  html+= weekDays.map(day => '<td>' + day + '</td>').join('');
+  html+= '</tr>';
+
+  // empty days before month starts
+  html+= '<tr>';
+  for (i = 0; i < FirstDayWeekDay; i++) {
+    html+= '<td class="disabled">-</td>';
+  }
+
+  // Month Days
+  let actualWeekDay = FirstDayWeekDay;
+  for (i = 1; i <= numberOfDays; i++) {
+    if (actualWeekDay === 7) {
+      actualWeekDay = 0;
+      html+= '</tr><tr>';  
+    }
+    
+    let classes = '';
+    if (i === thisDay) classes += ' today';
+    if (typeof events[i] !== 'undefined') classes += ' has-event';
+    if (i >= thisDay) classes += ' schedule-enable'; else classes += ' schedule-disable';
+    
+    let click = 'null';
+    if (i >= thisDay) click = 'handleClick(' + i + ')';
+
+    html+= '<td class="' + classes + '" onClick="' + click + '">' + i + '</td>';
+    actualWeekDay++;
+  }
+  
+  // empty days before month ends
+  for (i = actualWeekDay; i < 7; i++) {
+    html+= '<td class="disabled">-</td>';
+  }
+  
+  html+= '</tr>';
+
+  // Closes
+  html+= '</tbody></table>';
+
+  document.getElementById('calendar').innerHTML = html;
+}
+
+function handleClick(day) {
+  const modal = document.getElementById('modal');
+  const main = document.getElementById('main');
+  modal.classList.add('is-open'); //el.classList.remove(className);
+  main.className += ' modal-is-open';
+  let html = '<button class="close" onClick="handleModalClose()">X</button><h2>Schedule for ' + months[thisMonth] + ' ' + day + '</h2>';
+
+  if (typeof events[day] !== 'undefined') {
+    html += '<p>There is already an appointment registered for that day, you can update or delete it below:</p><form onSubmit="handleSubmit(' + day + '); return false;"><input type="hidden" name="day" value="' + day + '" /><input id="text" type="text" name="description" value="' + events[day] + '" /><button class="update" type="submit">Update</button><button class="delete" onClick="handleDelete(' + day + '); return false;">Delete</button></form>';
+  } else {
+    html += '<p>There is no appointment registered for this day, do you want to register some?</p><form onSubmit="handleSubmit(' + day + '); return false;"><input type="hidden" name="day" value="' + day + '" /><input id="text" type="text" name="description" value="" /><button class="save" type="submit">Save</button><button class="cancel" onClick="handleModalClose(); return false;">Cancel</button></form>';
+  }
+  
+  modal.innerHTML = html;
+}
+
+function handleModalClose() {
+  const modal = document.getElementById('modal');
+  const main = document.getElementById('main');
+  modal.classList.remove('is-open');
+  main.classList.remove('modal-is-open');
+}
+
+function handleDelete(day) {
+  delete events[day];
+  handleModalClose();
+  printCalendar();
+}
+
+function handleSubmit(day) {
+  const text = document.getElementById('text');
+  events[day] = text.value;
+  handleModalClose();
+  printCalendar();
+}
+
+
+
+</script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript" src="js/display.js"></script>
+<script type="text/javascript" src="js/nav-ui.js"></script>
+
+</body>
+</html>    

@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CM Advocates</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/cart-outline.css">
+<link rel="stylesheet" href="css/nav.css">
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body id="member">
+
+  <style type="text/css">
+    /* Style the form element with a border around it */
+
+    .sme{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/Nyundo-01.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+@keyframes back{
+  100%{
+    background-position:2000px 0;
+  }
+}
+</style>
+  
+    <section class="sme">
+        
+      <nav id="nav" class="nav-custom">
+      </nav>   
+        <h1 style="color:transparent; -webkit-text-stroke:1px #fff; background:url(images/back.png);  -webkit-background-clip:text;  background-position:0 0; animation: back 20s linear infinite; font-size:80px;"><i class="fa fa-user" aria-hidden="true"></i> Meet <span id="meber_name"></span></h1>
+    </section>
+    
+    
+<!------- team content -------->
+<div style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/image4.jpg);">
+ <div class="row" >
+            <div class="col-12 card mx-auto mt-5" style="background:rgba(255,255,255,0.2);">
+<!--                      <ul class="list-group">
+  <li class="list-group-item active" style="background:linear-gradient(60deg, #1c355e, #7f2729);">Valued at (money)</li>
+</ul> -->
+<div class="row">
+ 
+             <div class="col-12 card mx-auto mt-5" style="background:rgba(255,255,255,0.2);">
+
+<a class="mx-auto" id="image_holder" href="index.html"></a>
+           <ul class="list-group">
+  <li class="list-group-item active" style="background: #1c355e; text-align:center;">Role(<span id="role"></span>)</li>
+</ul>
+
+
+            </div>  
+
+</div>
+
+            </div>
+        </div>
+        </div>
+
+         <div class="mt-5 pb-3" >
+ <div class="row" >
+            <div class="col-12 card mx-auto mt-5" style="background:rgba(255,255,255,0.5);">
+<!--                      <ul class="list-group">
+  <li class="list-group-item active" style="background:linear-gradient(60deg, #1c355e, #7f2729);">Valued at (money)</li>
+</ul> -->
+           <ul class="list-group">
+  <li class="list-group-item active" style="background: #7f2729; text-align:center;" id="desc">Brief Description</li>
+</ul>
+
+  <p style="color:#000;display:list-item;  list-style-type: disc;    list-style-position: inside;">Managing Partner.</p>
+
+
+            </div>
+        </div>
+        </div>
+
+
+
+       <form action="action_page.php">
+  <div class="subscribe">
+    <h2>Subscribe to our Newsletter</h2>
+  </div>
+
+  <div class="subscribe" style="background-color:white">
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+     <a href="contact.html" style=" border:1px solid #808080; justify-content:center;" class="hero-btn red-btn">Subscribe</a>
+  </div>
+
+ 
+</form>
+
+
+<!-------- footer ---------->
+
+
+
+   <div style="margin-bottom:15px;"></div>
+
+<div class="bottom">    
+   <footer class="footer">
+       <div class="container">
+        <div class="row">
+     <p class="copyright">Copyright CM Advocates LLP &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+   </footer>
+   </div>
+  
+  
+<!----JavaScript for toggle menu---->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/display.js"></script>
+<script type="text/javascript" src="js/nav-ui.js"></script>
+
+    
+</body>
+</html>    

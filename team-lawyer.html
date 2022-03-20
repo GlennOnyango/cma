@@ -1,0 +1,244 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CM Advocates</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/cart-outline.css">
+<link rel="stylesheet" href="css/nav.css">
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body id="one_lawyer">
+
+  <style type="text/css">
+    /* Style the form element with a border around it */
+ .subscribe form {
+  border: 4px solid #f1f1f1;
+}
+
+/* Add some padding and a grey background color to containers */
+.subscribe {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* Style the input elements and the submit button */
+ .subscribe input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+.subscribe input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+.subscribe input[type=submit] {
+  background-color: #663F17;
+  color: white;
+  border: none;
+}
+
+.subscribe input[type=submit]:hover {
+  opacity: 0.8;
+}
+   @media only screen and (max-width: 991px){
+      .consultation{
+        margin-bottom:15px;
+      }
+    }
+        .sme{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/Nyundo-01.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+@keyframes back{
+  100%{
+    background-position:2000px 0;
+  }
+}
+</style>
+
+    <section class="sme">
+        
+        <nav id="nav" class="nav-custom">
+        </nav>    
+            <h1 style="color:transparent; -webkit-text-stroke:1px #fff; background:url(images/back.png);  -webkit-background-clip:text;  background-position:0 0; animation: back 20s linear infinite; font-size:80px;"><i class="fa fa-user" aria-hidden="true"></i> Meet <span id="title_name"></span></h1>
+    </section>
+    
+    
+<!------- team content -------->
+<div style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/image4.jpg);">
+ <div class="row" >
+            <div class="col-12 card mx-auto mt-5" style="background:rgba(255,255,255,0.2);">
+<!--                      <ul class="list-group">
+  <li class="list-group-item active" style="background:linear-gradient(60deg, #1c355e, #7f2729);">Valued at (money)</li>
+</ul> -->
+<div class="row">
+ 
+             <div class="col-5 card mx-auto mt-5" style="background:rgba(255,255,255,0.2);">
+
+<a class="mx-auto" href="index.html"><img class="img" src="images/Cyrus-Maina.jpg" style="border-radius: 50%;width:135px;"></a>
+           <ul class="list-group">
+  <li class="list-group-item active" style="background: #1c355e; text-align:center;">Lawyer Type(<span id="lawyer_type"></span>)</li>
+  <li class="list-group-item">Lawyer Name(<span id="lawyer_name"></span>)</li>
+</ul>
+<button class="btn mb-3 text-white" style="background: #1c355e;width: 100%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact <span id="con_name"></span></button>
+
+
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <div class="container-fluid">
+                        <form class="row" method="POST" id="myreg_form">
+                              <div class="card mb-3" style="background:linear-gradient(60deg, #1c355e, #7f2729);" >
+                             <label class="text-white p-2">Get In Touch with(<span id="con_name_2"></span>)</label>
+                            </div>
+                            <div class="form-group  mb-3">
+                                <input type="email" class="form-control" id="email1" name="email" placeholder="Email">
+                            </div>
+                               <div class="form-group mb-3">
+                                <input type="text" class="form-control" id="fullname" placeholder="First Name">
+                            </div>
+
+                              <div class="form-group mb-3">
+                                <input type="text" class="form-control" id="fullname" placeholder="Last Name">
+                            </div>
+
+                                 <div class="form-group mb-3">
+                                <input type="text" class="form-control" id="fullname" placeholder="Phone Number">
+                            </div>
+
+                            <div class="form-group">
+  <label for="exampleFormControlTextarea3">Tell us about your inquiry</label>
+  <textarea class="form-control" id="exampleFormControlTextarea3" rows="7"></textarea>
+</div>            
+
+                        </form>
+
+                    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            </div>
+
+
+     <div class="col-5 card mx-auto mt-5" style="background:rgba(255,255,255,0.2);">
+           <ul class="list-group" id="pa_area">
+  <li class="list-group-item active" style="background: #1c355e; text-align:center;">Practise Areas</li>
+  
+</ul>
+
+
+            </div>
+
+  
+
+</div>
+
+            </div>
+        </div>
+        </div>
+
+         <div class="mt-5 pb-3" >
+ <div class="row" >
+            <div class="col-5 card mx-auto mt-5" id="descriptions" style="background:rgba(255,255,255,0.5);">
+           <ul class="list-group">
+  <li class="list-group-item active" style="background: #7f2729; text-align:center;">Brief Description</li>
+</ul>
+
+
+
+            </div>
+
+             <div class="col-5 card mx-auto mt-5" id="qualifications" style="background:rgba(255,255,255,0.5);">
+           <ul class="list-group">
+  <li class="list-group-item active" style="background: #7f2729; text-align:center;">Qualifications</li>
+</ul>
+
+
+            </div>
+        </div>
+        </div>
+
+
+
+       <form action="action_page.php">
+  <div class="subscribe">
+    <h2>Subscribe to our Newsletter</h2>
+  </div>
+
+  <div class="subscribe" style="background-color:white">
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+     <a href="contact.html" style=" border:1px solid #808080; justify-content:center;" class="hero-btn red-btn">Subscribe</a>
+  </div>
+
+ 
+</form>
+
+
+<!-------- footer ---------->
+
+
+
+   <div style="margin-bottom:15px;"></div>
+
+<div class="bottom">    
+   <footer class="footer">
+       <div class="container">
+        <div class="row">
+     <p class="copyright">Copyright CM Advocates LLP &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+   </footer>
+   </div>
+  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript" src="js/display.js"></script>
+<script type="text/javascript" src="js/nav-ui.js"></script>
+  
+<!----JavaScript for toggle menu---->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+
+    
+</body>
+</html>    

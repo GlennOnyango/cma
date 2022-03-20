@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memberships</title>
+</head>
+<body>
+
+	<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CM Advocates</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/video.css">
+<link rel="stylesheet" href="css/cart-outline.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> 
+
+<style type="text/css">
+    .sme{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/Nyundo-01.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.accordion{
+      width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+      margin: auto;
+    }
+    .accordion-item{
+      background-color:#fff3f3;
+      color:#111;
+      margin:1rem 0;
+      border-radius:0.5rem;
+      box-shadow:0 4px 5px 0 rgba(0,0,0,0.5);
+    }
+    .accordion-item-header{
+      padding:0.5rem 3rem 0.5rem 1 rem;
+      min-height:3.5rem;
+      line-height:1.25rem;
+      font-weight:bold;
+      display:flex;
+      align-items:center;
+      position:relative;
+      cursor:pointer;
+    }
+    .accordion-item-header::after{
+      content:"\002B";
+      font-size:2rem;
+      position:absolute;
+      right:1rem;
+    }
+    .accordion-item-header.active::after{
+      content:"\2212";
+      }
+    .accordion-item-body{
+      max-height:0;
+      overflow:hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    .accordion-item-body-content{
+      padding:1rem;
+      line-height:1.5rem;
+      border-top: 1px solid;
+      border-image:linear-gradient(to right,transparent,#1c355e, transparent)1;
+    }
+
+.swiper-container {
+	width: 100%;
+	padding-top:50px;
+	padding-bottom: 50px;
+}
+
+.swiper-slide{
+	background-position:center;
+	background-size:cover;
+	width:350px;
+	height:400px;
+	-webkit-box-shadow: 0px 10px 13px -7px #000000, 42px 3px 0px -12px rgba(0,0,0,0);
+	box-shadow:0px 10px 13px -7px #000000, 42px 3px 0px -12px rgba(0,0,0,0);
+}
+
+.swiper-slide .profile{
+	height: 80px;
+	width: 80px;
+	border: 4px solid #eee;
+	border-radius: 50%;
+}
+
+.swiper-slide .card{
+	padding: 30px 20px;
+
+}
+
+.swiper-slide .card .profile{
+	padding: 20px 0px;
+	background-color:#fff;
+	clip-path:polygon(20% 0 ,100% 0, 82% 90%, 0 93%);
+	text-align:center;
+}
+
+.swiper-slide .card .profile h4{
+	font-size:18px;
+	color:#eee;
+	padding:0px 10px;
+}
+
+.swiper-slide .profile a{
+	font-size:18px;
+	color:#eee;
+	padding:5px 10px;
+	font-size:18px;
+}
+
+.swiper-slide .profile a:hover{
+	color:#1c355e;
+	transition:0.3s all;
+}
+
+.swiper-slide .profile img{
+	height: 80px;
+	width: 80px;
+	border: 4px solid #eee;
+	border-radius: 50%;
+}
+
+.swiper-slide .card .description i {
+	font-size:30px;
+	color:#1c355e;
+}
+
+.swiper-slide .card .description p {
+	text-align:center;
+	font-size:16px;
+	color:rgb(58,54,54);
+	line-height:25px;
+}
+
+@keyframes back{
+  100%{
+    background-position:2000px 0;
+  }
+}
+
+</style>
+
+
+</head>
+<body>
+    <section class="sme">  
+    	   <nav id="nav" class="nav">
+        </nav>  
+            <h1 style="color:transparent; -webkit-text-stroke:1px #fff; background:url(images/back.png);  -webkit-background-clip:text;  background-position:0 0; animation: back 20s linear infinite; font-size:80px;"><i class="fa fa-university" aria-hidden="true"></i> CM CLUBS</h1>
+    </section>
+
+
+        <section class="course">
+        <h1>Become A Member Of Any Of Our Clubs</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <div class="swiper-container">
+  	<div class="swiper-wrapper" id="memberships">
+
+
+     <!-- add pagination -->
+     <div class="swiper-pagination">
+     	
+     </div>	
+  		
+  	</div>
+  	
+  </div>
+</section>
+
+
+   <section class="course">
+        <h1>FAQs
+        </h1>
+        <p>Here are some frequently asked questions </p>
+   
+    </section>
+
+
+    <div class="accordion"> 
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    What is CM Club
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    How Do I enroll or become a member?
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    How long will I be attended to?
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  </div>
+     
+
+<!-------- footer ---------->
+
+<div class="bottom">    
+   <footer class="footer">
+       <div class="container">
+        <div class="row">
+     <p class="copyright">Copyright CM Advocates LLP &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+   </footer>
+          <a href="https://wa.me/country_code_and_your_phone_number" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+   </div>
+
+
+
+
+ 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" type="text/javascript"></script>  
+  
+<script type="text/javascript">
+  const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+  accordionItemHeaders.forEach(accordionItemHeader=>{
+    accordionItemHeader.addEventListener("click",event=>{
+      accordionItemHeader.classList.toggle("active");
+  const accordionItemBody = accordionItemHeader.nextElementSibling;
+  if (accordionItemHeader.classList.contains("active")) {
+    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+  }else{
+    accordionItemBody.style.maxHeight=0;
+  }   
+    });
+  });
+</script>
+
+<script type="text/javascript">
+	var swiper = new Swiper('.swiper-container',{
+		effect:'coverflow',
+		grabCursor:true,
+		centeredSlides:true,
+		slidesPerView:'auto',
+		coverflowEffect:{
+			rotate: 50,
+			stretch:0,
+			depth:100,
+			modifier:1,
+			slideShadows:true,
+		},
+		pagination:{
+			el:'.swiper-pagination',
+		},
+
+		autoplay:{
+			delay:5000,
+			disableOnInteraction:false
+		}
+	});
+</script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript" src="js/display.js"></script>
+<script type="text/javascript" src="js/nav-ui.js"></script>
+    
+</body>
+</html>    
+
+</body>
+</html>

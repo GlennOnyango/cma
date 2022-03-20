@@ -1,0 +1,1050 @@
+[19-Mar-2019 22:16:12 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:16:12 America/New_York] PHP Warning:  include(helveticab.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1145
+[19-Mar-2019 22:16:12 America/New_York] PHP Warning:  include(helveticab.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1145
+[19-Mar-2019 22:16:12 America/New_York] PHP Warning:  include(): Failed opening 'helveticab.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1145
+[19-Mar-2019 22:20:06 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:20:06 America/New_York] PHP Warning:  include(helveticab.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1145
+[19-Mar-2019 22:20:06 America/New_York] PHP Warning:  include(helveticab.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1145
+[19-Mar-2019 22:20:06 America/New_York] PHP Warning:  include(): Failed opening 'helveticab.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1145
+[19-Mar-2019 22:22:10 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:22:10 America/New_York] PHP Warning:  fopen(../../img/logo.png): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1232
+[19-Mar-2019 22:22:11 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:22:11 America/New_York] PHP Warning:  fopen(../../img/logo.png): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1232
+[19-Mar-2019 22:25:41 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:25:42 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[19-Mar-2019 22:25:52 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:25:53 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[19-Mar-2019 22:26:03 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:26:04 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[19-Mar-2019 22:26:23 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:26:24 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[19-Mar-2019 22:26:29 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:26:29 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[19-Mar-2019 22:27:24 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:27:25 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[19-Mar-2019 22:27:44 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[19-Mar-2019 22:27:44 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[20-Mar-2019 05:06:43 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[20-Mar-2019 05:06:43 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[20-Mar-2019 05:09:39 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'pasodomo_oscar'@'localhost' to database 'pasodomo_rota' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[20-Mar-2019 05:09:39 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[20-Mar-2019 05:09:44 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'pasodomo_oscar'@'localhost' to database 'pasodomo_rota' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 4
+[20-Mar-2019 05:09:44 America/New_York] PHP Fatal error:  Call to a member function query() on boolean in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/multicell_table.php on line 25
+[20-Mar-2019 18:17:53 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'pasodo_oscar'@'localhost' (using password: YES) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 3
+[20-Mar-2019 18:17:53 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 11
+[20-Mar-2019 18:17:53 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 17
+[20-Mar-2019 18:20:14 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'pasodo_oscar'@'localhost' (using password: YES) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 3
+[20-Mar-2019 18:20:14 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 11
+[20-Mar-2019 18:20:14 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 17
+[20-Mar-2019 18:20:50 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'pasodo_oscar'@'localhost' (using password: YES) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 3
+[20-Mar-2019 18:20:50 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 11
+[20-Mar-2019 18:20:50 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 17
+[20-Mar-2019 18:20:51 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'pasodo_oscar'@'localhost' (using password: YES) in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 3
+[20-Mar-2019 18:20:51 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 11
+[20-Mar-2019 18:20:51 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/MOCK_DATA.php on line 17
+[20-Mar-2019 18:45:37 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 18:49:30 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 18:50:30 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:19:08 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:21:53 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:21:54 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:22:34 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:22:36 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:22:56 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:22:57 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:26:06 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:27:10 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:27:12 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:27:41 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:31:03 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:31:06 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:31:06 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:31:06 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:44:37 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 40
+[20-Mar-2019 19:45:15 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 40
+[20-Mar-2019 19:45:25 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:46:23 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:48:18 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:48:54 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:48:58 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 19:50:03 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 30
+[20-Mar-2019 20:06:02 America/New_York] PHP Warning:  fopen(../img/logo.png): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/fpdf17/fpdf.php on line 1232
+[20-Mar-2019 20:42:13 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'pasodo_oscar'@'localhost' (using password: YES)' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:3
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(3): PDO->__construct('mysql:host=loca...', 'pasodo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 20:45:52 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'pasodo_oscar'@'localhost' (using password: YES)' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:3
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(3): PDO->__construct('mysql:host=loca...', 'pasodo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 20:45:53 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'pasodo_oscar'@'localhost' (using password: YES)' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:3
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(3): PDO->__construct('mysql:host=loca...', 'pasodo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 20:47:22 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'pasodo_oscar'@'localhost' (using password: YES)' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:4
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(4): PDO->__construct('mysql:host=loca...', 'pasodo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 4
+[20-Mar-2019 20:47:31 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'pasodo_oscar'@'localhost' (using password: YES)' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:4
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(4): PDO->__construct('mysql:host=loca...', 'pasodo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 4
+[20-Mar-2019 20:53:52 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'could not find driver' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:4
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(4): PDO->__construct('mysqli:host=loc...', 'pasodo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 4
+[20-Mar-2019 20:53:53 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'could not find driver' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:4
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(4): PDO->__construct('mysqli:host=loc...', 'pasodo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 4
+[20-Mar-2019 20:54:41 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'could not find driver' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:4
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(4): PDO->__construct('mysqli:host=loc...', 'pasodomo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 4
+[20-Mar-2019 20:54:42 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'could not find driver' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:4
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(4): PDO->__construct('mysqli:host=loc...', 'pasodomo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 4
+[20-Mar-2019 20:54:46 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'could not find driver' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:4
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(4): PDO->__construct('mysqli:host=loc...', 'pasodomo_oscar', 'Oscar3296!!!')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 4
+[20-Mar-2019 23:03:01 America/New_York] PHP Warning:  require(fpdf.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 2
+[20-Mar-2019 23:03:01 America/New_York] PHP Warning:  require(fpdf.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 2
+[20-Mar-2019 23:03:01 America/New_York] PHP Fatal error:  require(): Failed opening required 'fpdf.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 2
+[20-Mar-2019 23:05:36 America/New_York] PHP Warning:  require(fpdf.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 3
+[20-Mar-2019 23:05:36 America/New_York] PHP Warning:  require(fpdf.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 3
+[20-Mar-2019 23:05:36 America/New_York] PHP Fatal error:  require(): Failed opening required 'fpdf.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 3
+[20-Mar-2019 23:05:39 America/New_York] PHP Warning:  require(fpdf.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 3
+[20-Mar-2019 23:05:39 America/New_York] PHP Warning:  require(fpdf.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 3
+[20-Mar-2019 23:05:39 America/New_York] PHP Fatal error:  require(): Failed opening required 'fpdf.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/pdf_mc_table.php on line 3
+[20-Mar-2019 23:08:53 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:53 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:53 America/New_York] PHP Fatal error:  require(): Failed opening required 'pdf_mc_table.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:55 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:55 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:55 America/New_York] PHP Fatal error:  require(): Failed opening required 'pdf_mc_table.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:57 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:57 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:57 America/New_York] PHP Fatal error:  require(): Failed opening required 'pdf_mc_table.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:57 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:57 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:57 America/New_York] PHP Fatal error:  require(): Failed opening required 'pdf_mc_table.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:58 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:58 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:08:58 America/New_York] PHP Fatal error:  require(): Failed opening required 'pdf_mc_table.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:09:14 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:09:14 America/New_York] PHP Warning:  require(pdf_mc_table.php): failed to open stream: No such file or directory in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[20-Mar-2019 23:09:14 America/New_York] PHP Fatal error:  require(): Failed opening required 'pdf_mc_table.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 3
+[25-Mar-2019 19:17:22 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'firstName' in 'where clause'' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:17
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(17): PDO->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 17
+[25-Mar-2019 20:21:47 America/New_York] PHP Fatal error:  Call to a member function fetch() on null in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 69
+[27-Mar-2019 05:25:30 America/New_York] PHP Fatal error:  Call to a member function fetch() on null in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 69
+[27-Mar-2019 05:26:01 America/New_York] PHP Fatal error:  Call to a member function fetch() on null in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 69
+[27-Mar-2019 05:26:09 America/New_York] PHP Fatal error:  Call to a member function fetch() on null in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 69
+[27-Mar-2019 23:06:50 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''oscar\'' at line 1' in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php:18
+Stack trace:
+#0 /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php(18): PDO->query('SELECT personal...')
+#1 {main}
+  thrown in /home/pasodomo/rotaproject.pasodomovers.com/Admin/Reports/adminReport.php on line 18
+[02-Mar-2021 15:41:52 Africa/Nairobi] PHP Warning:  fopen(../../img/logo.png): failed to open stream: No such file or directory in /home/planetme/public_html/archive/Admin/Reports/fpdf17/fpdf.php on line 2463
+[02-Mar-2021 15:42:04 Africa/Nairobi] PHP Warning:  fopen(../../img/logo.png): failed to open stream: No such file or directory in /home/planetme/public_html/archive/Admin/Reports/fpdf17/fpdf.php on line 2463
+[02-Mar-2021 15:42:11 Africa/Nairobi] PHP Warning:  fopen(../../img/logo.png): failed to open stream: No such file or directory in /home/planetme/public_html/archive/Admin/Reports/fpdf17/fpdf.php on line 2463
+[03-Mar-2021 09:40:47 Africa/Nairobi] PHP Warning:  fopen(../../img/logo.png): failed to open stream: No such file or directory in /home/planetme/public_html/archive/Admin/Reports/fpdf17/fpdf.php on line 2463
+[06-Mar-2021 16:53:19 Africa/Nairobi] PHP Warning:  fopen(../../img/logo.png): failed to open stream: No such file or directory in /home/planetme/public_html/archive/Admin/Reports/fpdf17/fpdf.php on line 2463
+[16-Apr-2021 13:04:55 Africa/Nairobi] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 31
+[16-Apr-2021 13:05:04 Africa/Nairobi] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 31
+[16-Apr-2021 13:05:32 Africa/Nairobi] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 31
+[16-Apr-2021 13:05:39 Africa/Nairobi] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 31
+[16-Apr-2021 13:06:12 Africa/Nairobi] PHP Warning:  fopen(../../img/logo.png): failed to open stream: No such file or directory in /home/planetme/public_html/archive/Archive/Report/fpdf17/fpdf.php on line 2463
+[16-Apr-2021 13:08:06 Africa/Nairobi] PHP Fatal error:  Using $this when not in object context in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 16
+[16-Apr-2021 13:08:09 Africa/Nairobi] PHP Fatal error:  Using $this when not in object context in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 16
+[16-Apr-2021 13:08:16 Africa/Nairobi] PHP Fatal error:  Using $this when not in object context in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 16
+[16-Apr-2021 14:19:17 Africa/Nairobi] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 19
+[16-Apr-2021 14:19:20 Africa/Nairobi] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 19
+[16-Apr-2021 14:21:04 Africa/Nairobi] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 19
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 8 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 9 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 10 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 12 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 13 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 14 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 15 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 16 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 17 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 18 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 19 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 20 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 21 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 22 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 23 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 23 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 24 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 24 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 25 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 25 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 26 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 26 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 27 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 27 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 28 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 28 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 29 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 29 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 30 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 30 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 31 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 31 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 32 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 32 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 33 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 33 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 34 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 34 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 35 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 35 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 36 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 36 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 37 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 37 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 38 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 38 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 39 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 39 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 40 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 40 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 41 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 41 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 42 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 42 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 43 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 43 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 8 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 9 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 10 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 12 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 13 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 14 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 15 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 16 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 17 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 18 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 19 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 20 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 21 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 22 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 23 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 23 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 24 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 24 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 25 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 25 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 26 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 26 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 27 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 27 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 28 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 28 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 29 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 29 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 30 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 30 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 31 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 31 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 32 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 32 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 33 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 33 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 34 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 34 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 35 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 35 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 36 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 36 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 37 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 37 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 38 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 38 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 39 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 39 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 40 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 40 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 41 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 41 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 42 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 42 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 43 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 43 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 8 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 9 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 10 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 12 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 13 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 14 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 15 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 16 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 17 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 18 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 19 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 20 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 21 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 22 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 23 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 23 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 24 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 24 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 25 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 25 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 26 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 26 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 27 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 27 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 28 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 28 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 29 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 29 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 30 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 30 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 31 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 31 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 32 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 32 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 33 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 33 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 34 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 34 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 35 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 35 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 36 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 36 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 37 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 37 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 38 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 38 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 39 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 39 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 40 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 40 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 41 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 41 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 42 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 42 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 43 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 43 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 128
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 8 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 9 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 10 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 12 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 13 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 14 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 15 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 16 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 17 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 18 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 19 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 20 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 21 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 22 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 23 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 23 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 24 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 24 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 25 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 25 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 26 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 26 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 27 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 27 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 28 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 28 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 29 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 29 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 30 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 30 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 31 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 31 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 32 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 32 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 33 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 33 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 34 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 34 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 35 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 35 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 36 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 36 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 37 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 37 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 38 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 38 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 39 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 39 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 40 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 40 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 41 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 41 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 42 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 42 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 43 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 154
+[16-Apr-2021 15:10:09 Africa/Nairobi] PHP Notice:  Undefined offset: 43 in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 180
+[16-Apr-2021 15:12:43 Africa/Nairobi] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 228
+[16-Apr-2021 15:12:43 Africa/Nairobi] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Archive/Report/pdf_mc_table.php on line 228
+[16-Apr-2021 15:12:43 Africa/Nairobi] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Archive/Report/fpdf17/fpdf.php on line 1371
+[16-Apr-2021 15:12:43 Africa/Nairobi] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Archive/Report/fpdf17/fpdf.php on line 1573
+[16-Apr-2021 15:12:43 Africa/Nairobi] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Archive/Report/fpdf17/fpdf.php on line 1371
+[16-Apr-2021 15:12:43 Africa/Nairobi] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Archive/Report/fpdf17/fpdf.php on line 1573
+[16-Apr-2021 15:13:23 Africa/Nairobi] PHP Parse error:  syntax error, unexpected ')' in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 53
+[16-Apr-2021 15:21:40 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 43
+[16-Apr-2021 15:22:18 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 43
+[16-Apr-2021 15:22:18 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 53
+[16-Apr-2021 15:22:50 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 43
+[16-Apr-2021 15:22:50 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 53
+[16-Apr-2021 15:23:30 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 43
+[16-Apr-2021 15:23:56 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 43
+[16-Apr-2021 15:24:15 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 43
+[16-Apr-2021 15:24:28 Africa/Nairobi] PHP Notice:  Undefined variable: result in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 43
+[16-Apr-2021 15:27:17 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 47
+[16-Apr-2021 15:27:17 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 47
+[16-Apr-2021 15:27:17 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 51
+[16-Apr-2021 15:27:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 52
+[16-Apr-2021 15:27:17 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 53
+[16-Apr-2021 15:34:53 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 47
+[16-Apr-2021 15:34:53 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 47
+[16-Apr-2021 15:34:53 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 51
+[16-Apr-2021 15:34:53 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 52
+[16-Apr-2021 15:34:53 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 53
+[14-May-2021 13:38:31 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 47
+[14-May-2021 13:38:31 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 47
+[14-May-2021 13:38:31 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 51
+[14-May-2021 13:38:31 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 52
+[14-May-2021 13:38:31 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Archive/Report/searchResults.php on line 53
+[14-May-2021 13:52:22 Africa/Nairobi] PHP Warning:  require_once(../../config/sessions.php): failed to open stream: No such file or directory in /home/planetme/public_html/archive/Report/searchResults.php on line 9
+[14-May-2021 13:52:22 Africa/Nairobi] PHP Fatal error:  require_once(): Failed opening required '../../config/sessions.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/planetme/public_html/archive/Report/searchResults.php on line 9
+[14-May-2021 13:54:07 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/searchResults.php on line 47
+[14-May-2021 13:54:07 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/searchResults.php on line 47
+[14-May-2021 13:54:07 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/searchResults.php on line 51
+[14-May-2021 13:54:07 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/searchResults.php on line 52
+[14-May-2021 13:54:07 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/searchResults.php on line 53
+[14-May-2021 13:54:12 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/searchResults.php on line 47
+[14-May-2021 13:54:12 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/searchResults.php on line 47
+[14-May-2021 13:54:12 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/searchResults.php on line 51
+[14-May-2021 13:54:12 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/searchResults.php on line 52
+[14-May-2021 13:54:12 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/searchResults.php on line 53
+[14-May-2021 14:50:56 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '2021-03-10' AND  '2021-03-11'
+
+              ORDER BY reco' at line 9' in /home/planetme/public_html/archive/php/Database.php:92
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(92): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-10', '2021-03-11', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 92
+[14-May-2021 14:51:53 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '2021-03-01' AND  '2021-03-13'
+
+              ORDER BY reco' at line 9' in /home/planetme/public_html/archive/php/Database.php:92
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(92): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-01', '2021-03-13', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 92
+[14-May-2021 14:52:12 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'personalNumber' in where clause is ambiguous' in /home/planetme/public_html/archive/php/Database.php:92
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(92): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-01', '2021-03-13', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 92
+[14-May-2021 14:52:18 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'personalNumber' in where clause is ambiguous' in /home/planetme/public_html/archive/php/Database.php:92
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(92): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-01', '2021-03-13', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 92
+[14-May-2021 14:52:58 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'personalNumber' in where clause is ambiguous' in /home/planetme/public_html/archive/php/Database.php:96
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(96): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-01', '2021-03-13', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 96
+[14-May-2021 14:53:37 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND recordDate BETWEEN '2021-03-01' AND  '2021-03-13'
+
+              ORDER BY ' at line 9' in /home/planetme/public_html/archive/php/Database.php:96
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(96): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-01', '2021-03-13', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 96
+[14-May-2021 14:54:07 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'personalNumber' in where clause is ambiguous' in /home/planetme/public_html/archive/php/Database.php:96
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(96): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-01', '2021-03-13', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 96
+[14-May-2021 15:11:50 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 7' in /home/planetme/public_html/archive/php/Database.php:103
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(103): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-04', '2021-03-13', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 103
+[14-May-2021 15:11:54 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 7' in /home/planetme/public_html/archive/php/Database.php:103
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(103): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(21): Database->getResults('2021-03-04', '2021-03-13', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 103
+[14-May-2021 15:18:45 Africa/Nairobi] PHP Parse error:  syntax error, unexpected '' ORDER BY recordDate DESC";' (T_ENCAPSED_AND_WHITESPACE) in /home/planetme/public_html/archive/php/Database.php on line 98
+[14-May-2021 15:18:48 Africa/Nairobi] PHP Parse error:  syntax error, unexpected '' ORDER BY recordDate DESC";' (T_ENCAPSED_AND_WHITESPACE) in /home/planetme/public_html/archive/php/Database.php on line 98
+[14-May-2021 15:27:20 Africa/Nairobi] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/planetme/public_html/archive/php/Database.php on line 82
+[14-May-2021 15:27:23 Africa/Nairobi] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/planetme/public_html/archive/php/Database.php on line 82
+[14-May-2021 15:27:25 Africa/Nairobi] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/planetme/public_html/archive/php/Database.php on line 82
+[14-May-2021 15:27:35 Africa/Nairobi] PHP Notice:  Undefined variable: startDate in /home/planetme/public_html/archive/php/Database.php on line 100
+[14-May-2021 15:27:35 Africa/Nairobi] PHP Notice:  Undefined variable: endDate in /home/planetme/public_html/archive/php/Database.php on line 100
+[14-May-2021 15:35:28 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-14' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:103
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(103): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 103
+[14-May-2021 15:35:36 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-14' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:103
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(103): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 103
+[14-May-2021 15:37:35 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-14' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:105
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(105): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 105
+[14-May-2021 15:37:55 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-14' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:107
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(107): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 107
+[14-May-2021 15:38:15 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-14' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:108
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(108): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 108
+[14-May-2021 15:38:45 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-14' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:108
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(108): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 108
+[14-May-2021 15:40:43 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 15:40:43 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 15:52:35 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 15:52:35 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:00:25 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:00:25 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:00:29 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:00:29 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:00:54 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:00:54 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:00:58 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:00:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:01:30 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:01:30 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:27:34 Africa/Nairobi] PHP Notice:  Undefined variable: postResults in /home/planetme/public_html/archive/Report/report.php on line 15
+[14-May-2021 16:27:34 Africa/Nairobi] PHP Notice:  Undefined variable: postResults in /home/planetme/public_html/archive/Report/report.php on line 16
+[14-May-2021 16:27:34 Africa/Nairobi] PHP Notice:  Undefined variable: postResults in /home/planetme/public_html/archive/Report/report.php on line 17
+[14-May-2021 16:27:44 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 48
+[14-May-2021 16:27:44 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 48
+[14-May-2021 16:27:44 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 52
+[14-May-2021 16:27:44 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 53
+[14-May-2021 16:27:44 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:27:55 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 48
+[14-May-2021 16:27:55 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 48
+[14-May-2021 16:27:55 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 52
+[14-May-2021 16:27:55 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 53
+[14-May-2021 16:27:55 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 54
+[14-May-2021 16:28:16 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 16:28:16 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 16:28:16 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 61
+[14-May-2021 16:28:16 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 62
+[14-May-2021 16:28:16 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 63
+[14-May-2021 16:28:19 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 16:28:19 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 16:28:19 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 61
+[14-May-2021 16:28:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 62
+[14-May-2021 16:28:19 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 63
+[14-May-2021 16:28:27 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 16:28:27 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 16:28:27 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 61
+[14-May-2021 16:28:27 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 62
+[14-May-2021 16:28:27 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 63
+[14-May-2021 16:39:21 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 16:39:21 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 16:39:21 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 61
+[14-May-2021 16:39:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 62
+[14-May-2021 16:39:21 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 63
+[14-May-2021 16:45:08 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 49
+[14-May-2021 16:45:08 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 49
+[14-May-2021 16:45:11 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 49
+[14-May-2021 16:45:11 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 49
+[14-May-2021 18:58:58 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 52
+[14-May-2021 18:58:58 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 52
+[14-May-2021 18:58:58 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 56
+[14-May-2021 18:58:58 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 18:58:58 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 58
+[14-May-2021 20:20:19 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 52
+[14-May-2021 20:20:19 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 52
+[14-May-2021 20:20:19 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 56
+[14-May-2021 20:20:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 57
+[14-May-2021 20:20:19 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 58
+[15-May-2021 18:23:11 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-15' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:101
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(101): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, '99004650')
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 101
+[15-May-2021 18:23:16 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-15' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:101
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(101): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, '99004650')
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 101
+[15-May-2021 18:23:28 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-15' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:101
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(101): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, '99004650')
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 101
+[15-May-2021 22:04:20 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recordDate BETWEEN '1970-01-01' AND '2021-05-15' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:101
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(101): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults(NULL, NULL, '99004650')
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 101
+[15-May-2021 22:29:44 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND recordDate BETWEEN '2021-03-01' AND '2021-05-15' ORDER BY recordDate DESC' at line 7' in /home/planetme/public_html/archive/php/Database.php:97
+Stack trace:
+#0 /home/planetme/public_html/archive/php/Database.php(97): PDO->query('SELECT archive_...')
+#1 /home/planetme/public_html/archive/Report/report.php(18): Database->getResults('2021-03-01', '2021-05-15', NULL)
+#2 {main}
+  thrown in /home/planetme/public_html/archive/php/Database.php on line 97
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 52
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 52
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 56
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 57
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 58
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 52
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 52
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 56
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 57
+[15-May-2021 22:39:19 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 58
+[15-May-2021 22:44:09 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 52
+[15-May-2021 22:44:09 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 52
+[15-May-2021 22:44:09 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 56
+[15-May-2021 22:44:09 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 57
+[15-May-2021 22:44:09 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 58
+[15-May-2021 23:41:53 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 52
+[15-May-2021 23:41:53 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 52
+[15-May-2021 23:41:53 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 56
+[15-May-2021 23:41:53 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 57
+[15-May-2021 23:41:53 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 58
+[22-May-2021 12:36:29 Africa/Nairobi] PHP Notice:  Undefined index: firstName in /home/planetme/public_html/archive/Report/report.php on line 52
+[22-May-2021 12:36:29 Africa/Nairobi] PHP Notice:  Undefined index: lastName in /home/planetme/public_html/archive/Report/report.php on line 52
+[22-May-2021 12:36:29 Africa/Nairobi] PHP Notice:  Undefined index: locationSaved in /home/planetme/public_html/archive/Report/report.php on line 56
+[22-May-2021 12:36:29 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/archive/Report/report.php on line 57
+[22-May-2021 12:36:29 Africa/Nairobi] PHP Notice:  Undefined index: remarks in /home/planetme/public_html/archive/Report/report.php on line 58
+[23-May-2021 16:41:03 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 49
+[23-May-2021 16:41:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 49
+[26-May-2021 10:03:56 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 49
+[26-May-2021 10:03:56 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 49
+[01-Jun-2021 12:22:17 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 52
+[01-Jun-2021 12:22:17 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 52
+[01-Jun-2021 12:24:41 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 12:24:41 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 12:24:58 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 12:24:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 12:25:02 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 12:25:02 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 12:28:24 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[01-Jun-2021 16:39:40 Africa/Nairobi] PHP Notice:  Undefined index: post in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 16:40:10 Africa/Nairobi] PHP Notice:  Undefined index: post in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 16:41:25 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 57
+[01-Jun-2021 16:41:46 Africa/Nairobi] PHP Notice:  Undefined index: post in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 16:42:50 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[01-Jun-2021 16:42:53 Africa/Nairobi] PHP Notice:  Undefined index: post in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 16:42:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 54
+[01-Jun-2021 16:43:25 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 16:43:29 Africa/Nairobi] PHP Notice:  Undefined index: post in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 16:45:08 Africa/Nairobi] PHP Notice:  Undefined index: post in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 16:45:32 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 55
+[01-Jun-2021 17:09:23 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:11:26 Africa/Nairobi] PHP Notice:  Undefined index: post in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 17:12:36 Africa/Nairobi] PHP Notice:  Undefined index: post in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 17:13:58 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:13:58 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 17:13:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 17:14:26 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:14:26 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 17:14:26 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 53
+[01-Jun-2021 17:15:16 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:15:16 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 17:15:16 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 56
+[01-Jun-2021 17:15:23 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:15:23 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 14
+[01-Jun-2021 17:15:23 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/archive/Report/report.php on line 56
+[01-Jun-2021 17:15:44 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:16:04 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:18:50 Africa/Nairobi] PHP Warning:  unserialize() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:19:06 Africa/Nairobi] PHP Warning:  unserialize() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:20:00 Africa/Nairobi] PHP Warning:  unserialize() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:20:10 Africa/Nairobi] PHP Warning:  unserialize() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:23:18 Africa/Nairobi] PHP Warning:  unserialize() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:23:18 Africa/Nairobi] PHP Notice:  Undefined index: startTime in /home/planetme/public_html/archive/Report/report.php on line 16
+[01-Jun-2021 17:23:18 Africa/Nairobi] PHP Notice:  Undefined index: endTime in /home/planetme/public_html/archive/Report/report.php on line 17
+[01-Jun-2021 17:23:18 Africa/Nairobi] PHP Notice:  Undefined index: personalNumber in /home/planetme/public_html/archive/Report/report.php on line 18
+[01-Jun-2021 17:24:22 Africa/Nairobi] PHP Warning:  unserialize() expects parameter 1 to be string, array given in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 17:26:03 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 21:35:59 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 21:36:46 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 21:37:37 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 21:38:10 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[01-Jun-2021 21:39:40 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[03-Jun-2021 18:34:51 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[03-Jun-2021 22:21:04 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[04-Jun-2021 15:38:38 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[04-Jun-2021 15:54:34 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 14:15:14 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 14:19:09 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 14:19:09 Africa/Nairobi] PHP Notice:  Undefined offset: 8 in /home/planetme/public_html/archive/Report/pdf_mc_table.php on line 114
+[26-Jun-2021 14:19:09 Africa/Nairobi] PHP Notice:  Undefined offset: 8 in /home/planetme/public_html/archive/Report/pdf_mc_table.php on line 140
+[26-Jun-2021 14:19:09 Africa/nairobi] PHP Notice:  Undefined offset: 8 in /home/planetme/public_html/archive/Report/pdf_mc_table.php on line 114
+[26-Jun-2021 14:19:09 Africa/nairobi] PHP Notice:  Undefined offset: 8 in /home/planetme/public_html/archive/Report/pdf_mc_table.php on line 140
+[26-Jun-2021 14:20:11 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 14:20:38 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 14:21:24 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 14:21:51 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 15:31:22 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 15:50:03 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[26-Jun-2021 18:29:45 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[27-Jun-2021 14:31:18 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[27-Jun-2021 21:39:50 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[27-Jun-2021 21:40:30 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[27-Jun-2021 21:43:39 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[27-Jun-2021 21:45:24 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[27-Jun-2021 21:55:56 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[02-Jul-2021 14:14:22 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[02-Jul-2021 14:17:19 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[02-Jul-2021 16:34:20 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[03-Aug-2021 11:05:47 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[25-Aug-2021 12:11:12 Africa/Nairobi] PHP Notice:  Undefined index: results in /home/planetme/public_html/archive/Report/report.php on line 13
+[30-Aug-2021 23:30:40 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:31:05 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:31:43 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:34:34 Africa/Nairobi] PHP Notice:  Undefined variable: stmt in /home/planetme/public_html/petition/model/Petition.php on line 89
+[30-Aug-2021 23:54:18 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:54:31 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:54:54 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:55:31 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:56:09 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:58:16 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[30-Aug-2021 23:58:46 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 00:01:26 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 00:01:33 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 00:01:33 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 00:01:38 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 00:01:38 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 00:01:48 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 00:01:48 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 00:01:50 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 00:01:50 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 00:02:05 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 00:11:21 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 00:18:26 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 00:18:31 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:50:12 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:53:39 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:53:58 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:54:22 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:54:34 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:54:51 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:55:04 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:56:15 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 10:56:15 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[31-Aug-2021 10:56:22 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:56:56 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:57:10 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:58:08 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:59:21 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 10:59:41 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:00:55 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:01:17 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:01:51 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:02:08 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:02:26 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:02:44 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:02:53 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:03:00 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:03:21 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:03:33 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:04:11 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:09:51 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:10:18 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:19:17 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:20:03 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:21:55 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:29:28 Africa/Nairobi] PHP Warning:  getimagesize(/assets/images/pdf-logo.jpg): failed to open stream: No such file or directory in /home/planetme/public_html/petition/lib/report/fpdf17/fpdf.php on line 2425
+[31-Aug-2021 11:42:41 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 11:43:01 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 12:02:00 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 12:27:45 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 19:56:49 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 21:46:02 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 21:59:44 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 21:59:48 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:00:04 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:00:20 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:00:28 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:00:40 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:01:08 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:02:43 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:02:43 Africa/Nairobi] PHP Fatal error:  Call to undefined method PDF_MC_Table::centreImage() in /home/planetme/public_html/petition/lib/report/pdf_mc_table.php on line 16
+[31-Aug-2021 22:02:52 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:03:07 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:03:21 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:04:10 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:04:25 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:04:36 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:26:02 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:26:15 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:26:30 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[31-Aug-2021 22:34:12 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[01-Sep-2021 09:54:53 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[01-Sep-2021 22:26:30 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[01-Sep-2021 22:30:36 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[01-Sep-2021 23:26:22 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[01-Sep-2021 23:29:03 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 16:51:11 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:46:25 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:47:15 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:47:31 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:47:43 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:48:00 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:48:10 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:48:24 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:48:46 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:49:11 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:49:28 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:51:28 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:51:56 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:56:34 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 18:57:03 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 22:27:54 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[02-Sep-2021 22:29:22 Africa/Nairobi] PHP Notice:  Undefined variable: searchResults in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[02-Sep-2021 22:29:22 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/planetme/public_html/petition/lib/report/report.php on line 39
+[02-Sep-2021 22:29:38 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[03-Sep-2021 01:15:41 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[03-Sep-2021 01:25:14 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 13
+[04-Sep-2021 19:30:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 49
+[04-Sep-2021 19:30:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 49
+[05-Sep-2021 15:21:03 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[05-Sep-2021 15:21:03 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[05-Sep-2021 15:21:03 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 18
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:28:26 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:29:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:29:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:29:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 18
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:33:59 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 18
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 04:36:21 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 18
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 22:52:33 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 18
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:13:39 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 18
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[06-Sep-2021 23:40:19 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 00:39:38 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 00:40:07 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 00:40:20 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 00:40:31 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 00:44:29 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 14:31:54 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 14:39:49 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 14:40:02 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:25:14 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:26:15 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:30:52 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:31:24 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:37:35 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:37:56 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:17 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:39:34 Africa/Nairobi] PHP Notice:  Undefined index: status in /home/planetme/public_html/petition/lib/report/report.php on line 48
+[12-Sep-2021 18:50:49 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 21
+[12-Sep-2021 18:50:49 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 21
+[12-Sep-2021 18:50:49 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'dateCreated' in where clause is ambiguous' in /home/planetme/public_html/petition/model/Petition.php:91
+Stack trace:
+#0 /home/planetme/public_html/petition/model/Petition.php(91): PDO->query('SELECT * FROM p...')
+#1 /home/planetme/public_html/petition/lib/report/report.php(21): Petition->getReportPetition(NULL, NULL, NULL, '5')
+#2 {main}
+  thrown in /home/planetme/public_html/petition/model/Petition.php on line 91
+[12-Sep-2021 18:51:49 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 21
+[12-Sep-2021 18:51:49 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 21
+[12-Sep-2021 18:51:49 Africa/Nairobi] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'dateCreated' in where clause is ambiguous' in /home/planetme/public_html/petition/model/Petition.php:91
+Stack trace:
+#0 /home/planetme/public_html/petition/model/Petition.php(91): PDO->query('SELECT * FROM p...')
+#1 /home/planetme/public_html/petition/lib/report/report.php(21): Petition->getReportPetition(NULL, NULL, NULL, '5')
+#2 {main}
+  thrown in /home/planetme/public_html/petition/model/Petition.php on line 91
+[12-Sep-2021 18:52:06 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 21
+[12-Sep-2021 18:52:06 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 21
+[12-Sep-2021 18:58:25 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 18:58:25 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 18:59:46 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 18:59:46 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 18:59:54 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 18:59:54 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 20:57:52 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 21
+[12-Sep-2021 20:57:52 Africa/Nairobi] PHP Notice:  Undefined variable: committee in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:11:09 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:11:09 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:11:17 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:11:17 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:11:41 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:11:41 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:11:45 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:11:45 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:12:18 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:12:18 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:12:21 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:12:21 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:12:47 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:12:47 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:13:51 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:13:51 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:14:12 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:14:12 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:14:27 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[12-Sep-2021 21:14:27 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[15-Sep-2021 12:33:35 Africa/Nairobi] PHP Notice:  Undefined index: userId in /home/planetme/public_html/petition/lib/report/report.php on line 21
+[15-Sep-2021 12:33:35 Africa/Nairobi] PHP Notice:  Undefined variable: committee in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[15-Sep-2021 12:55:31 Africa/Nairobi] PHP Notice:  Undefined variable: startTime in /home/planetme/public_html/petition/lib/report/report.php on line 23
+[15-Sep-2021 12:55:31 Africa/Nairobi] PHP Notice:  Undefined variable: endTime in /home/planetme/public_html/petition/lib/report/report.php on line 23

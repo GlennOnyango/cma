@@ -1,0 +1,187 @@
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: opacity ease .3s;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/image4.jpg);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main.modal-is-open {
+  opacity: .5;
+  z-index: -1;
+}
+
+header {  
+  margin-bottom: 2em;
+}
+
+.calendar {
+  display: block;
+  margin: 0 auto;
+}
+
+#calendar{
+
+}
+
+footer {
+  margin-top: 4em;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.24);
+  transition: box-shadow ease .3s;
+}
+
+table:hover {
+  box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.32);
+}
+
+thead {
+  background: linear-gradient(60deg, #1c355e, #7f2729);
+  font-weight: bold;
+}
+
+
+td {
+  padding: 1em;
+  position: relative;
+}
+
+tr.weekDays {
+  background: linear-gradient(60deg, #1c355e, #7f2729);
+  color: #fff;
+  font-weight: bold;
+}
+
+td.disabled {
+  opacity: .25;
+  cursor: not-allowed;
+}
+
+td.today {
+  background: #a2bdcc;
+  color: #404040;
+  border-radius: 12px;
+}
+
+td.schedule-enable {
+  cursor: pointer;
+}
+
+td.schedule-disable {
+  cursor: not-allowed;
+}
+
+td.schedule-disable:before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  display: block;
+  background: #7f2729;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 24px;
+  left: 10px;
+}
+
+td.schedule-disable:after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  display: block;
+  background: #7f2729;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 24px;
+  left: 10px;
+}
+
+td.schedule-enable:hover {
+  background: #888;
+  border-radius: 12px;
+}
+
+td.has-event:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block;
+  background: #7f2729;
+  border-radius: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.modal {
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50%;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  background: #fff;
+  color: #404040;
+  box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.32);
+  padding: 2em;
+  border-radius: 12px;
+  transition: top ease .3s;
+}
+
+.modal.is-open {
+  top: 50%;
+}
+
+.modal .close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: 0;
+  background: transparent;
+  padding: 1em;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal form {
+  display: flex;
+}
+
+.modal input {
+  width: 100%;
+  padding: .7em 1em;
+  border-radius: 12px;
+  border: 1px solid #aaa;
+}
+
+.modal form button {
+  padding: .7em 1em;
+  border: 0;
+  margin-left: 4px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.modal .update, .modal .save {
+  background: #65cf73;
+}
+
+.modal .delete, .modal .cancel {
+  background: #de4c4c;
+}

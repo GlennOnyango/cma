@@ -1,0 +1,96 @@
+::selection{
+  color: #fff;
+  background: #675AFE;
+}
+.currency{
+  width: 370px;
+  padding: 30px;
+  border-radius: 7px;
+  background: #fff;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+.currency header{
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.change-currency{
+  margin: 40px 0 20px 0;
+}
+.change-currency :where(input, select, button){
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+.change-currency p{
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.change-currency input{
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+  border: 1px solid #999;
+}
+.change-currency input:focus{
+  padding: 0 14px;
+  border: 2px solid #675AFE;
+}
+.change-currency .drop-list{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.change-currency .drop-list .select-box{
+  display: flex;
+  width: 115px;
+  height: 45px;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  border: 1px solid #999;
+}
+.change-currency .select-box img{
+  max-width: 25px;
+}
+.change-currency .select-box select{
+  width: auto;
+  font-size: 16px;
+  background: none;
+  margin: 0 -5px 0 5px;
+}
+.change-currency .select-box select::-webkit-scrollbar{
+  width: 8px;
+}
+.change-currency .select-box select::-webkit-scrollbar-track{
+  background: #fff;
+}
+.change-currency .select-box select::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+.change-currency .drop-list .icon{
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 22px;
+}
+.change-currency .exchange-rate{
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+.change-currency button{
+  height: 52px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  background: #675AFE;
+  transition: 0.3s ease;
+}
+ .change-currency button:hover{
+  background: #4534fe;
+}

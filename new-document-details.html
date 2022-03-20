@@ -1,0 +1,519 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CM Advocates</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style type="text/css">
+.course{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/image4.jpg);
+}
+
+.course-col-detail{
+    flex-basis: 31%;
+    background: background:rgba(255,255,255,0.5),#fff;
+    opacity:0.5;
+    width:70%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+/*input[type=date]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+*/
+
+.bottom{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+}
+
+.row-footer{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+    .footer{
+      background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/image4.jpg);
+        padding:70px 0;
+    }
+        .footer-col{
+            width:25%;
+            padding:0 15px;
+        }
+
+    .container-footer{
+        max-width:1170px;
+        margin:auto;
+    }
+    ul{
+        list-style:none;
+    }
+    .footer-col h4{
+        font-size:18px;
+        color:#ffffff;
+        text-transform:capitalize;
+        margin-bottom:35px;
+        font-weight:500;
+        position:relative; 
+    }
+    .footer-col h4::before{
+        content: '';
+        position:absolute;
+        /*left:0;*/
+        bottom:-10px;
+        background-color:#1c355e;
+        height:2px;
+        box-sizing:border-box;
+        width:50px;
+    }
+
+    .footer-col ul li:not(:last-child){
+        margin-bottom:10px;
+    }
+    .footer-col ul li a{
+        font-size:16px;
+        font-weight:bold;
+        color:#ffffff;
+        text-decoration:none;
+        color:#000000;
+        display:block;
+        transition:all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color:#1c355e;
+        padding-left:10px;
+    }
+
+    .footer-col .social-links a{
+        display:inline-block;
+        height:40px;
+        width:40px;
+        margin:0 10px 10px 0;
+        text-align:center;
+        line-height:40px;
+        border-radius:50%;
+        color:#ffffff;
+        transition:all 0.3s ease;
+    }
+
+      .footer-col .social-links a:hover{
+        color: #4dae47;
+        background-color:#ffffff;
+      }
+
+      @media(max-width:767px){
+        .footer-col{
+            width:50%;
+            margin-bottom:30px;
+        }
+      }
+        @media(max-width:574px){
+        .footer-col{
+            width:100%;
+            }
+      }
+
+/*
+
+.booking {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 90%;
+}*/
+/*
+    .text{
+     width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}*/
+
+.accordion{
+      width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+      margin: auto;
+    }
+    .accordion-item{
+      background-color:#fff3f3;
+      color:#111;
+      margin:1rem 0;
+      border-radius:0.5rem;
+      box-shadow:0 4px 5px 0 rgba(0,0,0,0.5);
+    }
+    .accordion-item-header{
+      padding:0.5rem 3rem 0.5rem 1 rem;
+      min-height:3.5rem;
+      line-height:1.25rem;
+      font-weight:bold;
+      display:flex;
+      align-items:center;
+      position:relative;
+      cursor:pointer;
+    }
+    .accordion-item-header::after{
+      content:"\002B";
+      font-size:2rem;
+      position:absolute;
+      right:1rem;
+    }
+    .accordion-item-header.active::after{
+      content:"\2212";
+      }
+    .accordion-item-body{
+      max-height:0;
+      overflow:hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    .accordion-item-body-content{
+      padding:1rem;
+      line-height:1.5rem;
+      border-top: 1px solid;
+      border-image:linear-gradient(to right,transparent,#1c355e, transparent)1;
+    }
+}
+</style>
+</head>
+<body>
+    <section class="sub-header">      
+    <nav class="nav">
+            <a href="index.html"><img class="img" src="images/cmalogo.png"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="practise.html">PRACTISE AREAS</a></li>
+                    <li><a href="cm-portal.html">CM PORTAL</a></li>
+                     <li><a href="resources.html">RESOURCES</a></li>
+                    <li><a href="blog.html">NEWS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><i class="fa fa-shopping-cart"></i></li>
+                    <li><a href="sme.html">SME CLUB</a></li>
+                     <li><a href="contact.html">Our Team</a></li>
+                    <a href="login.html" class="hero-btn">JOIN HERE</a>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>    
+            <h1>Affidavits</h1>
+    </section>
+    
+    
+<!------- Consultat ------->
+    
+   
+    <section class="blog-content">
+    <div class="row">
+    <div class="blog-left">
+        <img src="images/certificate.jpg">
+        <h2>Affidavits</h2>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus. Donec sit amet nisl non justo malesuada fermentum. Donec eget felis dolor. Suspendisse condimentum vestibulum ex ac cursus.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus. Donec sit amet nisl non justo malesuada fermentum. Donec eget felis dolor. Suspendisse condimentum vestibulum ex ac cursus. Nam pharetra viverra efficitur. Sed pellentesque luctus arcu, quis finibus nibh luctus mattis. Vivamus diam turpis, pellentesque vel magna sit amet, sollicitudin efficitur tortor. Etiam ornare lacinia iaculis. Cras nec dui eu nibh pharetra condimentum. Vestibulum ultrices sapien vitae arcu varius volutpat. Integer rhoncus a massa ut aliquam. Sed aliquet, nibh non dictum ullamcorper, orci arcu posuere tortor, vitae ultrices nulla tortor nec sapien. Vestibulum ac nibh at leo maximus molestie.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus. Donec sit amet nisl non justo malesuada fermentum. Donec eget felis dolor. Suspendisse condimentum vestibulum ex ac cursus. Nam pharetra viverra efficitur. Sed pellentesque luctus arcu, quis finibus nibh luctus mattis. Vivamus diam turpis, pellentesque vel magna sit amet, sollicitudin efficitur tortor. Etiam ornare lacinia iaculis. Cras nec dui eu nibh pharetra condimentum.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus. Donec sit amet nisl non justo malesuada fermentum. Donec eget felis dolor. Suspendisse condimentum vestibulum ex ac cursus. Nam pharetra viverra efficitur. Sed pellentesque luctus arcu.</p>
+        
+        <div class="comment-box">
+            <h3>Leave a comment</h3>
+            <form class="comment-form">
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter email">
+                    <textarea rows="5" placeholder="Your Comment"></textarea>
+                    <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+            </form>
+        </div>
+    </div>
+        
+    <div class="blog-right">
+        
+        
+            <h3>Related Documents</h3>
+            <div>
+                <span></span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>Data Science</span>
+                <span>28</span>
+            </div>
+            <div>
+                <span>Machine Learning</span>
+                <span>15</span>
+            </div>
+            <div>
+                <span>Computer Science</span>
+                <span>34</span>
+            </div>
+            <div>
+                <span>AutoCAD</span>
+                <span>42</span>
+            </div>
+            <div>
+                <span>Journalism</span>
+                <span>22</span>
+            </div>
+            <div>
+                <span>Commerce</span>
+                <span>13</span>
+            </div>
+           
+        </div> 
+    
+    </div>
+    </section>
+
+     <section class="course">
+        <h1>Get your hire agreement</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="row">
+              <div class="col-6 card mx-auto mt-5" style="background:rgba(255,255,255,0.3);">
+                <h3>Instant Download</h3>
+             <ul class="list-group">
+              <li class="list-group-item">Document template</li>
+              <li class="list-group-item">Emailed to you instantly</li>
+              <li class="list-group-item">Suitable for startups and small-to-medium businesses</li>
+              <li class="list-group-item">Editable Word Document for you to modify</li>
+              <li class="list-group-item">Guidance notes included</li>
+              <li class="list-group-item active">Valued at Kes. 1,500.00</li>
+            </ul>
+            <button type="submit" class="hero-btn red-btn">Purchase Now</button>
+            </div>
+            <div class="col-6 card mx-auto mt-5" style="background:rgba(255,255,255,0.3);">
+                <h3>Drafted By An Advocate</h3>
+                <ul class="list-group">
+                <li class="list-group-item">Document drafted by a lawyer</li>
+                <li class="list-group-item">Up to five business day turnaround</li>
+                <li class="list-group-item">Complimentary consultation with a lawyer to discuss changes and answer questions</li>
+                <li class="list-group-item">Fully personalised for your business and industry</li>
+                <li class="list-group-item">You are protected under our insurance</li>
+                 <li class="list-group-item active">Affordable fixed price</li>
+              </ul>
+                 <button type="submit" class="hero-btn red-btn">Instant Download</button>
+            </div>
+        </div>
+    </section>
+
+        <section class="blog-content">
+    <div class="row">
+    <div>
+          <div style="margin-top:-45px;" class="comment-box">
+            <form class="comment-form">
+                    <input type="text" placeholder="Enter Document Name">
+            </form>
+        </div>
+            <hr>
+        
+        <h2>COP 26: A Five Point Plan for Solidarity, Prosperity and Fairness</h2>
+        <br>
+        <p style="color:#000;">The COP26 summit in Glasgow comes at a time of maximum need as well as maximum opportunity to deliver on the Paris Agreement’s promise of a fair, equitable and robust response to climate change.
+
+The pandemic has devastated developing countries, on top of continuing climate change impacts such as extreme heat, droughts, floods and tropical storms. Support in the form of vaccines and debt relief would send a signal that the countries least responsible for causing climate change are not alone in fighting it..</p>
+        <br>
+        <button type="submit" class="hero-btn red-btn">DOWNLOAD</button>
+          <hr>
+             <br>
+
+      <h2>Driving A Green and Sustainable Post-Covid 19 Recovery in Africa: Recommendations For Policy Actors</h2>
+        <br>
+        <p style="color:#000">The science is clear: for our best chance of limiting global warming to 1.5 degrees Celsius, the world needs to halve greenhouse gas emissions between 2020 and 2030 and regenerate nature at the same time. But the window of opportunity is closing.
+
+To take on their fair share of mitigating the crisis, rich countries should at least halve their collective emissions within the 2020s, aim for net zero emissions well before 2050 and back their targets with “demonstrably commensurate” policies. Specifically, the report calls on:.</p>
+        <button type="submit" class="hero-btn red-btn">DOWNLOAD</button>
+    </div>
+      <hr> 
+    
+    </div>
+    </section>
+
+
+
+ <section class="testimonials">
+        <h1>Meet some of our lawyers</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="testimonial-col">
+                    <img src="images/user1.jpg">
+                    <div> 
+                        <p style="color:#000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus.</p>
+                        <h3>Christine Berkley</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+                <div class="testimonial-col">
+                    <img src="images/user2.jpg">
+                    <div>
+                        <p style="color:#000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus.</p>
+                        <h3>David Byer</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+
+     <section class="course">
+        <h1>FAQs
+        </h1>
+        <p>Here are some frequently asked questions </p>
+   
+    </section>
+
+
+    <div class="accordion"> 
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    What is Lawyer Type?
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    What is Associate Billing?
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  <div class="accordion-item">
+  <div class="accordion-item-header">
+    How long will I be attended to?
+  </div>
+  <div class="accordion-item-body">
+    <div class="accordion-item-body-content">
+      What is web development?
+    </div>
+  </div>    
+  </div>
+  </div>
+    
+<!-------- footer ---------->
+
+
+
+<div class="bottom">    
+   <footer class="footer">
+       <div class="container-footer">
+        <div class="row-footer">
+            <div class="footer-col">
+                <h4>Company</h4>
+                    <a href="index.html"><img style="width:135px;" src="images/cmalogo.png"></a>
+                <ul> <li><a href="index.html">Home</a></li>
+                    <li><a href="what.html">Legal Documents</a></li>
+                        <li><a href="publications.html">SME CLUB</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <h4>Kenya HeadQuarters</h4>
+                <ul>
+                   <li><a href="#">I&M Bank House ,7th Floor ,2nd Ngong Avenue</a></li>
+                 <li><a href="#">Phone:+254202210978<br>+254716209673</a></li>
+                    <li><a href="#">
+                        law@cmadvocates.com
+                    </a></li>
+                </ul>
+            </div>
+              <div class="footer-col">
+                <h4>Contact Us</h4>
+                 <h4>Mombasa Office</h4>
+                <ul>
+                   <li><a href="#">Links Plaza,4th Floor,Links Road ,Nyali</a></li>
+                   <li><a href="#">Phone:+254414470758<br>+254746995283</a></li>
+                    <li><a href="#">
+                        mombasaoffice@cmadvocates.com
+                    </a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                    <div class="social-links">
+                    <a href=""><i class="fa fa-facebook-f"></i> </a>
+                    <a href=""><i class="fa fa-twitter"></i> </a>
+                    <a href=""><i class="fa fa-instagram"></i> </a>
+                     <a href=""><i class="fa fa-linkedin"></i> </a>    
+                    </div>
+            </div>
+        </div>   
+       </div>
+       <hr class="hr">
+    <p class="copyright">Copyright CM Advocates LLP &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+   </footer>
+   </div>    
+<!----JavaScript for toggle menu---->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+
+
+<script type="text/javascript">
+  const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+  accordionItemHeaders.forEach(accordionItemHeader=>{
+    accordionItemHeader.addEventListener("click",event=>{
+      accordionItemHeader.classList.toggle("active");
+  const accordionItemBody = accordionItemHeader.nextElementSibling;
+  if (accordionItemHeader.classList.contains("active")) {
+    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+  }else{
+    accordionItemBody.style.maxHeight=0;
+  }   
+    });
+  });
+</script>
+</body>
+</html>    
