@@ -53,17 +53,28 @@ CREATE TABLE `documents_review` (
   `document_id` int NOT NULL,
   `user_id` int NOT NULL,
   `review_status` varchar(10) NOT NULL DEFAULT 'none',
-  `review_count` int NOT NULL DEFAULT 0 
+  `review_count` int NOT NULL DEFAULT 0,
+    `rm_id` int not null DEFAULT 0,
+  `advocate_assigned_id` int not null DEFAULT 0,
+  `assignee_status` int not null DEFAULT 0,
+  `date_assigned`  datetime DEFAULT null,
+  `duration` varchar(10) DEFAULT null
+
 );
+
+-- ALTER TABLE documents_review ADD COLUMN `date_assigned`  datetime DEFAULT null;
+-- ALTER TABLE documents_review ADD COLUMN `duration` varchar(10) DEFAULT null;
 
 CREATE TABLE `documents_download` (
   `document_id` int NOT NULL,
   `user_id` int NOT NULL,
   `download_count` int not null DEFAULT 0,
-  `rm_id` int not null DEFAULT 0;
+
 );
 
-ALTER TABLE documents_review ADD COLUMN rm_id int not null DEFAULT 0;
+-- ALTER TABLE documents_review ADD COLUMN rm_id int not null DEFAULT 0;
+-- ALTER TABLE documents_review ADD COLUMN advocate_assigned_id int not null DEFAULT 0;
+ALTER TABLE documents_review ADD COLUMN assignee_status int not null DEFAULT 0;
 
 
 CREATE VIEW `document_subscription_bought` AS SELECT
@@ -75,3 +86,11 @@ JOIN category ON documents.category_id = category.id
 JOIN documents_review ON documents.id = documents_review.document_id
 JOIN documents_download ON documents.id = documents_download.document_id;
 
+CREATE VIEW `vw_documents_review` AS
+SELECT documents_review.document_id,document_name,user_id,(SELECT userName FROM users WHERE id = user_id) AS client_name,
+(SELECT email FROM users WHERE id = user_id) AS client_email,review_status,
+rm_id,(SELECT userName FROM users WHERE id = rm_id) AS advocate_name,
+advocate_assigned_id,(SELECT userName FROM users WHERE id = advocate_assigned_id) AS advocate_assigned_name,
+assignee_status
+FROM documents_review
+JOIN documents ON documents_review.document_id = documents.id WHERE review_status = 'review';

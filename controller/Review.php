@@ -16,7 +16,7 @@ if(!empty($_GET['token_review'])){
     $review->collectReviews();
 }
 if(!empty($_POST['token_assign'])){
-    $review->assignReview($_POST["advocate"],$_POST['token_assign'],$_POST['duration'],$_POST['document_review_id']);
+    $review->assignReview($_POST["advocate"],$_POST['token_assign'],$_POST['duration'],$_POST['document_review_id'],$_POST['client_id']);
 }
 if(!empty($_GET['token_review_assignee'])){
     $review->collectReviewsAssigned();
@@ -121,48 +121,30 @@ class Reviews
     public function collectReviews(){
         
         $reviews = array();
-        $clients = array();
-        $query = "SELECT client_id FROM rm WHERE status = 'open' AND advocate_id = ".$_SESSION['id'];
-        
-
-        $result = $this->db-> query($query);
-
-        if(!$result){
-            
-            echo json_encode(array("result" => 2,"value" => "Not a relationship Manager"));
-            exit();
-
-        }
-        
-        while($row=$result -> fetch_assoc()){
-
-            array_push($clients,$row['client_id']);
-
-        }
         
         //Get all as rm
-        foreach ($clients as $key => $value) {
-            $query = "SELECT * FROM vw_documents_review WHERE client_id = ".$value." AND review_status = 'review' AND  rm_id = ".$_SESSION['id']." AND assignee_status = 0 ";
-            $result = $this->db-> query($query);
-                while($roww = $result->fetch_assoc()){
-                        
-                    array_push($reviews,array("id"=>$roww["id"],"document_id"=>$roww["document_id"],"client_name"=>$roww["client_name"],"client_id"=>$roww["client_id"],"rm_name"=>$roww["rm_name"],"document_name"=>$roww["document_name"],"review_status"=>$roww["review_status"],"view"=>$value,"assingee"=>0));
-    
-                }
-             
-        }
-
-        //Get all as assignee
+        $query = "SELECT * FROM vw_documents_review WHERE  rm_id = ".$_SESSION['id']." AND assignee_status = 0 ";
         
-        $query = "SELECT * FROM vw_documents_review WHERE review_status = 'review' AND  assignee = ".$_SESSION['id']." AND assignee_status = 1 ";
         $result = $this->db-> query($query);
-            while($roww = $result->fetch_assoc()){
+            while($row = $result->fetch_assoc()){
+                array_push($reviews,array("id"=>$row["document_id"],"document_id"=>$row["document_id"],"client_name"=>$row["client_name"],
+                "client_id"=>$row["user_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
+                "review_status"=>$row["review_status"],"assingee"=>0));
 
-                    array_push($reviews,array("id"=>$roww["id"],"document_id"=>$roww["document_id"],"client_name"=>$roww["client_name"],"client_id"=>$roww["client_id"],"rm_name"=>$roww["rm_name"],"document_name"=>$roww["document_name"],"review_status"=>$roww["review_status"],"view"=>$value,"assingee"=>1));
             }
-            
+        
+        //Get all as rm
+        $query = "SELECT * FROM vw_documents_review WHERE  advocate_assigned_id = ".$_SESSION['id']." AND assignee_status = 1 ";
+        $result = $this->db-> query($query);
+            while($row = $result->fetch_assoc()){
+                    
+                array_push($reviews,array("id"=>$row["document_id"],"document_id"=>$row["document_id"],"client_name"=>$row["client_name"],
+                "client_id"=>$row["user_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
+                "review_status"=>$row["review_status"],"assingee"=>1));
 
-
+            }
+        
+    
         echo json_encode(array("reviews" => $reviews));
             
         
@@ -171,51 +153,35 @@ class Reviews
     
     public function collectReviewsAssigned(){
         
+        $query = "SELECT * FROM vw_documents_review WHERE review_status = 'review' AND assignee_status = 1  AND advocate_assigned_id = ".$_SESSION['id'];
+        $result = $this->db-> query($query);
         $reviews = array();
-            
-            $query = "SELECT (SELECT userName FROM users WHERE id = assignee) AS assignee_name,document_name,duration,id,assignee FROM vw_documents_review WHERE rm_id = ".$_SESSION['id']." AND review_status = 'review' AND assignee_status = 1";
+        if (mysqli_num_rows($result) < 1) {
+    
+            echo json_encode(array("result" => "error","value" => $this->db->error));
 
-            $result = $this->db-> query($query);
-                while($roww = $result->fetch_assoc()){
-                  
-                        array_push($reviews,array("id"=>$roww["id"],"document_name"=>$roww["document_name"],"duration"=>$roww["duration"],"assignee_name"=>$roww["assignee_name"],"assignee"=>$roww["assignee"]));
-                   
-                }
-             
-        echo json_encode(array("reviews" => $reviews));
+            exit();
+
+        }
+        else {
+            while($row=$result -> fetch_assoc()){
             
+                array_push($reviews,array("id"=>$row["document_id"],"document_id"=>$row["document_id"],"client_name"=>$row["client_name"],
+                "client_id"=>$row["user_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
+                "advocate_assigned_id"=>$row['advocate_assigned_id'],"advocate_assigned_name"=>$row['advocate_assigned_name'],
+                "review_status"=>$row["review_status"],"assingee"=>1));
+ 
+            }   
+            echo json_encode(array("reviews" => $reviews));
+
+    
+        }
         
     }
     
     public function collectReviewsAssingee(){
-        $view = array();
-        $query = "SELECT client_id FROM rm WHERE assignee_status = 1 AND assignee = ".$_SESSION['id'];
-        
-        $result = $this->db-> query($query);
-        if (mysqli_num_rows($result) < 1) {
-        
 
-                    echo json_encode(array("result" => "error","value" => $this->db->error));
-        
-                    exit();
-        
-        }
-        else {
-            while($row=$result -> fetch_assoc()){
-                array_push($view,$row['client_id']);
-            }
-         
-        }
-
-        if (empty($view)) {
-            # code...
-            echo "We have a winner";
-
-        }
-        else{
-                foreach ($view as $key => $value) {
-                # code...
-                $query = "SELECT * FROM vw_documents_review WHERE review_status != 'completed' AND client_id = ".$value;
+                $query = "SELECT * FROM vw_documents_review WHERE review_status = 'review' AND assignee_status = 1  AND rm_id = ".$_SESSION['id'];
                 $result = $this->db-> query($query);
                 $reviews = array();
                 if (mysqli_num_rows($result) < 1) {
@@ -228,30 +194,25 @@ class Reviews
                 else {
                     while($row=$result -> fetch_assoc()){
                     
-                    array_push($reviews,array("id"=>$row["id"],"client_name"=>$row["client_name"],"rm_name"=>$row["rm_name"],"document_name"=>$row["document_name"],"review_status"=>$row["review_status"],"view"=>$value,"assingee"=>1));
-                    
+                        array_push($reviews,array("id"=>$row["document_id"],"document_id"=>$row["document_id"],"client_name"=>$row["client_name"],
+                        "client_id"=>$row["user_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
+                        "advocate_assigned_id"=>$row['advocate_assigned_id'],"advocate_assigned_name"=>$row['advocate_assigned_name'],
+                        "review_status"=>$row["review_status"],"assingee"=>1));
+         
                     }   
                     echo json_encode(array("reviews" => $reviews));
         
             
                 }
-    
-            }
-
-        }
-
-       
-        
-        
         
     }
 
-    public function assignReview($assignee_id,$token,$duration,$document_review_id){
+    public function assignReview($assignee_id,$token,$duration,$document_review_id,$client_id){
         if($token == $_SESSION['token']){
 
            // $query = "UPDATE document_review SET date_assigned = '".date("Y-m-d h:i:s")."', duration = ".$duration.", assignee_status = 1,assignee = ".$assignee_id." WHERE rm_id = ".$_SESSION['id'];
             
-            $query = "UPDATE document_review SET date_assigned = now(), duration = ".$duration.", assignee_status = 1,assignee = ".$assignee_id." WHERE rm_id = ".$_SESSION['id']." AND id = ".$document_review_id;
+            $query = "UPDATE documents_review SET date_assigned = now(), duration = '".$duration."', assignee_status = 1,assignee = $assignee_id WHERE rm_id = ".$_SESSION['id']." AND id = $document_review_id  AND user_id = $client_id";
             
             $result = $this->db-> query( $query);
 

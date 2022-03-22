@@ -10315,7 +10315,7 @@ client_id = element.client_id;
       <td>${element.client}</td>
       <td>${element.advocate}</td>
       <td>
-      <button type="button" id="main_id_in" data-toggle="modal" data-target="#exampleModal" data_client_id="${element.id}" class="btn btn-primary ml-5"> <span class="material-icons">
+      <button type="button" id="main_id_in" data-toggle="modal" data-target="#exampleModal" data_client_id="${element.client_id}" class="btn btn-primary ml-5"> <span class="material-icons">
 account_circle
 </span> Assign Rm</button>
       </td>
@@ -10422,7 +10422,7 @@ account_circle
   <ul class="list-group list-group-flush">
     <li class="list-group-item">${element.name}</li>
   </ul>
-  <button type="button" id="main_id_in" data-op="assign_rm_a" class="btn btn-primary btn-sm btn-round" data_advocate_id="${element.id}" data_client_id="${client_id}" >Choose</button>
+  <button type="button" id="main_id_in" data-op="assign_rm_a" class="btn btn-primary btn-sm btn-round" data_advocate_id="${element.id}" data_client_id="${element.client_id}" >Choose</button>
 </div>
           </div>
           
@@ -11621,7 +11621,7 @@ chooseRm.addEventListener("submit", (e) => {
           
         myft.classList.remove(obj.result);
         myft.innerHTML = '';
-        approve_reject();
+        assign_rm_to_case();
         }, 5000);//wait 2 seconds
 
     },

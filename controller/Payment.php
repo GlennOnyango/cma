@@ -140,7 +140,12 @@ class Payment{
     }
     public function uploadDocu($sub_id,$fold,$download_limit,$review_limit){
         $query = " SELECT document,id FROM vw_document WHERE subscription_id = $sub_id";
+        
         $result = $this->db-> query($query);
+
+        if(mysqli_num_rows($result) < 1){
+            return 2;
+        }
         while($row = $result->fetch_assoc()){
             $file = $row['document'];
             $newfile = $fold;

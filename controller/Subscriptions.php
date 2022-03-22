@@ -157,7 +157,7 @@ class Subscriptions{
                 
 
                 while($roww=$resultt -> fetch_assoc()){
-                array_push($subscription,array("id"=>$row['id'],"Name"=>$row['subscriptions_name'],"price"=>$row['price'],"billing_type"=>$roww['billing_type'],"payment_id"=>$roww['id'],"features"=>json_encode(array("features" => $subscription_features)),"discount"=>$_row['discount_applicable'],"annual_price"=>intval($ann_price)));
+                array_push($subscription,array("id"=>$row['id'],"Name"=>$row['subscriptions_name'],"price"=>$row['price'],"billing_type"=>$roww['billing_type'],"payment_id"=>$roww['id'],"features"=>json_encode(array("features" => $subscription_features)),"discount"=>$row['discount_applicable'],"annual_price"=>intval($ann_price)));
                 }
             }
         }

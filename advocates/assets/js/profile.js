@@ -1,6 +1,7 @@
 var log_form = document.querySelector("#log_form");
 var changePass = document.querySelector("#change_password");
 let document_id_assign = "";
+let client_id = "";
 
 if ($("#skill_set").length) {
 
@@ -372,7 +373,7 @@ if ($(".table_documents_reviewed").length) {
                         <td>${element.document_name}</td>
                         <td>
                             <button type="button" onclick="window.location.href='review-specific.html?document_id=${element.document_id}&client_id=${element.client_id}&assignee=0'" class="btn btn-block bg-gradient-primary" >Review</button>
-                            <button type="button" data-toggle="modal" data-target="#modal-xl" onclick="${document_id_assign = element.id}" class="btn btn-block bg-gradient-primary ">Assign</button>
+                            <button type="button" data-toggle="modal" data-target="#modal-xl" onclick="add_send(${element.id},${element.client_id})" class="btn btn-block bg-gradient-primary ">Assign</button>
                         </td>
                     </tr>`);
                     }
@@ -383,6 +384,13 @@ if ($(".table_documents_reviewed").length) {
 
         }
     });
+}
+
+function add_send(doc_id,client_id) {
+
+    document_id_assign = doc_id;
+    client_id = client_id;
+    
 }
 
 if($("#document_review_act").length){
@@ -426,6 +434,7 @@ if($("#assing_form").length){
         e.preventDefault();
         const formData = new FormData(document.querySelector("#assing_form"));
         formData.append('document_review_id',document_id_assign);
+        formData.append('client_id',client_id);
         formData.append('token_assign',sessionStorage.getItem("token"));
         $.ajax({
             type: "POST",

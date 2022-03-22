@@ -15,3 +15,18 @@ INSERT INTO rm (client_id,advocate_id,status)SELECT DISTINCT user_id,0,'open' FR
 
 
 SELECT DISTINCT user_id,0 FROM payment  WHERE status = 'active' AND type_paid = 'subscriptions';
+
+----==========================Trigger payment to rm===---------------------------------
+DELIMITER $$
+
+CREATE TRIGGER after_payment_insert
+AFTER INSERT
+ON payment FOR EACH ROW
+BEGIN
+    IF NEW.type_paid = 'subscriptions' THEN
+        INSERT INTO rm (client_id,advocate_id,status)
+        VALUES(NEW.user_id,0,'open');
+    END IF;
+END$$
+
+DELIMITER ;

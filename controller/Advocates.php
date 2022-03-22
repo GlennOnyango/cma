@@ -222,20 +222,8 @@ class Advocates
     
     public function addRm($advocate_id,$client_id){
 
-        $check = true;
-        $query = "SELECT * FROM rm WHERE advocate_id = $advocate_id AND client_id = $client_id";
-        $result = $this->db-> query($query);
-
-        if (mysqli_num_rows($result) > 0) {
-
-            $check = false;
-            
-            echo json_encode(array("result" => "error","value" => "client already assinged"));
-            exit();
-
-        }
-
-        $query = "INSERT INTO rm(advocate_id,client_id,status) VALUES ($advocate_id,$client_id,'open')";
+        $query = "UPDATE rm SET advocate_id = $advocate_id WHERE client_id = $client_id";
+        
         $result = $this->db-> query( $query);
 
         if(!$result){
@@ -245,7 +233,7 @@ class Advocates
         }
         else{
   
-            $query = "UPDATE document_review SET  rm_id = ".$advocate_id." WHERE client_id = ".$client_id;
+            $query = "UPDATE documents_review SET  rm_id = $advocate_id WHERE user_id = $client_id";
   
   
             $result = $this->db-> query( $query);
