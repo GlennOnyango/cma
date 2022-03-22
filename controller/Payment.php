@@ -34,12 +34,19 @@ class Payment{
 
     }
 
+    public function addRm(){
+        $query = "INSERT INTO rm (client_id,advocate_id,status) VALUES(".$_SESSION['id'].",0,'open')";
+    
+        $result = $this->db->query($query);
+    }
     public function registerPayment($data){
         $next_step = 0;
 
         if($data['type_paid'] == "subscriptions"){
+            $this->addRm();
             $query = "SELECT subscriptions_name,downloads_limit,review_limit FROM subscriptions_new WHERE id = ".$data['product_id'];
             
+
             $result = $this->db->query($query);
             $row = $result->fetch_assoc();
 
@@ -125,6 +132,7 @@ class Payment{
               
     }
 
+    
     public function subscriptionsSetUp($sub_id,$sub_name,$download_limit,$review_limit){
        $fold = $_SERVER["DOCUMENT_ROOT"]."/controller/usersDirectories/".MD5($_SESSION['email'])."/";
        $sub_name = str_replace(" ","",$sub_name);

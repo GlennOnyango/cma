@@ -1,14 +1,23 @@
 // jQuery document ready
 $(document).ready(function() {
+
     const content = document.querySelector(".content");
     const main_id_in = document.querySelectorAll("#main_id_in");
     var log_form = document.querySelector("#log_form");
-
     const path = window.location.origin;
     let ui = "peace";
     var url_send = "https://cmversiontwo.cmadvocates.com/controller/authG.php";
-    index();
+    let note1 = 0;
     
+
+    index();
+    //Logout js
+    $(".logout_btn").on("click", () => {
+      logout(url);
+    });
+
+    
+
     $.get("https://cmversiontwo.cmadvocates.com/controller/User.php", { user_profile: "Donald", token1: sessionStorage.getItem("token") }, function(data) {
       const obj = JSON.parse(data);
 
@@ -23,12 +32,6 @@ $(document).ready(function() {
     });
 
 
-
-
-    $(".logout_btn").on("click", () => {
-        logout(url);
-    });
-    let note1 = 0;
     Object.keys(sessionStorage).forEach(element => {
         console.log(element);
         if (element.includes("product_id")) {
@@ -39,12 +42,9 @@ $(document).ready(function() {
     console.log("This is " + note1);
     $("#lblCartCount").text(note1);
 
-
     if(sessionStorage.getItem("cart") == "go"){
       view_cart();
     }
-    
-    
     
     
     $("#side-nav").on("click", "#main_id_in", function() {
@@ -1599,37 +1599,23 @@ $(document).ready(function() {
 
     function index() {
         ui = `
-   <div class="card-header card-header-primary">
-            <h4 class="card-title">Memberships</h4>
-        </div>
-  <div class="row" id="mytable">
-   
-</div>
+   <div class="card-header card-header-primary"><h4 class="card-title">Memberships</h4></div>
+  <div class="row" id="mytable"></div>
 
-  <div class="card-header card-header-primary">
-            <h4 class="card-title">Subscriptions</h4>
-        </div>
-  <div class="row" id="sub">
- 
-</div>
+  <div class="card-header card-header-primary"><h4 class="card-title">Subscriptions</h4></div>
+  <div class="row" id="sub"></div>
 
-<div class="card-header card-header-primary">
-            <h4 class="card-title">Consultation</h4>
-        </div>
+<div class="card-header card-header-primary"><h4 class="card-title">Consultation</h4></div>
   <div class="row">
   <div class="col-md-6">
       <div class="card">
           <div class="card-header card-header-text card-header-primary">
-            <div class="card-text">
-              <h4 class="card-title">Consult In A Lawyer</h4>
-            </div>
+            <div class="card-text"><h4 class="card-title">Consult In A Lawyer</h4></div>
           </div>
           <div class="card-body">
               The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...
           </div>
-             <div class="row ml-1">
-                <button type="button" id="main_id_in" data-op="booking"  class="btn btn-primary">View</button>
-              </div>
+             <div class="row ml-1"><button type="button" id="main_id_in" data-op="booking"  class="btn btn-primary">View</button></div>
       </div>
   </div> 
 </div>
@@ -1660,7 +1646,7 @@ $(document).ready(function() {
 </div> 
 </div>
 
-`;
+              `;
 
 
         $.get("https://cmversiontwo.cmadvocates.com/controller/Products.php", { getproducts: "Donald", token1: sessionStorage.getItem("token") }, function(data) {
@@ -5435,19 +5421,25 @@ $("#service_name").append(ui);
 
         console.log(main_id_in.length);
 
-        main_id_in.forEach((ele) => {
-            // Here comes the Code that should be executed on every Element, e.g.
-            ele.addEventListener("click", () => {
+        $("#mytable").on("click", "#main_id_in", function() {
+          let myatt = $(this).attr('data-op');
+          eval(`${myatt}()`);
 
-                while (content.firstChild) {
-                    content.removeChild(content.lastChild);
-                }
-                let myatt = ele.getAttribute("data-op");
-                eval(`${myatt}()`);
+      });
 
-            });
+        // main_id_in.forEach((ele) => {
+        //     // Here comes the Code that should be executed on every Element, e.g.
+        //     ele.addEventListener("click", () => {
 
-        });
+        //         while (content.firstChild) {
+        //             content.removeChild(content.lastChild);
+        //         }
+        //         let myatt = ele.getAttribute("data-op");
+        //         eval(`${myatt}()`);
+
+        //     });
+
+        // });
 
         
 
@@ -6205,21 +6197,23 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
           </div>
         `;
 
-        const main_id_in = document.querySelectorAll("#main_id_in");
+        // const main_id_in = document.querySelectorAll("#main_id_in");
 
-        main_id_in.forEach((ele) => {
-            // Here comes the Code that should be executed on every Element, e.g.
-            ele.addEventListener("click", () => {
+        
 
-                while (content.firstChild) {
-                    content.removeChild(content.lastChild);
-                }
-                let myatt = ele.getAttribute("data-op");
-                eval(`${myatt}()`);
+        // // main_id_in.forEach((ele) => {
+        // //     // Here comes the Code that should be executed on every Element, e.g.
+        // //     ele.addEventListener("click", () => {
 
-            });
+        // //         while (content.firstChild) {
+        // //             content.removeChild(content.lastChild);
+        // //         }
+        // //         let myatt = ele.getAttribute("data-op");
+        // //         eval(`${myatt}()`);
 
-        });
+        // //     });
+
+        // // });
 
 
         $.get("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { getPurchasedDocuments: "Donald", token1: sessionStorage.getItem("token") }, function(data) {
@@ -6804,24 +6798,33 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
 
 
         $(content).html(ui);
-        const main_id_in = document.querySelectorAll("#main_id_in");
+        // const main_id_in = document.querySelectorAll("#main_id_in");
 
-        console.log(main_id_in.length);
+        // console.log(main_id_in.length);
 
-        main_id_in.forEach((ele) => {
-            // Here comes the Code that should be executed on every Element, e.g.
-            ele.addEventListener("click", () => {
+        // main_id_in.forEach((ele) => {
+        //     // Here comes the Code that should be executed on every Element, e.g.
+        //     ele.addEventListener("click", () => {
 
-                while (content.firstChild) {
-                    content.removeChild(content.lastChild);
-                }
-                let myatt = ele.getAttribute("data-op");
-                eval(`${myatt}()`);
+        //         while (content.firstChild) {
+        //             content.removeChild(content.lastChild);
+        //         }
+        //         let myatt = ele.getAttribute("data-op");
+        //         eval(`${myatt}()`);
 
-            });
+        //     });
+
+        // });
+
+
+        $("#mytable").on("click", "#main_id_in", function() {
+          while (content.firstChild) {
+            content.removeChild(content.lastChild);
+        }
+          let myatt = $(this).attr('data-op');
+          eval(`${myatt}(${$( this ).attr( 'data_id')})`);
 
         });
-
 
     }
 

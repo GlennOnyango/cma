@@ -13,7 +13,6 @@ FROM rm;
 
 INSERT INTO rm (client_id,advocate_id,status)SELECT DISTINCT user_id,0,'open' FROM payment  WHERE status = 'active' AND type_paid = 'subscriptions';
 
-
 SELECT DISTINCT user_id,0 FROM payment  WHERE status = 'active' AND type_paid = 'subscriptions';
 
 ----==========================Trigger payment to rm===---------------------------------
