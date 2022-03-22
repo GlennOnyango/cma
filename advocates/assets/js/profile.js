@@ -386,10 +386,13 @@ if ($(".table_documents_reviewed").length) {
     });
 }
 
-function add_send(doc_id,client_id) {
+function add_send(doc_id,cl_id) {
 
     document_id_assign = doc_id;
-    client_id = client_id;
+    console.log("Add was clicked"+cl_id);
+    client_id = cl_id;
+    console.log("client was added"+client_id);
+    
     
 }
 
@@ -483,12 +486,12 @@ if($("#asignees_list").length){
 
         obj.reviews.forEach(element => {
             $("#asignees_list").append(`  <tr>
-            <td>${element.assignee_name}</td>
+            <td>${element.advocate_assigned_name}</td>
             <td>${element.document_name}</td>
             <td>${element.duration}</td>
             <td>
-                <button type="button" onclick="unassign_assignee(${(element.id)},${(element.assignee)})" class="btn btn-block bg-gradient-danger ">Unassign</button>
-                <button type="button" onclick="edit_assignee(${(element.id)},${(element.assignee)},${element.duration})" data-toggle="modal" data-target="#modal-xl" class="btn btn-block bg-gradient-primary ">Edit</button>
+                <button type="button" onclick="unassign_assignee(${(element.id)},${(element.advocate_assigned_id)},${(element.client_id)})" class="btn btn-block bg-gradient-danger ">Unassign</button>
+                <!--<button type="button" onclick="edit_assignee(${(element.id)},${(element.advocate_assigned_id)},${element.duration},${(element.client_id)})" data-toggle="modal" data-target="#modal-xl" class="btn btn-block bg-gradient-primary ">Edit</button>-->
             </td>
         </tr>`);
         });
@@ -500,13 +503,13 @@ if($("#asignees_list").length){
 }
 
 
-function edit_assignee(doc_id,id,duration){
+function edit_assignee(doc_id,id,duration,client_id_aft){
     sessionStorage.setItem("assignee_id",id);
     sessionStorage.setItem("doc_id",doc_id);
     
     $("#duration_change").attr("placeholder",duration+" days remaining");
 }
-function unassign_assignee(doc_id,id){
+function unassign_assignee(doc_id,id,client_id_aft){
     let text = "Press OK to unassign.";
     if (confirm(text) == true) {
         
@@ -515,6 +518,7 @@ function unassign_assignee(doc_id,id){
         formData.append('token_edit_form_unassign',sessionStorage.getItem("token"));
         formData.append('doc_id',doc_id);
         formData.append('assignee_id',id);
+        formData.append('client_id',client_id_aft);
         $.ajax({
             type: "POST",
             enctype: 'multipart/form-data',

@@ -22,10 +22,10 @@ if(!empty($_GET['token_review_assignee'])){
     $review->collectReviewsAssigned();
 }
 if(!empty($_POST['token_edit_assign'])){
-    $review->editAssignee($_POST["document_id"],$_POST["duration_change"]);
+    $review->editAssignee($_POST["document_id"],$_POST["duration_change"],$_POST["client_id"],$_POST['assignee_id']);
 }
 if(!empty($_POST['token_edit_form_unassign'])){
-    $review->unassign_assignee($_POST["doc_id"]);
+    $review->unassign_assignee($_POST["doc_id"],$_POST["client_id"],$_POST['assignee_id']);
 }
 
 if(isset($_POST['document_complete_review_id'])){
@@ -153,7 +153,7 @@ class Reviews
     
     public function collectReviewsAssigned(){
         
-        $query = "SELECT * FROM vw_documents_review WHERE review_status = 'review' AND assignee_status = 1  AND advocate_assigned_id = ".$_SESSION['id'];
+        $query = "SELECT * FROM vw_documents_review WHERE review_status = 'review' AND assignee_status = 1  AND rm_id = ".$_SESSION['id'];
         $result = $this->db-> query($query);
         $reviews = array();
         if (mysqli_num_rows($result) < 1) {
@@ -168,7 +168,7 @@ class Reviews
             
                 array_push($reviews,array("id"=>$row["document_id"],"document_id"=>$row["document_id"],"client_name"=>$row["client_name"],
                 "client_id"=>$row["user_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
-                "advocate_assigned_id"=>$row['advocate_assigned_id'],"advocate_assigned_name"=>$row['advocate_assigned_name'],
+                "advocate_assigned_id"=>$row['advocate_assigned_id'],"duration"=>$row['duration'],"advocate_assigned_name"=>$row['advocate_assigned_name'],
                 "review_status"=>$row["review_status"],"assingee"=>1));
  
             }   
@@ -210,16 +210,14 @@ class Reviews
     public function assignReview($assignee_id,$token,$duration,$document_review_id,$client_id){
         if($token == $_SESSION['token']){
 
-           // $query = "UPDATE document_review SET date_assigned = '".date("Y-m-d h:i:s")."', duration = ".$duration.", assignee_status = 1,assignee = ".$assignee_id." WHERE rm_id = ".$_SESSION['id'];
-            
-            $query = "UPDATE documents_review SET date_assigned = now(), duration = '".$duration."', assignee_status = 1,assignee = $assignee_id WHERE rm_id = ".$_SESSION['id']." AND id = $document_review_id  AND user_id = $client_id";
+            $query = "UPDATE documents_review SET date_assigned = now(), duration = '".$duration."', assignee_status = 1,advocate_assigned_id = $assignee_id WHERE rm_id = ".$_SESSION['id']." AND document_id = $document_review_id  AND user_id = $client_id";
             
             $result = $this->db-> query( $query);
 
             if(!$result){
 
 
-                echo json_encode(array("result" => "alert-danger","value" => $this->$db->error));
+                echo json_encode(array("result" => "alert-danger","value" => $this->db->error));
                 
             }
             else{
@@ -250,8 +248,8 @@ class Reviews
 
     }
 
-    public function editAssignee($doc_id,$duration){
-        $query = "UPDATE document_review SET duration = $duration WHERE id = $doc_id";
+    public function editAssignee($doc_id,$duration,$client_id,$assignee_id){
+        $query = "UPDATE documents_review SET duration = $duration WHERE document_id = $doc_id AND user_id = $client_id AND advocate_assigned_id =$assignee_id  AND rm_id=".$_SESSION['id'];
         $result = $this->db-> query( $query);
 
         if(!$result){
@@ -269,15 +267,15 @@ class Reviews
         
     }
 
-    public function unassign_assignee($doc_id){
-        $query = "UPDATE document_review SET assignee_status = 0,date_assigned = null,duration=0,assignee=0 WHERE id = $doc_id";
+    public function unassign_assignee($doc_id,$client_id,$assignee_id){
+        $query = "UPDATE documents_review SET assignee_status = 0,date_assigned = null,duration=0,advocate_assigned_id=0 WHERE document_id = $doc_id AND user_id = $client_id AND advocate_assigned_id =$assignee_id  AND rm_id=".$_SESSION['id'];
         
         $result = $this->db-> query( $query);
 
         if(!$result){
 
 
-            echo json_encode(array("result" => "alert-danger","value" => $query));
+            echo json_encode(array("result" => "alert-danger","value" => $this->db->error));
             
         }else{
 

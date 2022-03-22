@@ -85,14 +85,52 @@ $(document).ready(function () {
         console.log(PageURL.split('&')[1].split('=')[1].replace('%20'," ").toUpperCase());
         $("#pa_name").append(PageURL.split('&')[1].split('=')[1].replace('%20'," ").toUpperCase());
          
-        $.get(url, { getBusinessUnits: PageURL.split('&')[0].split('=')[1]}, function (data) {
+        $.get("https://cmversiontwo.cmadvocates.com/controller/Display/BusinessUnit.php", { getBusinessUnitsHead: PageURL.split('&')[0].split('=')[1]}, function (data) {
             const obj = JSON.parse(data);
       
             obj.busis.forEach(element => {
-            $("#desc").append(element.desc);
+              let pict =  element.preview_video.replace("./", "https://cmversiontwo.cmadvocates.com/controller/");
+              let userIm =  element.user_image.replace("./", "https://cmversiontwo.cmadvocates.com/controller/");
+              $(".pict").attr('src',pict);
+              $(".title_heading").text(element.title);
+              $(".business_head").text(element.Name);
+              $(".user_image").attr('src',userIm);
               
             });
           });
+
+          
+        $.get("https://cmversiontwo.cmadvocates.com/controller/Display/BusinessUnit.php", { getBusinessUnitsMembers: PageURL.split('&')[0].split('=')[1]}, function (data) {
+          const obj = JSON.parse(data);
+              
+          obj.busis.forEach(element => {
+            let userM =  element.user_image.replace("./", "https://cmversiontwo.cmadvocates.com/controller/");
+        
+            $(".member_list").append(`
+            <li class="w3-padding-16">
+                <img src="${userM}" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">${element.Name}</span><br>
+                <!--<span>Sed mattis nunc</span>-->
+              </li>
+            `);
+            
+          });
+        });
+
+        
+        $.get(`${url}?getPracticeArea`, function(data, status){
+
+          const obj = JSON.parse(data);
+       
+          obj.pas.forEach(element => {
+            $(".other_pa").append(`
+            <span  class="w3-tag w3-black w3-margin-bottom">${element.Name}</span>
+             `);
+            
+          });
+  
+      });
+
     }
 
     if($("#display_service").length){
@@ -442,72 +480,128 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Products.php", { 
             
                 $("#subs").empty();
                 obj.subscriptions.forEach(element => {
-              
-                    $("#subs").append(`<div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header card-header-primary">
-                            <h4 class="card-title">${element.Name}</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-center mb-3">
-                            <p>Free legal templates</p>
-                          <i class="fa fa-check" aria-hidden="true"></i> 
-                            </div>
-                              <div class="d-flex justify-content-center mb-3">
-                            <p>Guaranteed faster turn arounds</p>
-                            <i class="fa fa-check" aria-hidden="true"></i> 
-                            </div>
-                              <div class="d-flex justify-content-center mb-3">
-                            <p>Legal advice consultation</p>
-                            <i class="fa fa-check" aria-hidden="true"></i> 
-                            </div>
-                            <div class="d-flex justify-content-center mb-3">
-                            <p>Unlimited contract reviews and amendments</p>
-                              <p style="margin-left: 20px;">:<b>Limited to 5 per month</b></p> 
-                            </div>
-                
-                            <div class="d-flex justify-content-center mb-3">
-                            <p>Inhouse counsel Secondment</p>
-                            <i class="fa fa-times-circle"></i> 
-                            </div>
-                            <div class="d-flex justify-content-center mb-3">
-                            <p>Setup your inhouse legal department</p>
-                            <i class="fa fa-times-circle"></i> 
-                            </div>
-                              <div class="d-flex justify-content-center mb-3">
-                            <p style="font-size:20px; font-weight:bold;">kes ${element.price} monthly</p>
-                            </div>
-                            <div class="d-flex justify-content-center mb-3">
-                            <img class="img" style="width:75px; height:75px;" src="assets/img/visa.png" />
-                              <img class="img" style="width:75px; height:75px; margin-left: 10px;" src="assets/img/mpesa.png" /> 
-                            </div>
-                              <div class="d-flex justify-content-center mb-3">
-                            <p style="font-size:15px; font-weight:bold;">Get a discount with an annual subscription <del>kes${element.price}</del> <ins>kes ${element.annual_price}</ins>!</p>
-                            </div>
-                              <div class="d-flex justify-content-center mb-3">
-                            <p style="font-size:15px; font-weight:bold;">Per month billed annually</p><br>
-                            </div>
-              
-                            <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-primary" 
-                            onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({id:${element.id},type_paid:'subscriptions',name:'${element.Name}',billing_type:'annually',price:${element.annual_price * 12}} ));
-                            let total = $('#lblCartCount').text();
-                            total++;
-                            $('#lblCartCount').text(total);
-                            ">
-                             Purchase Anually </button>
-                            <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-default" 
-                            onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({id:${element.id},type_paid:'subscriptions',name:'${element.Name}',billing_type:'monthly',price:${element.annual_price * 1}} ));
-                            let total = $('#lblCartCount').text();
-                            total++;
-                            $('#lblCartCount').text(total);
-                            ">
-                             Purchase</button>
-                        </div>
-                    </div>
+
+                  let JSONObject = JSON.parse(element.features);
+                  let pTga = "";
+                  let pTag2 = ""; 
+                  if(element.discount == "no"){
+    
+                    pTga = `KES ${element.price} monthly  : KES ${element.price * 12} annually`;
+    
+                  }else{
+                    pTga = `KES ${element.price} monthly`;
+                    pTag2 = `Get a discount with an annual subscription <del>kes${element.price * 12}</del> <ins>kes ${element.annual_price}</ins>!`;
+    
+                  }
+                  let potential_id = element.Name;
+                  let kenetic =  potential_id.replace(/\s/g, '_');
+    
+    
+                    if (element.payment_id == "null") {
+    
+                        $("#subs").append(`<div class="col-md-6">
+          <div class="card">
+              <div class="card-header card-header-primary">
+                  <h4 class="card-title">${element.Name}</h4>
+              </div>
+              <div class="card-body" id="${kenetic}">
+    
+    
+                    <div class="d-flex justify-content-center mb-3">
+                  <p style="font-size:20px; font-weight:bold;">${pTga}</p>
                   </div>
-                                      
-                                      `);
-               
+                  <div class="d-flex justify-content-center mb-3">
+                  <img class="img" style="width:75px; height:75px;" src="assets/img/visa.png" />
+                    <img class="img" style="width:75px; height:75px; margin-left: 10px;" src="assets/img/mpesa.png" /> 
+                  </div>
+                    <div class="d-flex justify-content-center mb-3">
+                  <p style="font-size:15px; font-weight:bold;">${pTag2}</p>
+                  </div>
+    
+                  <div class="col-12">
+                  <p class="text-center">
+    
+                  <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-primary" 
+                  onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({id:${element.id},type_paid:'subscriptions',name:'${element.Name}',billing_type:'annually',price:${element.annual_price * 12}} ));
+                  let total = $('#lblCartCount').text();
+                  total++;
+                  $('#lblCartCount').text(total);
+                  ">
+                   Purchase Anually </button>
+                  <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-default" 
+                  onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({id:${element.id},type_paid:'subscriptions',name:'${element.Name}',billing_type:'monthly',price:${element.annual_price * 1}} ));
+                  let total = $('#lblCartCount').text();
+                  total++;
+                  $('#lblCartCount').text(total);
+                  ">
+                   Purchase</button>
+                   </p>
+                   </div>
+     
+    
+    
+    
+              </div>
+          </div>
+        </div>
+                            
+                            `);
+                    } 
+                    else {
+    
+                        let btn = '';
+                        if (element.billing_type == 'annually') {
+                            btn = `<button type="button" id="main_id_in" data-op="choose_subscription_form" class="btn btn-primary">Cancel Subscription</button>`;
+                        } else if (element.billing_type == 'monthly') {
+                            btn = `<button type="button" id="main_id_in" data-op="choose_billing_form" class="btn btn-primary"><span class="material-icons">paid</span> Bill Annually</button>`;
+    
+                        }
+    
+                        $("#sub").append(`<div class="col-md-6">
+          <div class="card">
+              <div class="card-header card-header-primary">
+                  <h4 class="card-title">${element.Name}</h4>
+              </div>
+              <div class="card-body" id="${kenetic}">
+                  
+                    <div class="d-flex justify-content-center mb-3">
+                  <p style="font-size:20px; font-weight:bold;">${pTga}</p>
+                  </div>
+                  <div class="d-flex justify-content-center mb-3">
+                  <img class="img" style="width:75px; height:75px;" src="assets/img/visa.png" />
+                    <img class="img" style="width:75px; height:75px; margin-left: 10px;" src="assets/img/mpesa.png" /> 
+                  </div>
+                    <div class="d-flex justify-content-center mb-3">
+                  <p style="font-size:15px; font-weight:bold;" class="text-center">${pTag2}</p>
+                  </div>
+                  <div class="col-12">
+                  <p class="text-center">
+                  ${btn}  
+                  </p>
+                  </div>
+              </div>
+          </div>
+        </div>
+                            
+                            `);
+    
+                    }
+    
+    
+                    JSONObject.features.forEach(featuer => {
+                      //console.log($("#"+kenetic).attr());
+                        if(featuer.presence == '1'){
+                          $("#"+kenetic).prepend(`<div class="d-flex justify-content-center mb-3"><p>${featuer.feature}</p><span class="material-icons">check</span></div>`);
+                          
+                        }
+                        else{
+                          $("#"+kenetic).prepend(`<div class="d-flex justify-content-center mb-3"><p>${featuer.feature}</p><span class="material-icons">close</span></div>`);
+                          
+                        }
+                    });
+      
+    
+    
                 });
               });
             

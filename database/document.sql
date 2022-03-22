@@ -91,6 +91,6 @@ SELECT documents_review.document_id,document_name,user_id,(SELECT userName FROM 
 (SELECT email FROM users WHERE id = user_id) AS client_email,review_status,
 rm_id,(SELECT userName FROM users WHERE id = rm_id) AS advocate_name,
 advocate_assigned_id,(SELECT userName FROM users WHERE id = advocate_assigned_id) AS advocate_assigned_name,
-assignee_status
+assignee_status,duration
 FROM documents_review
 JOIN documents ON documents_review.document_id = documents.id WHERE review_status = 'review';

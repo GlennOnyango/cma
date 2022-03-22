@@ -3,27 +3,6 @@ session_start();
 require_once(__DIR__ . '/../controller/Connection.php');
 require_once(__DIR__ . '/../controller/libs.php');
 
-// echo PHP_VERSION."<br>";
-// echo "post_max_size->".ini_get('post_max_size')."<br>";
-// echo "upload_max_filesize ->".ini_get('upload_max_filesize')."<br>";
-// echo "max_input_time->".ini_get('max_input_time')."<br>";
-// echo "max_execution_time ->".ini_get('max_execution_time')."<br>";
-
-// ini_set('upload_max_filesize', '500M');
-// ini_set('post_max_size', '500M');
-// ini_set('max_input_time', 30000);
-// ini_set('max_execution_time', 30000);
-
-// echo "<br> <br>";
-
-
-// echo ini_get('post_max_size')."<br>";
-// echo ini_get('upload_max_filesize')."<br>";
-// echo ini_get('max_input_time')."<br>";
-// echo ini_get('max_execution_time')."<br>";
-
-
-
 $busi = new BusinessUnit($db);
 
 //Business Units
@@ -49,6 +28,7 @@ class BusinessUnit{
         
         }
     public function addBusinessUnit($data){
+        
         
         $preview = libs :: uploadFile($_FILES['business_preview_hope'],"uploadPreviewBusinessUnit"); 
         

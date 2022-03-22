@@ -49,12 +49,13 @@ class Advocates
 
     public function completeProfile($data){
 
-        if(!empty($_FILES['name']['profile_image'])){
+        if(!empty($_FILES['profile_image']['name'])){
+            
             $image = libs :: uploadFile($_FILES['profile_image'],"userImage");
         }else{
+            
             $image = "";
         }
-
 
         $query ="UPDATE users SET 
         email = '".libs::test_input($data['profile_email'])."',

@@ -102,7 +102,6 @@ class Subscriptions{
     
 
     public function SubscriptionL($data){
-//        $query = "SELECT * FROM subscriptions WHERE product_id = ".$data["sub_id"];
         $query = "SELECT * FROM subscription_for_products WHERE product_id = $data";
 
         $result = $this->db->query($query);
@@ -111,23 +110,59 @@ class Subscriptions{
 
         if (!$result) {
     
-            echo json_encode(array("result" => "alert-danger","value" => $query));
+            echo json_encode(array("result" => "alert-danger","value" => "No Subscription"));
 
             exit();
 
-        }else {
-
-  
-            while($row=$result -> fetch_assoc()){
-                array_push($subscription,array("id"=>$row['id'],"Name"=>$row['subscriptions_name'],"price"=>$row['price'],"annual_price"=>($row['price']*0.98)));
-
-
-            }
-
-                
         }
+        else {
+
+            while($row=$result -> fetch_assoc()){
+
+                $query = "SELECT id,billing_type FROM payment WHERE type_paid ='subscriptions' AND product_id = ".$row['id']." AND  user_id = ".$_SESSION['id'];
+    
+                $resultt = $this->db->query($query);
+    
+    
+                $query1 = "SELECT feature_name, presence FROM subscription_features WHERE id =".$row['id'];
+    
+                $result_features = $this->db->query($query1);
+                $subscription_features = array();
+                while($row_features=$result_features -> fetch_assoc()){
+                    array_push($subscription_features,array("feature"=>$row_features['feature_name'],"presence"=>$row_features['presence']));
+    
+                }
+                
+                $ann_price = $row['price'] * 12;
+    
+                if($row['discount_applicable'] == 'yes'){
+                    $ann_price = $row['price'] * 12 * ((100 - intval($row['percentage_discount']))/100);
+                    
+                }
+    
+                if(mysqli_num_rows($resultt) != 1){
+    
+                    
+                    array_push($subscription,
+                    array("id"=>$row['id'],"Name"=>$row['subscriptions_name'],"price"=>$row['price'],"billing_type"=>"null","payment_id"=>"null","features"=>json_encode(array("features" => $subscription_features)),"discount"=>$row['discount_applicable'],"annual_price"=>intval($ann_price))
+                );
+                    
+                }
+                else{
+                    
+    
+                    while($roww=$resultt -> fetch_assoc()){
+                    array_push($subscription,array("id"=>$row['id'],"Name"=>$row['subscriptions_name'],"price"=>$row['price'],"billing_type"=>$roww['billing_type'],"payment_id"=>$roww['id'],"features"=>json_encode(array("features" => $subscription_features)),"discount"=>$row['discount_applicable'],"annual_price"=>intval($ann_price)));
+                    }
+                }
+            }
+    
+
+
+         
         echo json_encode(array("subscriptions" => $subscription));
 
+        }
     }
     
     public function ServiceL($data){

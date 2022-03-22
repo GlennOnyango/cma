@@ -1719,7 +1719,6 @@ $(document).ready(function() {
                 pTag2 = `Get a discount with an annual subscription <del>kes${element.price * 12}</del> <ins>kes ${element.annual_price}</ins>!`;
 
               }
-
               let potential_id = element.Name;
               let kenetic =  potential_id.replace(/\s/g, '_');
 
