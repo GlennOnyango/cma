@@ -363,7 +363,6 @@ class Subscription_update{
         }
 
     }
-
     
     public function getSubscriptionsForUse(){
         $query = "SELECT id,subscriptions_name FROM subscription_main WHERE status = 'active' AND product_status = 'active'";

@@ -123,7 +123,7 @@ $(document).ready(function () {
           const obj = JSON.parse(data);
        
           obj.pas.forEach(element => {
-            $(".other_pa").append(`
+            $(".other_pafil").append(`
             <span  class="w3-tag w3-black w3-margin-bottom">${element.Name}</span>
              `);
             
@@ -779,11 +779,12 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
   
           obj.advocates.forEach(element => {
              
+
           $("#advocates_display").append(`
           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
           <div class="card" id="${element.id}">
-          <img src="${element.user_image}" class="card-img-top" alt="...">
+          <img src="${element.user_image.replace('./','https://cmversiontwo.cmadvocates.com/controller/')}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">${element.name}</h5>
             <p class="card-text" id="lt_${element.id}"></p>
@@ -794,17 +795,20 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
           </div>
           `);
 
+          if(element.practieArea !== null){
 
-          element.practieArea.forEach(elem => {
-            $.get("https://cmversiontwo.cmadvocates.com/controller/Display/PracticeArea.php",{id:elem}, function(data) {
-                const obj = JSON.parse(data);
+            element.practieArea.forEach(elem => {
+              $.get("https://cmversiontwo.cmadvocates.com/controller/Display/PracticeArea.php",{id:elem}, function(data) {
+                  const obj = JSON.parse(data);
+  
+                  obj.pas.forEach(ele => {
+                      $(`<label> [*] ${ele.Name} &nbsp;</label>`).insertBefore(`.${element.id}`);
+                  });
+              });
+  
+              });
+          }
 
-                obj.pas.forEach(ele => {
-                    $(`<label> * : ${ele.Name} &nbsp;</label>`).insertBefore(`.${element.id}`);
-                });
-            });
-
-            });
 
 
             $.get("https://cmversiontwo.cmadvocates.com/controller/Display/LawyerType.php",{id:element.lawyergroup}, function(data) {
@@ -834,6 +838,8 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
           $("#advocates_display").empty();
   
           obj.advocate.forEach(element => {
+
+            $(".dynamic_img").attr("src",element.user_image.replace('./','https://cmversiontwo.cmadvocates.com/controller/'));
             
             $("#title_name").text(element.name);
             $("#lawyer_name").text(element.name);
@@ -851,6 +857,9 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
             });
 
             
+
+          if(element.practieArea != null){
+            
           element.practieArea.forEach(elem => {
             $.get("https://cmversiontwo.cmadvocates.com/controller/Display/PracticeArea.php",{id:elem}, function(data) {
                 const obj = JSON.parse(data);
@@ -861,6 +870,7 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
             });
 
             });
+          }  
 
           element.descriptions.forEach(elem => {
             $("#descriptions").append(`<p style="color:#000;display:list-item;  list-style-type: disc;    list-style-position: inside;">${elem}</p`);

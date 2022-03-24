@@ -50,6 +50,7 @@ JOIN service ON documents_service.service_id = service.id;
 
 
 CREATE TABLE `documents_review` (
+  `subscription_id` int NOT NULL,
   `document_id` int NOT NULL,
   `user_id` int NOT NULL,
   `review_status` varchar(10) NOT NULL DEFAULT 'none',
@@ -64,18 +65,17 @@ CREATE TABLE `documents_review` (
 
 -- ALTER TABLE documents_review ADD COLUMN `date_assigned`  datetime DEFAULT null;
 -- ALTER TABLE documents_review ADD COLUMN `duration` varchar(10) DEFAULT null;
+-- ALTER TABLE documents_review ADD COLUMN `subscription_id` int NOT NULL;
 
 CREATE TABLE `documents_download` (
+  `subscription_id` int NOT NULL,
   `document_id` int NOT NULL,
   `user_id` int NOT NULL,
   `download_count` int not null DEFAULT 0,
 
 );
 
--- ALTER TABLE documents_review ADD COLUMN rm_id int not null DEFAULT 0;
--- ALTER TABLE documents_review ADD COLUMN advocate_assigned_id int not null DEFAULT 0;
-ALTER TABLE documents_review ADD COLUMN assignee_status int not null DEFAULT 0;
-
+-- ALTER TABLE documents_download ADD COLUMN `subscription_id` int NOT NULL;
 
 CREATE VIEW `document_subscription_bought` AS SELECT
 documents.id,document_name,document,category_id,subscription_id,category_name,

@@ -119,10 +119,6 @@ class Subscriptions{
 
             while($row=$result -> fetch_assoc()){
 
-                $query = "SELECT id,billing_type FROM payment WHERE type_paid ='subscriptions' AND product_id = ".$row['id']." AND  user_id = ".$_SESSION['id'];
-    
-                $resultt = $this->db->query($query);
-    
     
                 $query1 = "SELECT feature_name, presence FROM subscription_features WHERE id =".$row['id'];
     
@@ -140,21 +136,11 @@ class Subscriptions{
                     
                 }
     
-                if(mysqli_num_rows($resultt) != 1){
-    
-                    
                     array_push($subscription,
                     array("id"=>$row['id'],"Name"=>$row['subscriptions_name'],"price"=>$row['price'],"billing_type"=>"null","payment_id"=>"null","features"=>json_encode(array("features" => $subscription_features)),"discount"=>$row['discount_applicable'],"annual_price"=>intval($ann_price))
                 );
                     
-                }
-                else{
-                    
     
-                    while($roww=$resultt -> fetch_assoc()){
-                    array_push($subscription,array("id"=>$row['id'],"Name"=>$row['subscriptions_name'],"price"=>$row['price'],"billing_type"=>$roww['billing_type'],"payment_id"=>$roww['id'],"features"=>json_encode(array("features" => $subscription_features)),"discount"=>$row['discount_applicable'],"annual_price"=>intval($ann_price)));
-                    }
-                }
             }
     
 

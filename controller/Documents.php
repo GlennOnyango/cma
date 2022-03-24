@@ -312,7 +312,8 @@ class Documents{
         else{
               while($row=$result -> fetch_assoc()){
                   //
-                  $query = "SELECT `id`, `document_name`,`review_status`, `category_name`,`subscription_id` FROM `document_subscription_bought` WHERE subscription_id = ".$row['product_id']." AND review_status != 'none' AND review_status != 'completed'";
+                  $query = "SELECT `id`, `document_name`,`review_status`, `category_name`,`subscription_id` FROM `document_subscription_bought` WHERE subscription_id = ".$row['product_id']." AND review_status = 'review' ";
+                  
                   $resulttt = $this->db->query($query);
 
                   if(!$resulttt){

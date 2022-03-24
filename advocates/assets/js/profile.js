@@ -27,8 +27,12 @@ if ($("#country").length) {
         $("#country").empty();
 
         obj.countries.forEach(element => {
-            $("#country").append(`<option value="${element.id}">${element.name}</option>`);
+            if(element.id == 116){
+                $("#country").append(`<option selected value="${element.id}">${element.name}</option>`);
 
+            }
+            $("#country").append(`<option value="${element.id}">${element.name}</option>`);
+            
 
 
         });

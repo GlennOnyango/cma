@@ -35,9 +35,24 @@ class Payment{
     }
 
     public function addRm(){
-        $query = "INSERT INTO rm (client_id,advocate_id,status) VALUES(".$_SESSION['id'].",0,'open')";
-    
+
+        $query = "SELECT count(*) FROM rm WHERE client_id = ".$_SESSION['id'];
         $result = $this->db->query($query);
+        if (mysqli_num_rows($result) == 1) {
+        }
+        elseif (mysqli_num_rows($result) < 0) {
+            $query = "INSERT INTO rm (client_id,advocate_id,status) VALUES(".$_SESSION['id'].",0,'open')";
+    
+            $result = $this->db->query($query);
+    
+            if(!$result){
+                echo json_encode(array("result" => "failed","value" => "An rm could not be assigned contact our support for assistance"));
+                exit();
+            }else{
+                echo json_encode(array("result" => "success","value" => "Pending relationship manager assignment"));
+                
+            } 
+        }
     }
     public function registerPayment($data){
         $next_step = 0;
@@ -54,42 +69,42 @@ class Payment{
             $next_step = $this->subscriptionsSetUp($data['product_id'],$row['subscriptions_name'],$row['downloads_limit'],$row['review_limit']);
 
 
-            if($next_step == 0){
-                echo json_encode(array("result" => "failed","value" => "Something went wrong contact Us for help"));
-                exit();
-            }
-            else{
+            // if($next_step == 0){
+            //     echo json_encode(array("result" => "failed","value" => "Something went wrong contact Us for help"));
+            //     exit();
+            // }
+            // else{
     
-                    $query ="INSERT INTO `payment`(user_id,refrence_number,amount,type_paid,billing_type,product_id) VALUES 
-                (".$_SESSION['id'].",'".$data['refrence']."',".$data['amount'].",'".$data['type_paid']."','".$data['billing_type']."','".$data['product_id']."') ";
+            //         $query ="INSERT INTO `payment`(user_id,refrence_number,amount,type_paid,billing_type,product_id) VALUES 
+            //     (".$_SESSION['id'].",'".$data['refrence']."',".$data['amount'].",'".$data['type_paid']."','".$data['billing_type']."','".$data['product_id']."') ";
     
-                $result = $this->db-> query( $query);
+            //     $result = $this->db-> query( $query);
     
-                if(!$result){
+            //     if(!$result){
     
-                    echo json_encode(array("result" => "failed","value" => $this->db->error));
+            //         echo json_encode(array("result" => "failed","value" => $this->db->error));
             
-                }
-                else{
+            //     }
+            //     else{
     
-                    $query = "SELECT email FROM users WHERE id = ".$_SESSION['id'];
-                    $result = $this->db->query($query);
-                    $row = $result->fetch_assoc();
+            //         $query = "SELECT email FROM users WHERE id = ".$_SESSION['id'];
+            //         $result = $this->db->query($query);
+            //         $row = $result->fetch_assoc();
     
-                    $body = "<h2>Thank for purchasing our products</h2><p>You have purchased ".$data['type_paid']."--".$data['billing_type']." </p>";
+            //         $body = "<h2>Thank for purchasing our products</h2><p>You have purchased ".$data['type_paid']."--".$data['billing_type']." </p>";
     
                     
-                    if(libs::mail_template ($row['email'],"Product Purchase","CMA product purchase",$body)){
+            //         if(libs::mail_template ($row['email'],"Product Purchase","CMA product purchase",$body)){
     
-                        // echo json_encode(array("result" => "sent","value" => "Check your email for the password."));
+            //             // echo json_encode(array("result" => "sent","value" => "Check your email for the password."));
                 
-                    }
+            //         }
                 
-                    echo json_encode(array("result" => "success","value" => "Payment Recorded"));
+            //         echo json_encode(array("result" => "success","value" => "Payment Recorded"));
             
-                }
+            //     }
     
-            }
+            // }
 
         }
         else{
@@ -169,7 +184,7 @@ class Payment{
            fclose($myfile);
 
 
-           $this->insertJob($row['id'],$download_limit,$review_limit);
+           $this->insertJob($sub_id,$row['id'],$download_limit,$review_limit);
 
             if (!copy($file, $newfile)) {
                 return 0;
@@ -179,18 +194,40 @@ class Payment{
         }
     }
 
-    public function insertJob($doc_id,$download_limit,$review_limit){
+    public function insertJob($sub_id,$doc_id,$download_limit,$review_limit){
 
-        $query ="INSERT INTO `documents_review`(document_id,user_id,review_status,review_count) VALUES 
-        (".$doc_id.",".$_SESSION['id'].",'none',".$review_limit.") ";
-
+        $doc_review_check = 0;
+        $doc_download_check = 0;
+        $query = "SELECT subscription_id,document_id,user_id FROM documents_review WHERE user_id =".$_SESSION['id'];
         $result = $this->db-> query( $query);
 
+        if (mysqli_num_rows($result) < 1) {
+            $doc_review_check = 1;
 
-        $query ="INSERT INTO `documents_download`(document_id,user_id,download_count) VALUES 
-        (".$doc_id.",".$_SESSION['id'].",".$download_limit.") ";
-
+        }
+        $query = "SELECT subscription_id,document_id,user_id FROM documents_download WHERE user_id =".$_SESSION['id'];
         $result = $this->db-> query( $query);
+
+        if (mysqli_num_rows($result) < 1) {
+            $doc_download_check = 1;
+
+        }
+        
+        if($doc_review_check == 1){
+            $query ="INSERT INTO `documents_review`(subscription_id,document_id,user_id,review_status,review_count) VALUES 
+            (".$sub_id.",".$doc_id.",".$_SESSION['id'].",'none',".$review_limit.") ";
+    
+            $result = $this->db-> query( $query);
+        }
+
+
+        if($doc_download_check == 1){
+            $query ="INSERT INTO `documents_download`(subscription_id,document_id,user_id,download_count) VALUES 
+            (".$sub_id.",".$doc_id.",".$_SESSION['id'].",".$download_limit.") ";
+            $result = $this->db-> query( $query);
+    
+        }
+       
 
 
     }

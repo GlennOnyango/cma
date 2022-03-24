@@ -53,8 +53,14 @@ class Advocates
             
             $image = libs :: uploadFile($_FILES['profile_image'],"userImage");
         }else{
+
+            $query="SELECT user_image FROM users WHERE id = ".$_SESSION['id'];
             
-            $image = "";
+            $result = $this->db-> query( $query);
+
+            while($row=$result -> fetch_assoc()){
+                $image = $row['user_mage'];   
+            }
         }
 
         $query ="UPDATE users SET 
