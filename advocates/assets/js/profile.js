@@ -397,14 +397,15 @@ function add_send(doc_id,cl_id) {
     client_id = cl_id;
     console.log("client was added"+client_id);
     
-    
 }
 
 if($("#document_review_act").length){
     console.log(window.location.search.substring(1).split('=')[1]);
     
+    let document_id = window.location.search.substring(1).split('&')[0].split('=')[1];
+    let client_id = window.location.search.substring(1).split('&')[1].split('=')[1];
     
-    $.get("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { getDoc: window.location.search.substring(1).split('&')[0].split('=')[1]}, function(data) {
+    $.get("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { getDoc: document_id,client_id:client_id}, function(data) {
         const obj = JSON.parse(data);
         console.log(obj);
         obj.document.forEach(element => {

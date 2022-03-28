@@ -3,7 +3,8 @@ $(document).ready(function() {
 
     const content = document.querySelector(".content");
     const main_id_in = document.querySelectorAll("#main_id_in");
-    var log_form = document.querySelector("#log_form");
+    let log_form = document.querySelector("#log_form");
+    let review_send = document.querySelector("#review_send");
     const path = window.location.origin;
     let ui = "peace";
     var url_send = "https://cmversiontwo.cmadvocates.com/controller/authG.php";
@@ -273,8 +274,8 @@ $(document).ready(function() {
                       sessionStorage.removeItem("billing_type");
 
                   } else {
-                      console.log(obj.value);
-                      window.location.replace("https://cmversiontwo.cmadvocates.com/profile.html");
+                      // console.log(obj.value);
+                      // window.location.replace("https://cmversiontwo.cmadvocates.com/profile.html");
 
                   }
 
@@ -6197,25 +6198,6 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
           </div>
         `;
 
-        // const main_id_in = document.querySelectorAll("#main_id_in");
-
-        
-
-        // // main_id_in.forEach((ele) => {
-        // //     // Here comes the Code that should be executed on every Element, e.g.
-        // //     ele.addEventListener("click", () => {
-
-        // //         while (content.firstChild) {
-        // //             content.removeChild(content.lastChild);
-        // //         }
-        // //         let myatt = ele.getAttribute("data-op");
-        // //         eval(`${myatt}()`);
-
-        // //     });
-
-        // // });
-
-
         $.get("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { getPurchasedDocuments: "Donald", token1: sessionStorage.getItem("token") }, function(data) {
             const obj = JSON.parse(data);
 
@@ -6252,16 +6234,17 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                 </td>
               </tr>
                                   `);
-                } else if (element.type == "subscriptions") {
+                } 
+                else if (element.type == "subscriptions") {
 
 
                   if(element.review_count < 1){
-                    btn_download = `<button class="btn" disabled data_type="sub" data_id="${element.document}"
-                    data_update="${element.id}" id="main_id_in">Download</button>`
+                    btn_download = `
+                    <button class="btn" disabled data_type="sub" data_update="${element.id}" id="main_id_in">Download</button>`;
                     
                   }else{
-                    btn_download = `<button class="btn" data_type="sub" data_id="${element.document}"
-                    data_update="${element.id}" id="main_id_in">Download</button>`
+                    btn_download = `
+                    <a href="${element.document}" class="btn" data_type="sub" data_update="${element.id}" id="main_id_in">Download</a>`;
                     
                   }
 
@@ -6271,9 +6254,10 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                     // btn = `<button class="btn" disabled onclick="review_document(${element.id})"  data_type="sub" data_id="${element.document}"
                     // data_update="${element.id}" id="main_id_in">Review</button>`;
                   }else{
-                    btn = `<button class="btn" data_type="review" data_id="${element.document}"
-                    data_update="${element.id}" id="main_id_in">Review</button>`;
-                  }
+                    btn = `<button class="btn" data_type="review" data_update="${element.id}" id="main_id_in" data-toggle="modal" data-target="#exampleModal" 
+                    >Review</button>`;
+
+                   }
 
                   
                   $("#mytable").append(` <tr>
@@ -6306,10 +6290,7 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
         $(content).html(ui);
 
         $("#mytable").on("click", "#main_id_in", function() {
-            console.log($(this).attr('data-op'));
-            let myatt = $(this).attr('data-op');
-            let doc = $(this).attr('data_id');
-
+            
             if ($(this).attr('data_type') == "sub") {
 
                 //
@@ -6328,17 +6309,63 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                 //
             } else if ($(this).attr('data_type') == "review") {
                 //
-                $.post("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { review: $(this).attr('data_update') })
-                    .done(function(data) {
-                        const obj = JSON.parse(data);
 
-                        if (obj.result == "error") {
+                review_send.addEventListener("submit", (e) => {
+                  e.preventDefault();
+              
+            let myft = document.querySelector("#feedback");   
+                  const formData = new FormData(review_send);
+                  formData.append("review",$(this).attr('data_update'));
+              
+                  $.ajax({
+                      type: "POST",
+                      enctype: 'multipart/form-data',
+                      url: "https://cmversiontwo.cmadvocates.com/controller/Documents.php",
+                      data: formData,
+                      crossDomain: true,
+                      processData: false,
+                      contentType: false,
+                      cache: false,
+                      timeout: 600000,
+                      success: function(data) {
+                          const obj = JSON.parse(data);
+                          
+                          if (obj.result == "error"){
+                            alert(data);    
+              
+                          }
+                          else if (obj.result == "success"){
+              
+                                view_document();
+                            
+                          }
+              
+              
+                      },
+                      error: function(e) {
+              
                           console.log(data);
-                        } else if (obj.result == "success") {
-                          view_document();
+              
+                      }
+              
+                  });
+              
+               
+              
+              });
 
-                        }
-                    });
+
+                // $.post("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { review: $(this).attr('data_update') })
+                //     .done(function(data) {
+                //         const obj = JSON.parse(data);
+
+                //         if (obj.result == "error") {
+                //           console.log(data);
+                //         } else if (obj.result == "success") {
+                //           view_document();
+
+                //         }
+                //     });
 
                 //
             } else {
@@ -6356,9 +6383,9 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
     function readDocument(doc) {
 
         ui = `
-  <!--<embed src="controller/${doc}"><embed>-->
+  <!--<embed src="${doc}"><embed>-->
   <iframe
-    src="https://cmversiontwo.cmadvocates.com/controller/${doc}"
+    src="${doc}"
     frameBorder="0"
     scrolling="auto"
     height="100vh"

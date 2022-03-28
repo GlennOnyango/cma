@@ -17,7 +17,7 @@ if(isset($_POST['id'])){
 
 if(isset($_POST['review'])){
    
-    $document->DocumentReview($_POST['review']);
+    $document->DocumentReview($_POST['review'],$_POST["review_title"],$_POST["review_description"]);
 }
 
 if(isset($_GET['getDocument']) && $_GET['token1'] == $_SESSION['token']){
@@ -52,7 +52,7 @@ if(isset($_POST['search_document'])){
 }
 if(isset($_GET['getDoc'])){
 
-    $document->getDocumentWithId($_GET['getDoc']);
+    $document->getDocumentWithId($_GET['getDoc'],$_GET['client_id']);
 }
 if(isset($_POST['token_upload'])){
     $document->replaceDocument($_POST['token_upload'],$_POST['document_id'],$_FILES['upload_document'],$_POST['assignee']);
@@ -109,7 +109,7 @@ class Documents{
            }
       
     }
-    public function DocumentReview($data){
+    public function DocumentReview($data,$review_title,$review_description){
 
         $query = "SELECT review_count FROM documents_review WHERE document_id = $data AND user_id = ".$_SESSION['id'];
         $result = $this->db->query($query);
@@ -120,11 +120,11 @@ class Documents{
             $count = $row['review_count'];
             $count = $count - 1;
 
-            $query = "UPDATE documents_review SET review_count = $count, review_status='review'  WHERE document_id = $data AND user_id = ".$_SESSION['id'];
+            $query = "UPDATE documents_review SET review_count = $count, review_status='review',title = '".$review_title."', description = '".$review_description."'  WHERE document_id = $data AND user_id = ".$_SESSION['id'];
             if($this->db->query($query)){
                 echo json_encode(array("result"=>"success"));
             }else{
-                echo json_encode(array("result"=>$this->db->error));
+                echo json_encode(array("result"=>$query));
             }
 
         }
@@ -150,20 +150,25 @@ class Documents{
         echo json_encode(array("documents" => $document));
         }  
     }
-    public function getDocumentWithId($id){
+    public function getDocumentWithId($id,$client_id){
       
-        $query = "SELECT `id`, `document_name`, `document_description`, `document` FROM `vw_document` WHERE id = ".$id;
+        $query = "SELECT `document_name`,`title`,`description`,document,client_email,subscriptions_name FROM `vw_documents_review` WHERE user_id = ".$client_id." AND document_id = ".$id." AND rm_id = ".$_SESSION['id'];
         $result = $this->db->query($query);
         $document = array();
         if (!$result) {
     
-            echo json_encode(array("result" => "alert-danger","value" => $this->db->error));
+            echo json_encode(array("result" => "alert-danger","value" => $query));
             exit();
         }
         else {
             while($row=$result -> fetch_assoc()){
                 
-                 array_push($document,array("id"=>$row['id'],"Name"=>$row['document_name'],"document_description"=>$row['document_description'],"document"=>$row['document']));
+                $doc_name = str_replace("./uploadDocuments/","",$row['document']);
+                $sub_name = str_replace(" ","",$row['subscriptions_name']);
+                
+                $url = "https://cmversiontwo.cmadvocates.com/controller/usersDirectories/".MD5($row['client_email'])."/".$sub_name."/".$doc_name;
+
+                 array_push($document,array("Name"=>$row['document_name'],"document_description"=>$row['description'],"document"=>$url,"title"=>$row['title']));
                
                 
         }
@@ -244,7 +249,7 @@ class Documents{
                   }
                   elseif($row['type_paid'] == "subscriptions") {
                     
-                    $query = "SELECT `id`, `document_name`, `category_name`,`document`,`download_count`,`review_count`,`review_status` FROM `document_subscription_bought` WHERE subscription_id = ".$row['product_id'];
+                    $query = "SELECT `id`, `document_name`, `category_name`,`document`,`download_count`,`review_count`,`subscriptions_name`,`review_status` FROM `document_subscription_bought` WHERE subscription_id = ".$row['product_id'];
                     
 
                     $my_type = "subscriptions";
@@ -263,14 +268,20 @@ class Documents{
                     $review_count = 0;
                     $review_status = 'none';
 
+                    $doc_name = str_replace("./","https://cmversiontwo.cmadvocates.com/controller/",$roww['document']);
+                    $url = $doc_name;
+
                       }else{
                         $review_count = $roww['review_count'];
                         $review_status = $roww['review_status'];
-    
+                        $doc_name = str_replace("./uploadDocuments/","",$roww['document']);
+                        $sub_name = str_replace(" ","",$roww['subscriptions_name']);
+                        
+                        $url = "https://cmversiontwo.cmadvocates.com/controller/usersDirectories/".MD5($_SESSION['email'])."/".$sub_name."/".$doc_name;
 
                       }
                     
-                    array_push($document,array("id"=>$roww['id'],"Name"=>$roww['document_name'],"category"=>$roww['category_name'],"review_count"=>$review_count,"download_count"=>$download_count,"type"=>$my_type,"review_status"=>$review_status,"document"=>$roww['document']));
+                    array_push($document,array("id"=>$roww['id'],"Name"=>$roww['document_name'],"category"=>$roww['category_name'],"review_count"=>$review_count,"download_count"=>$download_count,"type"=>$my_type,"review_status"=>$review_status,"document"=>$url));
                       
                       
                     }

@@ -55,17 +55,22 @@ CREATE TABLE `documents_review` (
   `user_id` int NOT NULL,
   `review_status` varchar(10) NOT NULL DEFAULT 'none',
   `review_count` int NOT NULL DEFAULT 0,
-    `rm_id` int not null DEFAULT 0,
+  `rm_id` int not null DEFAULT 0,
   `advocate_assigned_id` int not null DEFAULT 0,
   `assignee_status` int not null DEFAULT 0,
   `date_assigned`  datetime DEFAULT null,
-  `duration` varchar(10) DEFAULT null
+  `duration` varchar(10) DEFAULT null,
+  `title` varchar(100) DEFAULT null,
+  `description` varchar(100) DEFAULT null
 
 );
 
 -- ALTER TABLE documents_review ADD COLUMN `date_assigned`  datetime DEFAULT null;
 -- ALTER TABLE documents_review ADD COLUMN `duration` varchar(10) DEFAULT null;
 -- ALTER TABLE documents_review ADD COLUMN `subscription_id` int NOT NULL;
+
+-- ALTER TABLE documents_review ADD COLUMN `title` varchar(100) DEFAULT null;
+-- ALTER TABLE documents_review ADD COLUMN `description` varchar(1000) DEFAULT null;
 
 CREATE TABLE `documents_download` (
   `subscription_id` int NOT NULL,
@@ -78,10 +83,11 @@ CREATE TABLE `documents_download` (
 -- ALTER TABLE documents_download ADD COLUMN `subscription_id` int NOT NULL;
 
 CREATE VIEW `document_subscription_bought` AS SELECT
-documents.id,document_name,document,category_id,subscription_id,category_name,
-sub_category_id,review_status,review_count,download_count
+documents.id,document_name,document,category_id,documents_subscription.subscription_id,category_name,
+sub_category_id,review_status,review_count,download_count,subscriptions_name
 FROM documents
 JOIN documents_subscription ON  documents.id = documents_subscription.document_id
+JOIN subscriptions_new ON documents_subscription.subscription_id = subscriptions_new.id
 JOIN category ON documents.category_id = category.id
 JOIN documents_review ON documents.id = documents_review.document_id
 JOIN documents_download ON documents.id = documents_download.document_id;
@@ -91,6 +97,8 @@ SELECT documents_review.document_id,document_name,user_id,(SELECT userName FROM 
 (SELECT email FROM users WHERE id = user_id) AS client_email,review_status,
 rm_id,(SELECT userName FROM users WHERE id = rm_id) AS advocate_name,
 advocate_assigned_id,(SELECT userName FROM users WHERE id = advocate_assigned_id) AS advocate_assigned_name,
-assignee_status,duration
+assignee_status,duration,documents_review.title,documents_review.description,documents.document,subscriptions_name,documents_review.subscription_id
 FROM documents_review
-JOIN documents ON documents_review.document_id = documents.id WHERE review_status = 'review';
+JOIN documents ON documents_review.document_id = documents.id
+JOIN subscriptions_new ON documents_review.subscription_id = subscriptions_new.id
+ WHERE review_status = 'review';

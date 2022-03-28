@@ -101,7 +101,7 @@
                                     <a class="dropdown-item" href="#">Profile</a>
                                     <a class="dropdown-item" href="#">Settings</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" id="log_out_btn">Log out</a>
+                                    <a class="dropdown-item" href="#" id="log_out_btn">Log out</a>
                                 </div>
                             </li>
                         </ul>
@@ -114,6 +114,49 @@
             </div>
         </div>
 <!---->
+
+
+  <!--subscription-->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Review Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+            <form class="col-12" style="background:rgba(255,255,255,0.2);" method="POST" id="review_send">
+  
+                  <div class=" d-none" id="feedback" role="alert">This is a primary alert—check it out!</div>
+                   
+                  <div class="mb-2">
+                    <label for="review_title">Title</label>
+                       <input class="form-control" type="text" placeholder="Review Title" required name="review_title">
+                   </div>
+   
+                   <div class="mb-2">
+                        <label for="review_description">Description</label>
+                        <textarea class="form-control" id="review_description" required name="review_description" rows="2"></textarea>
+                   </div>
+   
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="submit" class="btn mb-3 text-white close" style="background:linear-gradient(60deg, #1c355e, #7f2729);width: 100%;">Send</button>
+                        </div>
+                    </div>
+                  </div>
+   
+               </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>
 
         <!-- Modal -->
         <div class="modal fade" id="reauth" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
