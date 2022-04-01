@@ -15,8 +15,7 @@ if(isset($_POST['id'])){
     $document->countDownloads($_POST['id']);
 }
 if(isset($_POST['rem_id'])){
-   
-    $document->countDownloadsrem($_POST['rem_id']);
+   $document->countDownloadsrem($_POST['rem_id'],$_POST['service_id']);
 }
 
 if(isset($_POST['review'])){
@@ -256,17 +255,17 @@ class Documents{
                   if($row['type_paid'] == "documents"){
                       
                     
-                    $query = "SELECT `id`, `document_name`,`document`,`category_name`, `service_downloads` AS download_count FROM
+                    $query = "SELECT `id`, `document_name`,`document`,`category_name`, `service_downloads` AS download_count,`service_id` FROM
                      `vw_document_service_bought` WHERE id = ".$row['product_id']." AND user_id = ".$_SESSION['id'];
-                     echo $query;
-                  
+                    
                   $my_type = "solo";
 
                   }
                   elseif($row['type_paid'] == "subscriptions") {
                     
                     $query = "SELECT `id`, `document_name`, `category_name`,`document`,`download_count`,`review_count`,
-                    `subscriptions_name`,`review_status` FROM `document_subscription_bought` WHERE subscription_id = ".$row['product_id']." AND user_id =".$_SESSION['id'];
+                    `subscriptions_name`,`review_status` FROM `document_subscription_bought`
+                     WHERE subscription_id = ".$row['product_id']." AND user_id =".$_SESSION['id'];
                     
                     $my_type = "subscriptions";
                   }
@@ -286,18 +285,20 @@ class Documents{
 
                     $doc_name = str_replace("./","https://cmversiontwo.cmadvocates.com/controller/",$roww['document']);
                     $url = $doc_name;
+                    $service_id =$roww['service_id'];
 
                       }else{
                         $review_count = $roww['review_count'];
                         $review_status = $roww['review_status'];
                         $doc_name = str_replace("./uploadDocuments/","",$roww['document']);
                         $sub_name = str_replace(" ","",$roww['subscriptions_name']);
-                        
+                        $service_id = null;
+    
                         $url = "https://cmversiontwo.cmadvocates.com/controller/usersDirectories/".MD5($_SESSION['email'])."/".$sub_name."/".$doc_name;
 
                       }
                     
-                    array_push($document,array("id"=>$roww['id'],"Name"=>$roww['document_name'],"category"=>$roww['category_name'],"review_count"=>$review_count,"download_count"=>$download_count,"type"=>$my_type,"review_status"=>$review_status,"document"=>$url));
+                    array_push($document,array("id"=>$roww['id'],"Name"=>$roww['document_name'],"category"=>$roww['category_name'],"review_count"=>$review_count,"download_count"=>$download_count,"type"=>$my_type,"review_status"=>$review_status,"document"=>$url,"service_id"=>$service_id));
                       
                       
                     }
@@ -398,8 +399,9 @@ class Documents{
 
     }
 
-    public function countDownloadsrem($id){
-        $query = "SELECT download_count FROM documents_bought_service WHERE document_id = $id AND user_id = ".$_SESSION['id'];
+    public function countDownloadsrem($id,$service_id){
+        $query = "SELECT download_count FROM documents_bought_service WHERE document_id = $id AND service_id = $service_id AND user_id = ".$_SESSION['id'];
+        
         $result = $this->db->query($query);
 
         while($row = $result->fetch_assoc()){
@@ -408,7 +410,8 @@ class Documents{
             $count = $row['download_count'];
             $count = $count - 1;
 
-            $query = "UPDATE documents_bought_service SET download_count = $count WHERE document_id = $id AND user_id = ".$_SESSION['id'];
+            $query = "UPDATE documents_bought_service SET download_count = $count WHERE document_id = $id AND service_id = $service_id AND user_id = ".$_SESSION['id'];
+            
             if($this->db->query($query)){
                 echo json_encode(array("result"=>"success"));
             }else{

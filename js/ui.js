@@ -6194,11 +6194,11 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                 if (element.type == "solo") {
 
                     $("#mytable").append(` <tr>
-                <td>${element.type}</td>
+                <td>Service</td>
                 <td>${element.Name}</td>
                 <td>${element.category}</td>
                 <td>${element.download_count}</td>
-                <td><a href="${element.document}" class="btn"  data_type="local" data_update="${element.id}" id="main_id_in">Download</a><td>
+                <td><a href="${element.document}" download class="btn"  data_type="local" data_service_id="${element.service_id}" data_update="${element.id}" id="main_id_in">Download</a><td>
                 <td>Life Time</td>
                 <td><!--<button class="btn" onclick="review_document(${element.id})">Review</button>--></td>
               </tr>
@@ -6210,7 +6210,7 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                   if(element.download_count < 1){
                     btn_download = `<button class="btn" disabled>Download</button>`;
                   }else{
-                    btn_download = `<a href="${element.document}" class="btn" data_type="sub" data_update="${element.id}" id="main_id_in">Download</a>`;
+                    btn_download = `<a href="${element.document}" download class="btn" data_type="sub" data_update="${element.id}" id="main_id_in">Download</a>`;
                     
                   }
 
@@ -6261,7 +6261,7 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
             } 
             else if($(this).attr('data_type') == "local"){
 
-              $.post("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { rem_id: $(this).attr('data_update') })
+              $.post("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { rem_id: $(this).attr('data_update'),service_id: $(this).attr('data_service_id')})
               .done(function(data) {
                   const obj = JSON.parse(data);
 

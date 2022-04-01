@@ -102,7 +102,8 @@ CREATE TABLE `payment` (
   `billing_type` varchar(100) NOT NULL DEFAULT 'monthly',
   `product_id` int NOT NULL,
   `status` varchar(100) DEFAULT 'active',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE(`refrence_number`)
 );
 --ALTER TABLE payment ADD COLUMN `service_id` int NOT NULL DEFAULT 0;
 

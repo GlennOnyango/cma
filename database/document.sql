@@ -30,9 +30,10 @@ CREATE TABLE `documents_service` (
   `document_id` int NOT NULL,
   `service_id` int NOT NULL
 );
-
+DROP TABLE IF EXISTS `documents_bought_service`;
 CREATE TABLE documents_bought_service(
   `user_id` int NOT NULL,
+  `service_id` int NOT NULL,
   `ref_no` varchar(1000) NOT NULL,
   `document_id` int NOT NULL,
   `download_count`int NOT NULL,
@@ -59,13 +60,13 @@ JOIN category ON documents.category_id = category.id
 JOIN service ON documents_service.service_id = service.id;
 
 CREATE VIEW vw_document_service_bought AS SELECT
-documents.id, document_name,document,document_price,category_name,service_id,service_name,category_id,document_description,
+documents.id, document_name,document,document_price,category_name,documents_bought_service.service_id,service_name,category_id,document_description,
 service_reviews,service_validity,
-payment.user_id,payment.type_paid,payment.product_id,
-(SELECT download_count FROM documents_bought_service WHERE user_id = payment.user_id AND document_id = payment.product_id) AS service_downloads
+payment.user_id,payment.type_paid,payment.product_id,documents_bought_service.download_count AS service_downloads
 FROM payment
 JOIN documents ON payment.product_id = documents.id
 JOIN documents_service ON payment.product_id = documents_service.document_id
+JOIN documents_bought_service ON documents_service.service_id = documents_bought_service.service_id
 JOIN category ON documents.category_id = category.id
 JOIN service ON documents_service.service_id = service.id
 WHERE payment.type_paid = "documents";
