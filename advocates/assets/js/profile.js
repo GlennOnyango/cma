@@ -309,6 +309,8 @@ if ($("#all_advocates").length) {
 }
 
 if($("#my_done_reivews").length){
+
+    console.log("GRAND standing");
     
     $.get("https://cmversiontwo.cmadvocates.com/controller/Review.php", { token_review_done: sessionStorage.getItem("token") }, function(data) {
         $("#my_done_reivews").empty();
@@ -329,8 +331,8 @@ if($("#my_done_reivews").length){
                         <td>${element.rm_name}</td>
                         <td>${element.document_name}</td>
                         <td>
-                            <button type="button" onclick="window.location.href='review-specific.html?document_id=${element.id}&client_id=${element.client_id}'" class="btn btn-block bg-gradient-primary" >Completed</button>
-                            <button type="button" onclick="window.location.href='review-specific.html?document_id=${element.id}&client_id=${element.client_id}'" class="btn btn-block bg-gradient-primary" >Back Review</button>
+                            <button type="button" onclick="actionOnCompletedReview('complete',${element.rm_id},${element.assingee},${element.client_id},${element.document_id})" class="btn btn-block bg-gradient-primary" >complete</button>
+                            <button type="button" onclick="actionOnCompletedReview('return',${element.rm_id},${element.assingee},${element.client_id},${element.document_id})" class="btn btn-block bg-gradient-primary" >Redo</button>
                             
                         </td>
                     </tr>`);
@@ -340,6 +342,42 @@ if($("#my_done_reivews").length){
 
         }
     });
+}
+
+function actionOnCompletedReview(direction,rm_id,assingee,client_id,document_id) {
+
+    
+    const formData = new FormData();
+    formData.append('direction',direction);
+    formData.append('rm_id',rm_id);
+    formData.append('assingee_id',assingee);
+    formData.append('client_id',client_id);
+    formData.append('document_id',document_id);
+    $.ajax({
+        type: "POST",
+        enctype: 'multipart/form-data',
+        url: 'https://cmversiontwo.cmadvocates.com/controller/Review.php',
+        data: formData,
+        crossDomain: true,
+        processData: false,
+        contentType: false,
+        cache: false,
+        timeout: 600000,
+        success: function(data) {
+            const obj = JSON.parse(data);
+
+            alert(obj.value);
+
+        },
+        error: function(e) {
+
+            console.log(data);
+
+        }
+
+    });
+
+    
 }
 
 if ($(".table_documents_reviewed").length) {
@@ -358,25 +396,25 @@ if ($(".table_documents_reviewed").length) {
         }else{
 
                 obj.reviews.forEach(element => {
-                    if (element.assingee == 1) {
+                    if (element.assingee != 0) {
         
                         $(".table_documents_reviewed").append(`<tr>
                         <td>${element.client_name}</td>
                         <td>${element.rm_name}</td>
                         <td>${element.document_name}</td>
                         <td>
-                        <button type="button" onclick="window.location.href='review-specific.html?document_id=${element.document_id}&client_id=${element.client_id}&assignee=1'" class="btn btn-block bg-gradient-primary" >Review</button>
+                        <button type="button" onclick="window.location.href='review-specific.html?document_id=${element.document_id}&client_id=${element.client_id}&assignee=${element.assingee}&rm_id=${element.rm_id}'" class="btn btn-block bg-gradient-primary" >Review</button>
                         
                         </td>
                     </tr>`);
-                    } else if (element.assingee == 0) {
+                    } else {
         
                         $(".table_documents_reviewed").append(`<tr>
                         <td>${element.client_name}</td>
                         <td>${element.rm_name}</td>
                         <td>${element.document_name}</td>
                         <td>
-                            <button type="button" onclick="window.location.href='review-specific.html?document_id=${element.document_id}&client_id=${element.client_id}&assignee=0'" class="btn btn-block bg-gradient-primary" >Review</button>
+                            <button type="button" onclick="window.location.href='review-specific.html?document_id=${element.document_id}&client_id=${element.client_id}&assignee=0&rm_id=${element.rm_id}'" class="btn btn-block bg-gradient-primary" >Review</button>
                             <button type="button" data-toggle="modal" data-target="#modal-xl" onclick="add_send(${element.id},${element.client_id})" class="btn btn-block bg-gradient-primary ">Assign</button>
                         </td>
                     </tr>`);
@@ -397,15 +435,17 @@ function add_send(doc_id,cl_id) {
     client_id = cl_id;
     console.log("client was added"+client_id);
     
+    
 }
 
 if($("#document_review_act").length){
-    console.log(window.location.search.substring(1).split('=')[1]);
     
-    let document_id = window.location.search.substring(1).split('&')[0].split('=')[1];
-    let client_id = window.location.search.substring(1).split('&')[1].split('=')[1];
+    let docId = window.location.search.substring(1).split('&')[0].split('=')[1];
+    let clientId = window.location.search.substring(1).split('&')[1].split('=')[1];
+    let assingeeId = window.location.search.substring(1).split('&')[2].split('=')[1];
+    let rm_id = window.location.search.substring(1).split('&')[3].split('=')[1];
     
-    $.get("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { getDoc: document_id,client_id:client_id}, function(data) {
+    $.get("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { getDoc : docId, client_id : clientId, assingeeId:assingeeId,rm_id:rm_id}, function(data) {
         const obj = JSON.parse(data);
         console.log(obj);
         obj.document.forEach(element => {
@@ -425,7 +465,6 @@ if ($("#advocates").length) {
 
     $.get("https://cmversiontwo.cmadvocates.com/controller/Advocates.php", { token_available_assignee: sessionStorage.getItem("token"), all:true}, function(data) {
         const obj = JSON.parse(data);
-        console.log(obj);
 
         obj.advocates.forEach(element => {
             $("#advocates").append(`<option value="${element.id}">${element.name}</option>`);
@@ -475,7 +514,6 @@ if($("#assing_form").length){
             }
 
         });
-        console.log(formData);
     });
     
        
@@ -487,8 +525,7 @@ if($("#asignees_list").length){
     
     $.get("https://cmversiontwo.cmadvocates.com/controller/Review.php", { token_review_assignee: sessionStorage.getItem("token")}, function(data) {
         const obj = JSON.parse(data);
-        console.log(obj);
-
+    
         obj.reviews.forEach(element => {
             $("#asignees_list").append(`  <tr>
             <td>${element.advocate_assigned_name}</td>
@@ -535,10 +572,8 @@ function unassign_assignee(doc_id,id,client_id_aft){
             cache: false,
             timeout: 600000,
             success: function(data) {
-                console.log(data);
 
                 const obj = JSON.parse(data);
-
                 
                 if(obj.value != "Lawyer Unassigneed"){
                     alert("Advocate not assigned");
@@ -582,12 +617,9 @@ if($("#edit_form_assign").length){
             cache: false,
             timeout: 600000,
             success: function(data) {
-                console.log(data);
-
+           
                 const obj = JSON.parse(data);
                 window.location.replace("https://cmversiontwo.cmadvocates.com/advocates/asignees.html");
-
-
 
             },
             error: function(e) {
@@ -597,7 +629,6 @@ if($("#edit_form_assign").length){
             }
 
         });
-        console.log(formData);
     });
 }
 if($("#review_document").length){
@@ -607,6 +638,7 @@ if($("#review_document").length){
         formData.append('document_id',window.location.search.substring(1).split('&')[0].split('=')[1]);
         formData.append('client_id',window.location.search.substring(1).split('&')[1].split('=')[1]);
         formData.append('assignee',window.location.search.substring(1).split('&')[2].split('=')[1]);
+        formData.append('rm_id',window.location.search.substring(1).split('&')[3].split('=')[1]);
         formData.append('token_upload',sessionStorage.getItem("token"));
         $.ajax({
             type: "POST",
@@ -650,11 +682,11 @@ if($("#review_document").length){
                         myft.classList.add('d-none');
                         myft.classList.remove(obj.result);
                         myft.innerHTML = '';
-                    
+                        window.location.href = "https://cmversiontwo.cmadvocates.com/advocates/documents-review.html";
             
                     }, 5000);//wait 2 seconds
 
-                    complete_review(window.location.search.substring(1).split('&')[0].split('=')[1],window.location.search.substring(1).split('&')[1].split('=')[1],window.location.search.substring(1).split('&')[2].split('=')[1],myft);
+                    //complete_review(window.location.search.substring(1).split('&')[0].split('=')[1],window.location.search.substring(1).split('&')[1].split('=')[1],window.location.search.substring(1).split('&')[2].split('=')[1],myft);
 
 
                 }
@@ -740,57 +772,3 @@ function complete_review(document_id,client_id,assignee,myft) {
 }
 
 
-
-// //to be removed
-// function check_documents() {
-
-//     ui = `
-// <p> Checking Documents.... </p>
-// `;
-
-
-//     $.get(url_send, { user_cert: "Donald", token1: sessionStorage.getItem("token") }, function(data) {
-//         const obj = JSON.parse(data);
-
-//         if (obj.result == "session") {
-//             $("#reauth").modal();
-//             return;
-//         }
-//         if (obj.result == "error") {
-//             window.confirm("Add certificate to purchase");
-//             edit_profile();
-
-//         } else if (obj.states[0].st == "declined") {
-//             window.confirm("Request for certificate approval");
-
-//         } else if (obj.states[0].st == "approved") {
-//             makePayment();
-//         }
-//     });
-
-
-
-
-
-//     $(content).html(ui);
-//     $("#mytable").on("click", "#main_id_in", function() {
-//         console.log($(this).attr('data-op'));
-//         let myatt = $(this).attr('data-op');
-//         eval(`${myatt}(${$( this ).attr( 'data_id')})`);
-
-//     });
-
-//     $("#sub").on("click", "#main_id_in", function() {
-//         console.log($(this).attr('data-op'));
-//         let myatt = $(this).attr('data-op');
-//         eval(`${myatt}(${$( this ).attr( 'data_id')})`);
-
-//     });
-
-//     $("#service_name").on("click", "#main_id_in", function() {
-//         console.log($(this).attr('data-op'));
-//         let myatt = $(this).attr('data-op');
-//         eval(`${myatt}(${$( this ).attr( 'data_id')})`);
-//     });
-
-// }

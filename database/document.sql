@@ -31,6 +31,16 @@ CREATE TABLE `documents_service` (
   `service_id` int NOT NULL
 );
 
+CREATE TABLE documents_bought_service(
+  `user_id` int NOT NULL,
+  `ref_no` varchar(1000) NOT NULL,
+  `document_id` int NOT NULL,
+  `download_count`int NOT NULL,
+  `review_count` int NOT NULL
+);
+
+
+
 CREATE VIEW vw_document AS SELECT 
 documents.id,document_name,document,subscriptions_name,category_id,subscription_id,category_name,
 sub_category_id,status,downloads_limit,consultaion_hours,review_limit
@@ -41,11 +51,29 @@ JOIN subscriptions_new ON  subscriptions_new.id = documents_subscription.subscri
 
 
 CREATE VIEW vw_document_service AS SELECT 
-documents.id, document_name,document,document_price,category_name,service_id,service_name,category_id,service_downloads,document_description,
+DISTINCT (documents.id), document_name,document,document_price,category_name,service_id,service_name,category_id,service_downloads,document_description,
 service_reviews,service_validity
 FROM documents
-JOIN category ON documents.category_id = category.id
 JOIN documents_service ON documents.id = documents_service.document_id
+JOIN category ON documents.category_id = category.id
+JOIN service ON documents_service.service_id = service.id;
+
+CREATE VIEW vw_document_service_bought AS SELECT
+documents.id, document_name,document,document_price,category_name,service_id,service_name,category_id,document_description,
+service_reviews,service_validity,
+payment.user_id,payment.type_paid,payment.product_id,
+(SELECT download_count FROM documents_bought_service WHERE user_id = payment.user_id AND document_id = payment.product_id) AS service_downloads
+FROM payment
+JOIN documents ON payment.product_id = documents.id
+JOIN documents_service ON payment.product_id = documents_service.document_id
+JOIN category ON documents.category_id = category.id
+JOIN service ON documents_service.service_id = service.id
+WHERE payment.type_paid = "documents";
+
+
+---Get service downloads
+CREATE VIEW vw_document_service_get_download AS
+SELECT documents_service.document_id,documents_service.service_id,service.service_downloads,service.service_reviews FROM documents_service
 JOIN service ON documents_service.service_id = service.id;
 
 
@@ -82,15 +110,25 @@ CREATE TABLE `documents_download` (
 
 -- ALTER TABLE documents_download ADD COLUMN `subscription_id` int NOT NULL;
 
-CREATE VIEW `document_subscription_bought` AS SELECT
-documents.id,document_name,document,category_id,documents_subscription.subscription_id,category_name,
-sub_category_id,review_status,review_count,download_count,subscriptions_name
-FROM documents
-JOIN documents_subscription ON  documents.id = documents_subscription.document_id
-JOIN subscriptions_new ON documents_subscription.subscription_id = subscriptions_new.id
+
+CREATE VIEW `document_subscription_bought` AS SELECT 
+documents.id,documents.document_name,documents.document,
+payment.user_id,payment.type_paid,payment.product_id,
+documents_subscription.document_id,
+documents.category_id,category.category_name,documents.sub_category_id,review_status,
+documents_review.review_count,documents_download.download_count,
+subscriptions_new.subscriptions_name,documents_subscription.subscription_id,
+(SELECT email FROM users WHERE id = payment.user_id) AS client_email,
+rm_id,advocate_assigned_id,assignee_status
+FROM payment
+JOIN documents_subscription ON  payment.product_id = documents_subscription.subscription_id
+JOIN documents ON documents_subscription.document_id = documents.id
 JOIN category ON documents.category_id = category.id
-JOIN documents_review ON documents.id = documents_review.document_id
-JOIN documents_download ON documents.id = documents_download.document_id;
+JOIN documents_review ON documents_subscription.document_id = documents_review.document_id
+JOIN subscriptions_new ON payment.product_id = subscriptions_new.id
+JOIN documents_download ON documents_subscription.document_id = documents_download.document_id
+WHERE payment.type_paid = "subscriptions" AND documents_download.user_id = payment.user_id  AND documents_review.user_id = payment.user_id;
+
 
 CREATE VIEW `vw_documents_review` AS
 SELECT documents_review.document_id,document_name,user_id,(SELECT userName FROM users WHERE id = user_id) AS client_name,
@@ -101,4 +139,15 @@ assignee_status,duration,documents_review.title,documents_review.description,doc
 FROM documents_review
 JOIN documents ON documents_review.document_id = documents.id
 JOIN subscriptions_new ON documents_review.subscription_id = subscriptions_new.id
- WHERE review_status = 'review';
+WHERE review_status = 'review';
+
+CREATE VIEW `vw_documents_completed` AS
+SELECT documents_review.document_id,document_name,user_id,(SELECT userName FROM users WHERE id = user_id) AS client_name,
+(SELECT email FROM users WHERE id = user_id) AS client_email,review_status,
+rm_id,(SELECT userName FROM users WHERE id = rm_id) AS advocate_name,
+advocate_assigned_id,(SELECT userName FROM users WHERE id = advocate_assigned_id) AS advocate_assigned_name,
+assignee_status,duration,documents_review.title,documents_review.description,documents.document,subscriptions_name,documents_review.subscription_id
+FROM documents_review
+JOIN documents ON documents_review.document_id = documents.id
+JOIN subscriptions_new ON documents_review.subscription_id = subscriptions_new.id
+WHERE review_status = 'completed';

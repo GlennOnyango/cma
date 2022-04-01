@@ -227,8 +227,11 @@ class Auth{
              if(!is_dir($folderName))
              {
                  mkdir($folderName,  0777, true);
+                 mkdir($folderName."/service",  0777, true);
                  $query1 = "UPDATE users SET user_directory = '$folderName' WHERE id = ".$row['id'];
                  $result1 = $this->db->query($query1);
+
+                 //echo  MD5($row['email'])."<br>";
                  
                  if(!$result1){echo json_encode(array("result" => "alert-danger","value" => "Could not create directory.Contact Us for more info"));}
                  else{echo json_encode(array("result" => "alert-success","value" => "Registration complete.Login to continue"));}

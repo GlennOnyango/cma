@@ -27,9 +27,11 @@ if(!empty($_POST['token_edit_assign'])){
 if(!empty($_POST['token_edit_form_unassign'])){
     $review->unassign_assignee($_POST["doc_id"],$_POST["client_id"],$_POST['assignee_id']);
 }
-
-if(isset($_POST['document_complete_review_id'])){
-    $review->complete_review($_POST["document_complete_review_id"],$_POST['assignee']);
+if(!empty($_GET['token_review_done'])){
+    $review->completed_reviews();
+}
+if(!empty($_POST['direction'])){
+    $review->kill_process($_POST['direction'],$_POST['rm_id'],$_POST['assingee_id'],$_POST['client_id'],$_POST['document_id']);
 }
 
 class Reviews 
@@ -128,7 +130,7 @@ class Reviews
         $result = $this->db-> query($query);
             while($row = $result->fetch_assoc()){
                 array_push($reviews,array("id"=>$row["document_id"],"document_id"=>$row["document_id"],"client_name"=>$row["client_name"],
-                "client_id"=>$row["user_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
+                "client_id"=>$row["user_id"],"rm_id"=>$row["rm_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
                 "review_status"=>$row["review_status"],"assingee"=>0));
 
             }
@@ -139,8 +141,8 @@ class Reviews
             while($row = $result->fetch_assoc()){
                     
                 array_push($reviews,array("id"=>$row["document_id"],"document_id"=>$row["document_id"],"client_name"=>$row["client_name"],
-                "client_id"=>$row["user_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
-                "review_status"=>$row["review_status"],"assingee"=>1));
+                "client_id"=>$row["user_id"],"rm_id"=>$row["rm_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
+                "review_status"=>$row["review_status"],"assingee"=>$row["advocate_assigned_id"]));
 
             }
         
@@ -148,6 +150,79 @@ class Reviews
         echo json_encode(array("reviews" => $reviews));
             
         
+    }
+
+    public function completed_reviews(){
+        //Get all completed
+        $reviews = array();
+        
+        $query = "SELECT * FROM vw_documents_completed WHERE rm_id = ".$_SESSION['id'];
+
+        $result = $this->db-> query($query);
+        
+        if (mysqli_num_rows($result) < 1) {
+    
+            echo json_encode(array("result" => "error","value" => $this->db->error));
+
+            exit();
+
+        }
+        else {
+        
+            while($row = $result->fetch_assoc()){
+                
+        
+                array_push($reviews,array("id"=>$row["document_id"],"document_id"=>$row["document_id"],"client_name"=>$row["client_name"],
+                "client_id"=>$row["user_id"],"rm_id"=>$row["rm_id"],"rm_name"=>$row["advocate_name"],"document_name"=>$row["document_name"],
+                "review_status"=>$row["review_status"],"assingee"=>$row["advocate_assigned_id"]));
+
+            }
+        }
+    
+        echo json_encode(array("reviews" => $reviews));
+            
+    }
+    public function kill_process($direction,$rm_id,$assingee_id,$client_id,$document_id){
+        if($direction == "complete"){
+            // $mail_of_user = "<h4>Review Submission</h4>
+            // <p>Review for document [".$row["document_name"]."] is complete.</p>";
+
+            // libs::mail_template ($row['client_email'],"Document Review","CMA document review",$mail_of_user);
+
+            $query = "UPDATE documents_review SET review_status = 'none',title ='',description='' WHERE user_id = $client_id AND document_id = $document_id AND advocate_assigned_id = $assingee_id AND rm_id = ".$rm_id;
+            
+            $result = $this->db-> query($query);
+
+            if(!$result){
+            
+                echo json_encode(array("result" => "alert-danger","value" => $query));
+                exit();
+
+            }else{
+
+                    echo json_encode(array("result" => "alert-success","value" => "Document Marked as done"));
+                    exit();
+            
+            }
+        }
+        else{
+
+            $query = "UPDATE documents_review SET review_status = 'review' WHERE 
+            user_id = $client_id AND document_id = $doc_id AND advocate_assigned_id= $assignee_id AND rm_id = ".$rm_id;
+            $result = $this->db->query($query);
+            if(!$result){
+    
+                echo json_encode(array("result" => "alert-danger","value" => $this->db->error));
+                exit();
+
+            }else{
+                    echo json_encode(array("result" => "alert-success","value" => "Document marked as on review"));
+                    exit();
+            
+            }
+
+        }
+
     }
 
     
@@ -309,79 +384,6 @@ class Reviews
         
         }
     
-    }
-
-    public function complete_review($doc_id,$assignee){
-        
-        if($assignee == 0){
-            $sql = "UPDATE document_review SET review_status = 'completed' WHERE assignee_status = 0 AND  document_id = ".$doc_id." AND rm_id = ".$_SESSION['id'];
-
-        // UPDATE document_review SET assignee_status = 0,date_assigned = null,duration=0,assignee=0;
-
-        $result = $this->db-> query($sql);
-
-            if(!$result){
-            
-                echo json_encode(array("result" => "alert-danger","value" => "Document not marked as complete"));
-                exit();
-
-            }else{
-
-                //
-
-                $query = "UPDATE Documents SET review_status = 'completed' WHERE id =".$doc_id;
-                $result = $this->db-> query( $query);
-
-                if(!$result){
-                    echo json_encode(array("result" => "alert-danger","value" => "document not marked as complete"));
-                    exit();
-
-                }else{
-
-                    echo json_encode(array("result" => "alert-success","value" => "Document added as complete"));
-                    exit();
-                }
-
-                //
-            
-            }
-        
-        }
-        else{
-            $sql = "UPDATE document_review SET review_status = 'completed' WHERE assignee_status = 1 AND  document_id = ".$doc_id." AND assignee = ".$_SESSION['id'];
-
-        // UPDATE document_review SET assignee_status = 0,date_assigned = null,duration=0,assignee=0;
-
-        $result = $this->db-> query($sql);
-
-            if(!$result){
-            
-                echo json_encode(array("result" => "alert-danger","value" => "Document not marked as complete"));
-                exit();
-
-            }else{
-
-                //
-
-                $query = "UPDATE Documents SET review_status = 'completed' WHERE id =".$doc_id;
-                $result = $this->db-> query( $query);
-
-                if(!$result){
-                    echo json_encode(array("result" => "alert-danger","value" => "document not marked as complete"));
-                    exit();
-
-                }else{
-
-                    echo json_encode(array("result" => "alert-success","value" => "Document added as complete"));
-                    exit();
-                }
-
-                //
-            
-            }
-        
-        }    
-
     }
 
     private function getAllAdvocates(){

@@ -109,8 +109,8 @@ class Payment{
         else{
 
 
-            $query ="INSERT INTO `payment`(user_id,refrence_number,amount,type_paid,billing_type,product_id) VALUES 
-            (".$_SESSION['id'].",'".$data['refrence']."',".$data['amount'].",'".$data['type_paid']."','".$data['billing_type']."','".$data['product_id']."') ";
+            $query ="INSERT INTO `payment`(user_id,refrence_number,amount,type_paid,billing_type,product_id,service_id) VALUES 
+            (".$_SESSION['id'].",'".$data['refrence']."',".$data['amount'].",'".$data['type_paid']."','".$data['billing_type']."',".$data['product_id'].",".$data['service_id'].") ";
 
             $result = $this->db-> query( $query);
 
@@ -120,6 +120,24 @@ class Payment{
         
             }
             else{
+
+                if($data['type_paid'] == "documents"){
+
+                        $mysql ="SELECT service_downloads,service_reviews FROM 
+                        vw_document_service_get_download WHERE document_id =".$data['product_id']." AND service_id =".$data["service_id"];
+    
+                        $result_send = $this->db-> query( $query);
+    
+                        $row = $result_send->fetch_row();
+    
+                        $mysql ="INSERT INTO `documents_bought_service`(user_id,ref_no,document_id,download_count,review_count) VALUES 
+                        (".$_SESSION['id'].",".$data['refrence'].",".$data['product_id'].",".$row['service_downloads'].",".$row['service_reviews'].") ";
+        
+                        $this->db-> query( $mysql);
+
+                }
+
+                
 
                 $query = "SELECT email FROM users WHERE id = ".$_SESSION['id'];
                 $result = $this->db->query($query);
@@ -231,6 +249,54 @@ class Payment{
 
 
     }
+    // public function serviceSetUp($serv_id){
+    //     $fold = $_SERVER["DOCUMENT_ROOT"]."/controller/usersDirectories/".MD5($_SESSION['email'])."/";
+    //     $folderName = $fold."".$serv_id;
+    //     if(!is_dir($folderName))
+    //     {
+    //          mkdir($folderName,  0777, true);
+    //          return $this->uploadDocu($sub_id,$folderName);
+         
+    //     }else{
+    //          return $this->uploadDocu($sub_id,$folderName);
+    //     }
+    // }
+
+    // public function uploadServiceDoc($serv_id,$docu_id,$fold){
+    //     $query = " SELECT document,id FROM vw_document_service WHERE service_id = $sub_id AND id = $docu_id";
+        
+    //     $result = $this->db-> query($query);
+
+    //     if(mysqli_num_rows($result) < 1){
+    //         return 2;
+    //     }
+    //     while($row = $result->fetch_assoc()){
+    //         $file = $row['document'];
+    //         $newfile = $fold;
+            
+    //        $copy_to_file = $file;
+    //        $left_wing =  str_replace("./uploadDocuments","",$copy_to_file); 
+    //        str_replace(".",$_SERVER["DOCUMENT_ROOT"]."/controller",$file);
+          
+    //        $newfile = $newfile."".$left_wing;
+          
+           
+    //        $myfile = fopen($newfile, "w");
+    //        fclose($myfile);
+
+
+    //        $this->insertJob($sub_id,$row['id'],$download_limit,$review_limit);
+
+    //         if (!copy($file, $newfile)) {
+                
+    //             return 0;
+    //         }else{
+    //             return 1;
+    //         }
+    //     }
+    // }
+
+
 
     public function getPayment(){
         $query = "SELECT  id,( CASE

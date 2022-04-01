@@ -14,6 +14,10 @@ if(isset($_POST['id'])){
    
     $document->countDownloads($_POST['id']);
 }
+if(isset($_POST['rem_id'])){
+   
+    $document->countDownloadsrem($_POST['rem_id']);
+}
 
 if(isset($_POST['review'])){
    
@@ -52,10 +56,10 @@ if(isset($_POST['search_document'])){
 }
 if(isset($_GET['getDoc'])){
 
-    $document->getDocumentWithId($_GET['getDoc'],$_GET['client_id']);
+    $document->getDocumentWithId($_GET['getDoc'],$_GET['client_id'],$_GET['assingeeId'],$_GET['rm_id']);
 }
 if(isset($_POST['token_upload'])){
-    $document->replaceDocument($_POST['token_upload'],$_POST['document_id'],$_FILES['upload_document'],$_POST['assignee']);
+    $document->replaceDocument($_POST['token_upload'],$_POST['document_id'],$_POST['client_id'],$_FILES['upload_document'],$_POST['assignee'],$_POST['rm_id']);
 }
 
 
@@ -120,7 +124,8 @@ class Documents{
             $count = $row['review_count'];
             $count = $count - 1;
 
-            $query = "UPDATE documents_review SET review_count = $count, review_status='review',title = '".$review_title."', description = '".$review_description."'  WHERE document_id = $data AND user_id = ".$_SESSION['id'];
+            $rw_dec = libs :: test_input($review_description);
+            $query = "UPDATE documents_review SET review_count = $count, review_status='review',title = '".$review_title."', description = '".$rw_dec."'  WHERE document_id = $data AND user_id = ".$_SESSION['id'];
             if($this->db->query($query)){
                 echo json_encode(array("result"=>"success"));
             }else{
@@ -150,9 +155,18 @@ class Documents{
         echo json_encode(array("documents" => $document));
         }  
     }
-    public function getDocumentWithId($id,$client_id){
+    public function getDocumentWithId($id,$client_id,$assingeeId,$rm_id){
+
+        if($assingeeId != 0){
+            $query = "SELECT `document_name`,`title`,`description`,document,client_email,subscriptions_name
+             FROM `vw_documents_review` WHERE user_id = ".$client_id." AND document_id = ".$id." AND advocate_assigned_id=".$assingeeId." AND rm_id = ".$rm_id;
+        
+        }else{
+            $query = "SELECT `document_name`,`title`,`description`,document,client_email,subscriptions_name
+             FROM `vw_documents_review` WHERE user_id = ".$client_id." AND document_id = ".$id." AND advocate_assigned_id=".$assingeeId." AND rm_id = ".$_SESSION['id'];
+        
+        }
       
-        $query = "SELECT `document_name`,`title`,`description`,document,client_email,subscriptions_name FROM `vw_documents_review` WHERE user_id = ".$client_id." AND document_id = ".$id." AND rm_id = ".$_SESSION['id'];
         $result = $this->db->query($query);
         $document = array();
         if (!$result) {
@@ -200,7 +214,7 @@ class Documents{
     public function getDocumentsService($data){
       
         
-        $query = "SELECT `id`, `document_name`,`document_price`, `category_name` FROM `vw_document_service` WHERE service_id =".$data;
+        $query = "SELECT `id`, `document_name`,`document_price`, `category_name`,`service_id` FROM `vw_document_service` WHERE service_id =".$data;
         $result = $this->db->query($query);
         $document = array();
         if (!$result) {
@@ -209,17 +223,17 @@ class Documents{
             exit();
         }else {
             while($row=$result -> fetch_assoc()){
-                 $query = "SELECT id,billing_type FROM payment WHERE type_paid ='documents' AND product_id = ".$row['id']." AND  user_id = ".$_SESSION['id'];
+                 $query = "SELECT id,billing_type,service_id FROM payment WHERE type_paid ='documents' AND product_id = ".$row['id']." AND  user_id = ".$_SESSION['id']." AND service_id =".$row['service_id'];
 
           $resultt = $this->db->query($query);
 
           if(mysqli_num_rows($resultt) != 1){
-            array_push($document,array("id"=>$row['id'],"Name"=>$row['document_name'],"price"=>$row['document_price'],"category"=>$row['category_name'],"payment_id" =>"null"));
+            array_push($document,array("id"=>$row['id'],"service_id"=>$row['service_id'],"Name"=>$row['document_name'],"price"=>$row['document_price'],"category"=>$row['category_name'],"payment_id" =>"null"));
                
           }
           else{
               while($roww=$resultt -> fetch_assoc()){
-                array_push($document,array("id"=>$row['id'],"Name"=>$row['document_name'],"price"=>$row['document_price'],"category"=>$row['category_name'],"payment_id" =>$roww['id']));
+                array_push($document,array("id"=>$row['id'],"service_id"=>$row['service_id'],"Name"=>$row['document_name'],"price"=>$row['document_price'],"category"=>$row['category_name'],"payment_id" =>$roww['id']));
               }
             }
                 
@@ -242,16 +256,18 @@ class Documents{
                   if($row['type_paid'] == "documents"){
                       
                     
-                    $query = "SELECT `id`, `document_name`,`document`,`category_name`, `service_downloads` AS download_count FROM `vw_document_service` WHERE id = ".$row['product_id'];
+                    $query = "SELECT `id`, `document_name`,`document`,`category_name`, `service_downloads` AS download_count FROM
+                     `vw_document_service_bought` WHERE id = ".$row['product_id']." AND user_id = ".$_SESSION['id'];
+                     echo $query;
                   
                   $my_type = "solo";
 
                   }
                   elseif($row['type_paid'] == "subscriptions") {
                     
-                    $query = "SELECT `id`, `document_name`, `category_name`,`document`,`download_count`,`review_count`,`subscriptions_name`,`review_status` FROM `document_subscription_bought` WHERE subscription_id = ".$row['product_id'];
+                    $query = "SELECT `id`, `document_name`, `category_name`,`document`,`download_count`,`review_count`,
+                    `subscriptions_name`,`review_status` FROM `document_subscription_bought` WHERE subscription_id = ".$row['product_id']." AND user_id =".$_SESSION['id'];
                     
-
                     $my_type = "subscriptions";
                   }
                 //   echo $query;
@@ -308,8 +324,6 @@ class Documents{
         return $row["email"];
 
     }
-
-    
 
 
     public function getPurchasedDocumentsOnReview(){
@@ -383,6 +397,28 @@ class Documents{
         }
 
     }
+
+    public function countDownloadsrem($id){
+        $query = "SELECT download_count FROM documents_bought_service WHERE document_id = $id AND user_id = ".$_SESSION['id'];
+        $result = $this->db->query($query);
+
+        while($row = $result->fetch_assoc()){
+
+            $count = 0;
+            $count = $row['download_count'];
+            $count = $count - 1;
+
+            $query = "UPDATE documents_bought_service SET download_count = $count WHERE document_id = $id AND user_id = ".$_SESSION['id'];
+            if($this->db->query($query)){
+                echo json_encode(array("result"=>"success"));
+            }else{
+                echo json_encode(array("result"=>$this->db->error));
+            }
+
+        }
+
+    }
+
     public function editDocument($data){
        $pre = "preview ->";
        if(!empty($_FILES['preview']['name']) && !empty($_FILES['docu']['name'])){
@@ -460,14 +496,16 @@ class Documents{
         }
     }
     //The following method will be used for reuploading reviewed documents
-    public function replaceDocument($token,$doc_id,$file,$assignee){
+    public function replaceDocument($token,$doc_id,$client_id,$file,$assignee,$rm_id){
+
 
         if($token == $_SESSION['token']){
-            $sql = " SELECT document,document_name FROM Documents WHERE id =  $doc_id ";
-
             
-            $result = $this->db->query($sql);
+            $query = "SELECT document_name,document,client_email,subscriptions_name FROM document_subscription_bought WHERE
+            user_id = $client_id AND id = $doc_id AND advocate_assigned_id= $assignee AND rm_id = ".$rm_id;
 
+            $result = $this->db->query($query);
+   
             while($row=$result -> fetch_assoc()){
                 # code...
                 $document_name = str_replace("./uploadDocuments/", "", $row['document']);
@@ -476,7 +514,10 @@ class Documents{
                     echo json_encode(array("result" => "alert-danger","value" => "You must upload file with same name"));
                     exit();
                 }
-                $document = libs :: uploadFile($_FILES['upload_document'],"uploadDocuments");
+                $sub_name = str_replace(" ","",$row["subscriptions_name"]);
+      
+                $link = "usersDirectories/".MD5($row['client_email'])."/".$sub_name;
+                $document = libs :: uploadFile($_FILES['upload_document'],$link);
 
                 if ($document == "") {
                     echo json_encode(array("result" => "alert-danger","value" => "Document not uploaded.Contact support."));
@@ -488,9 +529,49 @@ class Documents{
                
                 libs::mail_template ($this->getusermail($_SESSION['id']),"Document Review","CMA document review",$mail_of_rm);
                
+                
+                if($assignee == 0){
+                    $mail_of_user = "<h4>Review Submission</h4>
+                    <p>Review for document [".$row["document_name"]."] is complete.</p>";
+    
+                    libs::mail_template ($row['client_email'],"Document Review","CMA document review",$mail_of_user);
 
-                echo json_encode(array("result" => "alert-success","value" => "Document uploaded."));
-                exit();
+                    $query = "UPDATE documents_review SET review_status = 'none',title ='',description='' WHERE 
+                    user_id = $client_id AND document_id = $doc_id AND advocate_assigned_id= $assignee AND rm_id = ".$_SESSION['id'];
+                    
+                    $result = $this->db-> query($query);
+
+                    if(!$result){
+                    
+                        echo json_encode(array("result" => "alert-danger","value" => $this->db->error));
+                        exit();
+
+                    }else{
+
+                            echo json_encode(array("result" => "alert-success","value" => "Document Marked as done"));
+                            exit();
+                    
+                    }
+                
+           
+    
+                }else{
+                    $query = "UPDATE documents_review SET review_status = 'completed' WHERE 
+                    user_id = $client_id AND document_id = $doc_id AND advocate_assigned_id= $assignee AND rm_id = ".$rm_id;
+                    $result = $this->db->query($query);
+                    if(!$result){
+            
+                        echo json_encode(array("result" => "alert-danger","value" => $this->db->error));
+                        exit();
+        
+                    }else{
+                            echo json_encode(array("result" => "alert-success","value" => "Document added as complete"));
+                            exit();
+                    
+                    }
+                
+                }
+
 
             }
 

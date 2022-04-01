@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cart-outline.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -40,7 +42,7 @@
         .sme {
             height: 50vh;
             width: 100%;
-            background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/Nyundo-01.png);
+            background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/documents.png);
             background-position: center;
             background-size: cover;
             text-align: center;
@@ -49,10 +51,12 @@
     </style>
     <section class="sme">
 
-        <nav id="nav" class="nav">
+        <nav id="nav" class="nav-custom">
         </nav>
         <h5 id="document_name" style="color:transparent; -webkit-text-stroke:1px #fff; background:url(images/back.png);  -webkit-background-clip:text;  background-position:0 0; animation: back 20s linear infinite; font-size:80px;"><i class="fa fa-file" aria-hidden="true"></i> DOCUMENT DETAILS</h5>
     </section>
+
+    <div class="alert d-none" id="feedback_2" role="alert"></div>
 
     <!---->
     <div class="row m-5 shadow-lg" id="document_details_custom">
@@ -63,7 +67,7 @@
                   eaque rerum! Provident similique accusantium nemo autem.</label><br>
                 <label style="padding-left:2%;padding-right: 2%;"><small class="text-white" id="cat">${element.category}</small></label><br>
                 <label class=" text-white" style="padding-left:2%;padding-right: 2%;"><strong id="price">${element.price}</strong> </label>
-                <p class="text-center"><button class="btn btn-info rounded-0 shadow-lg">View Image</button></p>
+                <p class="text-center"><button style="background-color: #1c355e; color:#fff; border-color: #1c355e;" class="btn btn-info rounded-0 shadow-lg">View Image</button></p>
 
             </div>
 
@@ -97,11 +101,11 @@
 
                     <div class="row" style="padding-left:4%;padding-right: 4%;">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <label style="display: block;text-align: center;line-height: 150%;font-size: .85em;"><button class="btn btn-info shadow-lg rounded-0">Make Enquiry</button></label>
+                            <label style="display: block;text-align: center;line-height: 150%;font-size: .85em;"><button style="background-color: #1c355e; color:#fff; border-color: #1c355e;" class="btn btn-info shadow-lg rounded-0">Make Enquiry</button></label>
                         </div>
 
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <label style="display: block;text-align: center;line-height: 150%;font-size: .85em;"><button class="btn btn-info shadow-lg rounded-0">Get A Quote</button></label>
+                            <label style="display: block;text-align: center;line-height: 150%;font-size: .85em;"><button style="background-color: #1c355e; color:#fff; border-color: #1c355e;" class="btn btn-info shadow-lg rounded-0">Get A Quote</button></label>
                         </div>
 
                     </div>
@@ -117,47 +121,29 @@
     <!---->
 
 
-    <div class="comment-box">
-        <h3>Make an enquiry</h3>
-        <form class="comment-form">
-            <input type="text" placeholder="Enter Name">
-            <input type="email" placeholder="Enter email">
-            <textarea rows="5" placeholder="Your Comment"></textarea>
-            <button type="submit" class="hero-btn red-btn">SUBMIT</button>
-        </form>
-    </div>
-
-
-    <section class="facility">
-        <h1>Meet some of Our Lawyers</h1>
-        <div class="row">
-            <div class="facility-col">
-                <img style="width:200px; height:200px;" src="images/Cyrus-Maina.jpg">
-                <h3>Cyrus Maina</h3>
-                <p style="color:#000;">Managing Partner.</p>
-                <button type="submit" class="hero-btn red-btn">View</button>
-            </div>
-            <div class="facility-col">
-                <img style="width:200px; height:200px;" src="images/Njomo-Kamau.jpg">
-                <h3>Njomo Kamau</h3>
-                <p style="color:#000;">Partner</p>
-                <button type="submit" class="hero-btn red-btn">View</button>
-            </div>
-            <div class="facility-col">
-                <img style="width:200px; height:200px;" src="images/Francis-Kakai.jpg">
-                <h3>Francis Kakai</h3>
-                <p style="color:#000;">Partner</p>
-                <button type="submit" class="hero-btn red-btn">View</button>
-            </div>
+<div class="row justify-content-center ">
+<div class=" col-sm-8 col-md-8 col-lg-8 col-xl-8">
+    <div class="card mb-3">
+        <div class="card-header" style="background-color: #1c355e;">
+          <p style="color:white; font-size:25px; font-weight:bold;">Table Of Contents</p>
         </div>
-    </section>
-    <div class="subscribe" style="background-color:white">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+</div>    
+
+</div>
+<!-- Newsletter -->
+    <!-- <div class="subscribe" style="background-color:white">
         <input type="text" placeholder="Email address" name="mail" required>
         <label>
       <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
     </label>
         <a href="contact.html" style=" border:1px solid #808080; justify-content:center;" class="hero-btn red-btn">Subscribe</a>
-    </div>
+    </div> -->
 
     <!----JavaScript for toggle menu---->
     <div class="bottom">

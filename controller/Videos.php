@@ -106,8 +106,7 @@ class Videos{
     
     public function getServicevideos($data){
         
-        
-        $query = "SELECT `id`,`video_name`,`video_preview`,`price`,`video` FROM `vw_videos_service` WHERE service_id = ".$data;
+        $query = "SELECT `id`,`video_name`,`video_preview`,`price`,`service_id`,`video` FROM `vw_videos_service` WHERE service_id = ".$data;
         $result = $this->db->query($query);
         $video = array();
         if (!$result) {
@@ -119,17 +118,18 @@ class Videos{
         
           //
           
-          $query = "SELECT id,billing_type FROM payment WHERE type_paid ='videos' AND product_id = ".$row['id']." AND  user_id = ".$_SESSION['id'];
+          $query = "SELECT id,billing_type,service_id FROM payment WHERE type_paid ='videos' 
+          AND product_id = ".$row['id']." AND  user_id = ".$_SESSION['id']." AND service_id =".$row['service_id'];
 
           $resultt = $this->db->query($query);
 
           if(mysqli_num_rows($resultt) != 1){
-            array_push($video,array("id"=>$row['id'],"Name"=>$row['video_name'],"preview"=>$row['video_preview'],"price" => $row['price'],"payment_id" =>"null"));
+            array_push($video,array("id"=>$row['id'],"service_id"=>$row["service_id"],"Name"=>$row['video_name'],"preview"=>$row['video_preview'],"price" => $row['price'],"payment_id" =>"null"));
             
           }
           else{
               while($roww=$resultt -> fetch_assoc()){
-                array_push($video,array("id"=>$row['id'],"Name"=>$row['video_name'],"preview"=>$row['video_preview'],"video"=>$row['video'],"price" => $row['price'],"payment_id" =>$roww['id']));
+                array_push($video,array("id"=>$row['id'],"service_id"=>$row["service_id"],"Name"=>$row['video_name'],"preview"=>$row['video_preview'],"video"=>$row['video'],"price" => $row['price'],"payment_id" =>$roww['id']));
               }
           }
 

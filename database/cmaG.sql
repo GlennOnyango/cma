@@ -13,9 +13,6 @@ INSERT INTO `advocates_details` VALUES (12,'holder','declined'),(13,'holder','de
 
 
 
-
-
-
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -100,12 +97,15 @@ CREATE TABLE `payment` (
   `refrence_number` varchar(100) NOT NULL,
   `dateCreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `amount` int NOT NULL,
+  `service_id` int NOT NULL DEFAULT 0,
   `type_paid` varchar(100) NOT NULL,
   `billing_type` varchar(100) NOT NULL DEFAULT 'monthly',
   `product_id` int NOT NULL,
   `status` varchar(100) DEFAULT 'active',
   PRIMARY KEY (`id`)
 );
+--ALTER TABLE payment ADD COLUMN `service_id` int NOT NULL DEFAULT 0;
+
 
 DROP TABLE IF EXISTS `payment_terms`;
 CREATE TABLE `payment_terms` (

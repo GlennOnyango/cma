@@ -52,6 +52,7 @@ reg_form.addEventListener("submit", (e) => {
             myft.classList.remove(obj.result);
             myft.innerHTML = '';
          
+            window.location.replace("https://cmversiontwo.cmadvocates.com/login.html");
 
           }, 5000);//wait 2 seconds
             }
@@ -95,9 +96,8 @@ log_form.addEventListener("submit", (e) => {
 
             }else{
 
-                console.log(myft);
                 myft.classList.add(obj.result);
-                myft.innerHTML = obj.value;
+                myft.innerHTML = "Email or password is wrong";
                 myft.classList.remove('d-none');
       
                 

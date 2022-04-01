@@ -5,6 +5,7 @@ var url = "https://cmversiontwo.cmadvocates.com/controller/Display.php";
 // jQuery document ready
 $(document).ready(function () {
 
+
     
     if($("#practice_area_home").length || $("#all_practice").length){
 
@@ -202,17 +203,31 @@ $(document).ready(function () {
                   <div class="card">
                     <img src="images/Affidavit for Lost Certificate of Incorporation of a Trust.PNG" style="height:40vh" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">${element.Name}</h5>
+                        <h5 class="card-title"><a href="https://cmversiontwo.cmadvocates.com/documentDescription.html?id=${element.id}">${element.Name}</a></h5>
                         <small class="text-muted">${element.category}</small>
                         <p class="display-6">kes ${element.price}</p>
-                        <a class="btn btn-md" style="background:#1c355e;  color: white;" href="https://cmversiontwo.cmadvocates.com/documentDescription.html?id=${element.id}">View More</a>
-                        <!--<button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn" 
-                        onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
-                        let total = $('#lblCartCount').text();
-                        total++;
-                        $('#lblCartCount').text(total);
-                        ">
-                        Add To Cart</button>-->
+                        
+                        <div class="row">
+                        <div class="col-6">
+                        <button style="background:linear-gradient(60deg, #1c355e, #7f2729);color:white;" class="btn" 
+                       onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
+                       let total = $('#lblCartCount').text();
+                       total++;
+                       $('#lblCartCount').text(total);
+                       ">
+                        Add To Cart</button></div>
+                        
+                        <div class="col-6">
+                        <button style="background:linear-gradient(60deg, #1c355e, #7f2729);color:white;" class="btn" 
+                       onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
+                       let total = $('#lblCartCount').text();
+                       total++;
+                       $('#lblCartCount').text(total);
+                       window.location.replace('https://cmversiontwo.cmadvocates.com/cart.html');
+                       ">
+                        Purchase</button></div>
+                        </div>
+
                     </div>
                   </div>
 
@@ -248,14 +263,17 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Category.php", { 
       });
 //getsubcat
 
-  }
+    }
 
+  
 
-//Document DEtail
+    //Document DEtail
     if($("#document_details_custom").length){
-   console.log("ssadasdas");
+ 
+      
       $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Documents.php", { id_single: window.location.search.substring(1).split('&')[0].split('=')[1] }, function (data) {
         const obj = JSON.parse(data);
+
       
         $("#document_name").text(obj.documents[0].Name);
         $("#document_description").text(obj.documents[0].document_description);
@@ -263,17 +281,24 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Category.php", { 
         $("#cat").text(obj.documents[0].category);
         $("#cart_btn_holder").append(`<button  
         class="btn btn-info shadow-lg rounded-0" 
-        onclick="sessionStorage.setItem('product_id_${obj.documents[0].id}_document', JSON.stringify({'id':'${obj.documents[0].id}','type_paid':'documents','name':'${obj.documents[0].Name}','billing_type':'la','price':'${obj.documents[0].price * 1}'}) );
+        onclick="sessionStorage.setItem('product_id_${obj.documents[0].id}_document',
+        JSON.stringify({'id':'${obj.documents[0].id}',
+        'type_paid':'documents',
+        'name':'${obj.documents[0].Name}',
+        'billing_type':'la',
+        'price':'${obj.documents[0].price * 1}'}) );
         let total = $('#lblCartCount').text();
         total++;
         $('#lblCartCount').text(total);
+        myalert('${obj.documents[0].Name}');
+
         ">
          Add To Cart</button>`);
       });
     }
 
 
-//dOCUMENT dETAILS
+    //dOCUMENT dETAILS
     //video
     
     if($("#video").length){
@@ -308,10 +333,16 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Category.php", { 
        <div class="row">
        <div class="col-12">
        <button style="background:linear-gradient(60deg, #1c355e, #7f2729); color:white;" class="btn" 
-       onclick="sessionStorage.setItem('product_id_${element.id}_video', JSON.stringify({id:${element.id},type_paid:'videos',name:'${element.Name}',billing_type:'la',price:${element.price * 1}}) );
+       onclick="sessionStorage.setItem('product_id_${element.id}_video',
+        JSON.stringify({id:${element.id},
+        type_paid:'videos',
+        name:'${element.Name}',
+        billing_type:'la',
+        price:${element.price * 1}}) );
        let total = $('#lblCartCount').text();
         total++;
         $('#lblCartCount').text(total);
+        myalert('${element.Name}');
        ">
        <i class="fa fa-cart-plus" aria-hidden="true"></i>
         Add To Cart</button>
@@ -471,155 +502,162 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Products.php", { 
     }
     //membership
 
-        //subscription
+    //subscription
 
-        if($("#subs").length){
-            $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Subscriptions.php", {sub_id: window.location.search.substring(1).split('&')[0].split('=')[1] }, function (data) {
-                const obj = JSON.parse(data);
-                
+    if($("#subs").length){
+        $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Subscriptions.php", {sub_id: window.location.search.substring(1).split('&')[0].split('=')[1] }, function (data) {
+            const obj = JSON.parse(data);
             
-                $("#subs").empty();
-                obj.subscriptions.forEach(element => {
+        
+            $("#subs").empty();
+            obj.subscriptions.forEach(element => {
 
-                  let JSONObject = JSON.parse(element.features);
-                  let pTga = "";
-                  let pTag2 = ""; 
-                  if(element.discount == "no"){
-    
-                    pTga = `KES ${element.price} monthly  : KES ${element.price * 12} annually`;
-    
-                  }else{
-                    pTga = `KES ${element.price} monthly`;
-                    pTag2 = `Get a discount with an annual subscription <del>kes${element.price * 12}</del> <ins>kes ${element.annual_price}</ins>!`;
-    
-                  }
-                  let potential_id = element.Name;
-                  let kenetic =  potential_id.replace(/\s/g, '_');
-    
-    
-                    if (element.payment_id == "null") {
-    
-                        $("#subs").append(`<div class="col-md-6">
-          <div class="card">
-              <div class="card-header card-header-primary">
-                  <h4 class="card-title">${element.Name}</h4>
-              </div>
-              <div class="card-body" id="${kenetic}">
-    
-    
-                    <div class="d-flex justify-content-center mb-3">
-                  <p style="font-size:20px; font-weight:bold;">${pTga}</p>
-                  </div>
-                  <div class="d-flex justify-content-center mb-3">
-                  <img class="img" style="width:75px; height:75px;" src="assets/img/visa.png" />
-                    <img class="img" style="width:75px; height:75px; margin-left: 10px;" src="assets/img/mpesa.png" /> 
-                  </div>
-                    <div class="d-flex justify-content-center mb-3">
-                  <p style="font-size:15px; font-weight:bold;">${pTag2}</p>
-                  </div>
-    
-                  <div class="col-12">
-                  <p class="text-center">
-    
-                  <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-primary" 
-                  onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({id:${element.id},type_paid:'subscriptions',name:'${element.Name}',billing_type:'annually',price:${element.annual_price * 12}} ));
-                  let total = $('#lblCartCount').text();
-                  total++;
-                  $('#lblCartCount').text(total);
-                  ">
-                   Purchase Anually </button>
-                  <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-default" 
-                  onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({id:${element.id},type_paid:'subscriptions',name:'${element.Name}',billing_type:'monthly',price:${element.annual_price * 1}} ));
-                  let total = $('#lblCartCount').text();
-                  total++;
-                  $('#lblCartCount').text(total);
-                  ">
-                   Purchase</button>
-                   </p>
-                   </div>
-     
-    
-    
-    
-              </div>
+              let JSONObject = JSON.parse(element.features);
+              let pTga = "";
+              let pTag2 = ""; 
+              if(element.discount == "no"){
+
+                pTga = `KES ${element.price} monthly  : KES ${element.price * 12} annually`;
+
+              }else{
+                pTga = `KES ${element.price} monthly`;
+                pTag2 = `Get a discount with an annual subscription <del>kes${element.price * 12}</del> <ins>kes ${element.annual_price}</ins>!`;
+
+              }
+              let potential_id = element.Name;
+              let kenetic =  potential_id.replace(/\s/g, '_');
+
+
+                if (element.payment_id == "null") {
+
+                    $("#subs").append(`<div class="col-md-6">
+      <div class="card">
+          <div class="card-header card-header-primary">
+              <h4 class="card-title">${element.Name}</h4>
           </div>
-        </div>
-                            
-                            `);
-                    } 
-                    else {
-    
-                        let btn = '';
-                        if (element.billing_type == 'annually') {
-                            btn = `<button type="button" id="main_id_in" data-op="choose_subscription_form" class="btn btn-primary">Cancel Subscription</button>`;
-                        } else if (element.billing_type == 'monthly') {
-                            btn = `<button type="button" id="main_id_in" data-op="choose_billing_form" class="btn btn-primary"><span class="material-icons">paid</span> Bill Annually</button>`;
-    
-                        }
-    
-                        $("#sub").append(`<div class="col-md-6">
-          <div class="card">
-              <div class="card-header card-header-primary">
-                  <h4 class="card-title">${element.Name}</h4>
+          <div class="card-body" id="${kenetic}">
+
+
+                <div class="d-flex justify-content-center mb-3">
+              <p style="font-size:20px; font-weight:bold;">${pTga}</p>
               </div>
-              <div class="card-body" id="${kenetic}">
-                  
-                    <div class="d-flex justify-content-center mb-3">
-                  <p style="font-size:20px; font-weight:bold;">${pTga}</p>
-                  </div>
-                  <div class="d-flex justify-content-center mb-3">
-                  <img class="img" style="width:75px; height:75px;" src="assets/img/visa.png" />
-                    <img class="img" style="width:75px; height:75px; margin-left: 10px;" src="assets/img/mpesa.png" /> 
-                  </div>
-                    <div class="d-flex justify-content-center mb-3">
-                  <p style="font-size:15px; font-weight:bold;" class="text-center">${pTag2}</p>
-                  </div>
-                  <div class="col-12">
-                  <p class="text-center">
-                  ${btn}  
-                  </p>
-                  </div>
+              <div class="d-flex justify-content-center mb-3">
+              <img class="img" style="width:75px; height:75px;" src="assets/img/visa.png" />
+                <img class="img" style="width:75px; height:75px; margin-left: 10px;" src="assets/img/mpesa.png" /> 
               </div>
+                <div class="d-flex justify-content-center mb-3">
+              <p style="font-size:15px; font-weight:bold;">${pTag2}</p>
+              </div>
+
+              <div class="col-12">
+              <p class="text-center">
+
+              <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-primary" 
+              onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({id:${element.id},type_paid:'subscriptions',name:'${element.Name}',billing_type:'annually',price:${element.annual_price * 12}} ));
+              let total = $('#lblCartCount').text();
+              total++;
+              $('#lblCartCount').text(total);
+              myalert('${element.Name}');
+              ">
+                Purchase Anually </button>
+              <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn btn-default" 
+              onclick="sessionStorage.setItem('product_id_${element.id}_subscription',
+              JSON.stringify({id:${element.id},
+                type_paid:'subscriptions',
+                name:'${element.Name}',
+                billing_type:'monthly',
+                price:${element.annual_price * 1}} ));
+              let total = $('#lblCartCount').text();
+              total++;
+              $('#lblCartCount').text(total);
+              myalert('${element.Name}');
+              ">
+                Purchase</button>
+                </p>
+                </div>
+  
+
+
+
           </div>
-        </div>
-                            
-                            `);
-    
+      </div>
+    </div>
+                        
+                        `);
+                } 
+                else {
+
+                    let btn = '';
+                    if (element.billing_type == 'annually') {
+                        btn = `<button type="button" id="main_id_in" data-op="choose_subscription_form" class="btn btn-primary">Cancel Subscription</button>`;
+                    } else if (element.billing_type == 'monthly') {
+                        btn = `<button type="button" id="main_id_in" data-op="choose_billing_form" class="btn btn-primary"><span class="material-icons">paid</span> Bill Annually</button>`;
+
                     }
-    
-    
-                    JSONObject.features.forEach(featuer => {
-                      //console.log($("#"+kenetic).attr());
-                        if(featuer.presence == '1'){
-                          $("#"+kenetic).prepend(`<div class="d-flex justify-content-center mb-3"><p>${featuer.feature}</p><span class="material-icons">check</span></div>`);
-                          
-                        }
-                        else{
-                          $("#"+kenetic).prepend(`<div class="d-flex justify-content-center mb-3"><p>${featuer.feature}</p><span class="material-icons">close</span></div>`);
-                          
-                        }
-                    });
-      
-    
-    
+
+                    $("#sub").append(`<div class="col-md-6">
+      <div class="card">
+          <div class="card-header card-header-primary">
+              <h4 class="card-title">${element.Name}</h4>
+          </div>
+          <div class="card-body" id="${kenetic}">
+              
+                <div class="d-flex justify-content-center mb-3">
+              <p style="font-size:20px; font-weight:bold;">${pTga}</p>
+              </div>
+              <div class="d-flex justify-content-center mb-3">
+              <img class="img" style="width:75px; height:75px;" src="assets/img/visa.png" />
+                <img class="img" style="width:75px; height:75px; margin-left: 10px;" src="assets/img/mpesa.png" /> 
+              </div>
+                <div class="d-flex justify-content-center mb-3">
+              <p style="font-size:15px; font-weight:bold;" class="text-center">${pTag2}</p>
+              </div>
+              <div class="col-12">
+              <p class="text-center">
+              ${btn}  
+              </p>
+              </div>
+          </div>
+      </div>
+    </div>
+                        
+                        `);
+
+                }
+
+
+                JSONObject.features.forEach(featuer => {
+                  //console.log($("#"+kenetic).attr());
+                    if(featuer.presence == '1'){
+                      $("#"+kenetic).prepend(`<div class="d-flex justify-content-center mb-3"><p>${featuer.feature}</p><span class="material-icons">check</span></div>`);
+                      
+                    }
+                    else{
+                      $("#"+kenetic).prepend(`<div class="d-flex justify-content-center mb-3"><p>${featuer.feature}</p><span class="material-icons">close</span></div>`);
+                      
+                    }
                 });
-              });
-            
-                }    
-        //subscription
+  
+
+
+            });
+          });
+        
+            }    
+    //subscription
     
 
     //onemembershipsubscription
 
 
 
-if($("#membershipsubscription").length){
-        $("#membershipsubscription").click(()=>{
-            //
-            window.location.href = "https://cmversiontwo.cmadvocates.com/service-subscription.html?id="+window.location.search.substring(1).split('=')[1]; 
-            //
-        });
-    }
+    if($("#membershipsubscription").length){
+            $("#membershipsubscription").click(()=>{
+                //
+                window.location.href = "https://cmversiontwo.cmadvocates.com/service-subscription.html?id="+window.location.search.substring(1).split('=')[1]; 
+                //
+            });
+        }
     if($("#membershipsubscription").length){
              
 $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: window.location.search.substring(1).split('&')[0].split('=')[1] }, function (data) {
@@ -689,7 +727,8 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
   ">
    Purchase Anually </button>
   <button class="btn btn-default" 
-  onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({'id':'${element.id}','type_paid':'subscriptions','name':'${element.Name}','billing_type':'monthly',price:${element.annual_price * 1}}) );
+  onclick="sessionStorage.setItem('product_id_${element.id}_subscription',JSON.stringify({'id':'${element.id}',
+  'type_paid':'subscriptions','name':'${element.Name}','billing_type':'monthly',price:${element.annual_price * 1}}) );
   let total = $('#lblCartCount').text();
   total++;
   $('#lblCartCount').text(total);
@@ -715,19 +754,19 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
             console.log(element);
             if(element.includes("product_id")){
                 const obj = JSON.parse(sessionStorage.getItem(element));
-            
+                total += obj.price * 1;
+        
                 $("#cart_table").append(`
                 <tr>
                 <td>${obj.name}</td>
                 <td>${obj.type_paid}</td>
                 <td>${obj.billing_type}</td>
                 <td>1</td>
-                <td>${obj.price}</td>
+                <td>${(total + (total * 0.1)).toFixed(2)}</td>
                 <td><button class="hero-btn red-btn" id="remove_item" data-element="${element}">Remove Item</button></td>
                 </tr>
                 `);
-                total += obj.price * 1;
-        
+               
             }
         });
         
@@ -973,17 +1012,33 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
                 <div class="card">
                   <img src="images/Affidavit for Lost Certificate of Incorporation of a Trust.PNG" style="height:40vh" class="card-img-top" alt="...">
                   <div class="card-body">
-                      <h5 class="card-title">${element.Name}</h5>
+                      <h5 class="card-title"><a href="https://cmversiontwo.cmadvocates.com/documentDescription.html?id=${element.id}">${element.Name}</a></h5>
                       <small class="text-muted">${element.category}</small>
                       <p class="display-6">kes ${element.price}</p>
-                      <a class="btn btn-md" style="background:#1c355e;  color: white;" href="https://cmversiontwo.cmadvocates.com/documentDescription.html?id=${element.id}">View More</a>
-                      <!--<button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn" 
-                      onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
-                      let total = $('#lblCartCount').text();
-                      total++;
-                      $('#lblCartCount').text(total);
-                      ">
-                      Add To Cart</button>-->
+                      <div class="row">
+                      <div class="col-6">
+                        <button style="background:linear-gradient(60deg, #1c355e, #7f2729);color:white;" class="btn" 
+                        onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
+                        let total = $('#lblCartCount').text();
+                        total++;
+                        $('#lblCartCount').text(total);
+                        ">Add To Cart</button>
+
+                      </div>
+                     
+                      <div class="col-6">
+                        <button style="background:linear-gradient(60deg, #1c355e, #7f2729);color:white;" class="btn" 
+                        onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
+                        let total = $('#lblCartCount').text();
+                        total++;
+                        $('#lblCartCount').text(total);
+                        window.location.replace('https://cmversiontwo.cmadvocates.com/cart.html');
+                        ">Purchase</button>
+
+                      </div>
+                      
+                       </div>
+                      
                   </div>
                 </div>
 
@@ -1000,7 +1055,20 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
 });
 
 
+const myalert = (name)=>{
+  $('#feedback_2').removeClass('d-none');
+  $('#feedback_2').addClass('alert-success');
+  $('#feedback_2').text(`${name} has been added to cart`);
 
+  
+  setTimeout(function() {
+    $('#feedback_2').addClass('d-none');
+    $('#feedback_2').removeClass('alert-success');
+    $('#feedback_2').text('');
+  }, 3000);
+
+  $(window).scrollTop(0);      
+}
 
 function searchCat(id){
 
@@ -1015,17 +1083,30 @@ function searchCat(id){
   <div class="card">
       <img src="images/Affidavit for Lost Certificate of Incorporation of a Trust.PNG" style="height:40vh" class="card-img-top" alt="...">
       <div class="card-body">
-          <h5 class="card-title">${element.Name}</h5>
+          <h5 class="card-title"><a class="btn btn-md" style="background:#1c355e;  color: white;" href="https://cmversiontwo.cmadvocates.com/documentDescription.html?id=${element.id}">${element.Name}</a></h5>
           <small class="text-muted">${element.category}</small>
           <p class="display-6">kes ${element.price}</p>
-          <a class="btn btn-md" style="background:#1c355e;  color: white;" href="https://cmversiontwo.cmadvocates.com/documentDescription.html?id=${element.id}">View More</a>
-          <!--<button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn" 
-          onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
-          let total = $('#lblCartCount').text();
-          total++;
-          $('#lblCartCount').text(total);
-          ">
-           Add To Cart</button>-->
+          
+          <div class="row">
+          <div class="col-6">
+          <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn" 
+         onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
+         let total = $('#lblCartCount').text();
+         total++;
+         $('#lblCartCount').text(total);
+         ">
+          Add To Cart</button></div>
+          </div>
+
+          <div class="col-6">
+          <button style="background:linear-gradient(60deg, #1c355e, #7f2729);color:white" class="btn" 
+         onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
+         let total = $('#lblCartCount').text();
+         total++;
+         $('#lblCartCount').text(total);
+         ">
+          Purchase</button></div>
+          </div>
       </div>
   </div>
   
@@ -1064,13 +1145,28 @@ function searchdoc(id){
           <small class="text-muted">${element.category}</small>
           <p class="display-6">kes ${element.price}</p>
           <a class="btn btn-md" style="background:#1c355e;  color: white;" href="https://cmversiontwo.cmadvocates.com/documentDescription.html?id=${element.id}">View More</a>
-          <!--<button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn" 
+         
+           <div class="row">
+           <div class="col-6">
+           <button style="background:linear-gradient(60deg, #1c355e, #7f2729);" class="btn" 
           onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
           let total = $('#lblCartCount').text();
           total++;
           $('#lblCartCount').text(total);
           ">
-           Add To Cart</button>-->
+           Add To Cart</button></div>
+           </div>
+
+           <div class="col-6">
+           <button style="background:linear-gradient(60deg, #1c355e, #7f2729);color:white" class="btn" 
+          onclick="sessionStorage.setItem('product_id_${element.id}_document', JSON.stringify({'id':'${element.id}','type_paid':'documents','name':'${element.Name}','billing_type':'la','price':'${element.price * 1}'}) );
+          let total = $('#lblCartCount').text();
+          total++;
+          $('#lblCartCount').text(total);
+          ">
+           Purchase</button></div>
+           </div>
+
       </div>
   </div>
   
@@ -1083,3 +1179,6 @@ function searchdoc(id){
   });
 
 }
+
+
+

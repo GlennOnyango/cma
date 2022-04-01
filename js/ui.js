@@ -258,7 +258,8 @@ $(document).ready(function() {
                   amount: sessionStorage.getItem("price"),
                   type_paid: sessionStorage.getItem("type_paid"),
                   billing_type: sessionStorage.getItem("billing_type"),
-                  product_id: sessionStorage.getItem("id")
+                  product_id: sessionStorage.getItem("id"),
+                  service_id:sessionStorage.getItem("service_id")
 
               })
               .done(function(data) {
@@ -2064,7 +2065,9 @@ $("#service_name").append(ui);
       sessionStorage.setItem('type_paid','videos');
       sessionStorage.setItem('name','${element.Name}');
       sessionStorage.setItem('billing_type','la');
-      sessionStorage.setItem('price',${element.price * 1});">
+      sessionStorage.setItem('price',${element.price * 1});
+      sessionStorage.setItem('service_id',${element.service_id});
+      ">
        Purchase</button>
 
        <button class="btn btn-default" id="main_id_in" data-op="mPayment" 
@@ -2072,7 +2075,9 @@ $("#service_name").append(ui);
        sessionStorage.setItem('type_paid','videos');
        sessionStorage.setItem('name','${element.Name}');
        sessionStorage.setItem('billing_type','la');
-       sessionStorage.setItem('price',${element.price * 1});">
+       sessionStorage.setItem('price',${element.price * 1});
+       sessionStorage.setItem('service_id',${element.service_id});
+       ">
         MPurchase</button>
 </div>
 </div>
@@ -5132,11 +5137,10 @@ $("#service_name").append(ui);
       </td>
          <td>
          <button class="btn btn-default" id="main_id_in" data-op="makePayment" 
-         onclick="sessionStorage.setItem('id',${element.id});
-         sessionStorage.setItem('type_paid','documents');
-         sessionStorage.setItem('name','${element.Name}');
-         sessionStorage.setItem('billing_type','la');
-         sessionStorage.setItem('price',${element.price * 1});">
+         onclick="sessionStorage.setItem('id',${element.id});sessionStorage.setItem('type_paid','documents');
+         sessionStorage.setItem('name','${element.Name}');sessionStorage.setItem('billing_type','la');
+         sessionStorage.setItem('price',${element.price * 1});sessionStorage.setItem('service_id',${element.service_id});
+         ">
           Purchase</button>
       </td>
   </tr>             
@@ -6147,6 +6151,7 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                 </button>
               </div>
             </form>
+                        <th>Type</th>
                         <th>
                          Document Name
                         </th>
@@ -6167,28 +6172,6 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                         </th>
                       </thead>
                       <tbody id="mytable">
-                        <tr>
-                          <td>
-                            Employment Registration form
-                          </td>
-                          <td>
-                            Education
-                          </td>
-                            <td>
-                          kshs 3000
-                          </td>
-                          <td>
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Actions
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Export</a>
-    <a class="dropdown-item" href="#">Download</a>
-  </div>
-</div>
-                          </td>
-                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -6211,78 +6194,46 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                 if (element.type == "solo") {
 
                     $("#mytable").append(` <tr>
-                <td>
-                  ${element.Name}
-                </td>
-                <td>
-                  ${element.category}
-                </td>
-                  <td>
-                  ${element.download_count}
-                </td>
-                <td>
-                 <button class="btn" disabled
-                  data-op="readDocument" data_type="local" 
-                  data_id="${element.document}" id="main_id_in">Download</button></td>
-                  
-                  <td>
-                Life Time
-                </td>
-                
-                <td>
-                <!--<button class="btn" onclick="review_document(${element.id})">Review</button>-->
-                </td>
+                <td>${element.type}</td>
+                <td>${element.Name}</td>
+                <td>${element.category}</td>
+                <td>${element.download_count}</td>
+                <td><a href="${element.document}" class="btn"  data_type="local" data_update="${element.id}" id="main_id_in">Download</a><td>
+                <td>Life Time</td>
+                <td><!--<button class="btn" onclick="review_document(${element.id})">Review</button>--></td>
               </tr>
                                   `);
                 } 
                 else if (element.type == "subscriptions") {
 
 
-                  if(element.review_count < 1){
-                    btn_download = `
-                    <button class="btn" disabled data_type="sub" data_update="${element.id}" id="main_id_in">Download</button>`;
-                    
+                  if(element.download_count < 1){
+                    btn_download = `<button class="btn" disabled>Download</button>`;
                   }else{
-                    btn_download = `
-                    <a href="${element.document}" class="btn" data_type="sub" data_update="${element.id}" id="main_id_in">Download</a>`;
+                    btn_download = `<a href="${element.document}" class="btn" data_type="sub" data_update="${element.id}" id="main_id_in">Download</a>`;
                     
                   }
 
                   if(element.review_status == "review" || element.review_count < 1){
-                    btn = `<button class="btn" disabled data_type="sub" data_id="${element.document}"
-                    data_update="${element.id}" id="main_id_in">Review</button>`;
-                    // btn = `<button class="btn" disabled onclick="review_document(${element.id})"  data_type="sub" data_id="${element.document}"
-                    // data_update="${element.id}" id="main_id_in">Review</button>`;
+                    btn = `<button class="btn" disabled data_type="sub" data_id="${element.document}" data_update="${element.id}" id="main_id_in">Review</button>`;
+                   
                   }else{
                     btn = `<button class="btn" data_type="review" data_update="${element.id}" id="main_id_in" data-toggle="modal" data-target="#exampleModal" 
                     >Review</button>`;
 
                    }
 
-                  
                   $("#mytable").append(` <tr>
-                  <td>
-                    ${element.Name}
-                  </td>
-                  <td>
-                    ${element.category}
-                  </td>
-                    <td>
-                  ${element.download_count}
-                  </td>
-                  <td>
-                  ${btn_download}
-                  <td>
-                    ${element.review_count}
-                  </td>
-                  <td>
-                    ${btn}
-                  </td>
+                  <td>${element.type}</td>
+                  <td>${element.Name}</td>
+                  <td>${element.category}</td>
+                  <td>${element.download_count}</td>
+                  <td>${btn_download}</td>
+                  <td>${element.review_count}</td>
+                  <td>${btn}</td>
                 </tr>
                                     `);
 
-
-                    
                 }
             });
         });
@@ -6307,7 +6258,25 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                     });
 
                 //
-            } else if ($(this).attr('data_type') == "review") {
+            } 
+            else if($(this).attr('data_type') == "local"){
+
+              $.post("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { rem_id: $(this).attr('data_update') })
+              .done(function(data) {
+                  const obj = JSON.parse(data);
+
+                  if (obj.result == "error") {
+                      console.log(data);
+                  } else if (obj.result == "success") {
+                    view_document();
+
+                  }
+              });
+
+
+            }
+            
+            else if ($(this).attr('data_type') == "review") {
                 //
 
                 review_send.addEventListener("submit", (e) => {
@@ -6353,21 +6322,6 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
                
               
               });
-
-
-                // $.post("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { review: $(this).attr('data_update') })
-                //     .done(function(data) {
-                //         const obj = JSON.parse(data);
-
-                //         if (obj.result == "error") {
-                //           console.log(data);
-                //         } else if (obj.result == "success") {
-                //           view_document();
-
-                //         }
-                //     });
-
-                //
             } else {
                 eval(`${myatt}("${doc}")`);
             }
@@ -6825,23 +6779,6 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/UserStats.php", {document
 
 
         $(content).html(ui);
-        // const main_id_in = document.querySelectorAll("#main_id_in");
-
-        // console.log(main_id_in.length);
-
-        // main_id_in.forEach((ele) => {
-        //     // Here comes the Code that should be executed on every Element, e.g.
-        //     ele.addEventListener("click", () => {
-
-        //         while (content.firstChild) {
-        //             content.removeChild(content.lastChild);
-        //         }
-        //         let myatt = ele.getAttribute("data-op");
-        //         eval(`${myatt}()`);
-
-        //     });
-
-        // });
 
 
         $("#mytable").on("click", "#main_id_in", function() {
