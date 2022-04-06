@@ -52,21 +52,21 @@ $(document).ready(function () {
                     
                     $("#all_practice").append(`
                         
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-3" id="output">
-
-                        <div class="card" style="background: #fff3f3">
-                            <div class="card-body">
-                              <h5 class="card-title">${element.Name}</h5>
-                              <a href="https://cmversiontwo.cmadvocates.com/practiseDetails.html?getBusinessUnit=${element.id}&name=${element.Name}" class="hero-btn red-btn">View</a>
-
-                            </div>
-                        </div>
-
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-3 " id="output">
+                  <div class="card">
+                    <div class="card-body">
+                    <img class="card-img-top" src="images/about.jpg" alt="Card image cap">
+                      <h5 class="card-title">${element.Name}</h5>
+                      <a href="https://cmversiontwo.cmadvocates.com/practiseDetails.html?getBusinessUnit=${element.id}&name=${element.Name}" class="btn btn-primary">View</a>
                     </div>
+                  </div>
+                </div>
         
                         `);
 
                   });
+
+                
         
         
                 } 
@@ -147,7 +147,7 @@ $(document).ready(function () {
                                 
                                   <div class="course-col">
                                     <h3>${element.Name}</h3>
-                                    <a href="https://cmversiontwo.cmadvocates.com/service-detail.html?id=${element.id}" class="hero-btn red-btn">View</a>
+                                    <a href="https://cmversiontwo.cmadvocates.com/category.html?id=${element.id}" class="hero-btn red-btn">View</a>
                                   </div>
                                   
                                   `);
@@ -331,14 +331,11 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Category.php", { 
       </div>
        <div class="card-footer text-muted">
        <div class="row">
-       <div class="col-12">
+
+       <div class="col-6">
        <button style="background:linear-gradient(60deg, #1c355e, #7f2729); color:white;" class="btn" 
        onclick="sessionStorage.setItem('product_id_${element.id}_video',
-        JSON.stringify({id:${element.id},
-        type_paid:'videos',
-        name:'${element.Name}',
-        billing_type:'la',
-        price:${element.price * 1}}) );
+        JSON.stringify({id:${element.id},type_paid:'videos',service_id:'${element.service_id}',name:'${element.Name}',billing_type:'la',price:${element.price * 1}}) );
        let total = $('#lblCartCount').text();
         total++;
         $('#lblCartCount').text(total);
@@ -347,6 +344,23 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/Category.php", { 
        <i class="fa fa-cart-plus" aria-hidden="true"></i>
         Add To Cart</button>
        </div>
+
+
+       <div class="col-6">
+       <button style="background:linear-gradient(60deg, #1c355e, #7f2729); color:white;" class="btn" 
+       onclick="sessionStorage.setItem('product_id_${element.id}_video',
+        JSON.stringify({id:${element.id}, type_paid:'videos',service_id:'${element.service_id}', name:'${element.Name}',billing_type:'la', price:${element.price * 1}}) );
+       let total = $('#lblCartCount').text();
+        total++;
+        $('#lblCartCount').text(total);
+        myalert('${element.Name}');
+        window.location.href = 'https://cmversiontwo.cmadvocates.com/cart.html';
+       ">
+       <i class="fa fa-cart-plus" aria-hidden="true"></i>
+        Purchase</button>
+       </div>
+
+
        </div>
                        </div>
       </div>
@@ -987,6 +1001,7 @@ $.get("https://cmversiontwo.cmadvocates.com/controller/Display/", {service_id: w
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-3">
             <div class="card">
               <div class="card-body">
+              <img class="card-img-top" src="${element.image_cat.replace('./', 'https://cmversiontwo.cmadvocates.com/controller/')}" alt="Card image cap">
                 <h5 class="card-title">${element.Name}</h5>
                 <a href="category-documents.html?category_id=${element.id}" class="btn btn-primary">View Documents</a>
               </div>

@@ -119,7 +119,6 @@ class Documents{
                 
                  array_push($document,array("id"=>$row['id'],"Name"=>$row['document_name'],"price"=>$row['document_price'],"category"=>$row['category_name'],"document_description"=>$row['document_description']));
                
-                
         }
         echo json_encode(array("documents" => $document));
         }  

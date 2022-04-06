@@ -325,7 +325,7 @@ $(document).ready(function() {
                             //
                             console.log(`refrence: ${data.tx_ref},amount: ${obj_cart.price},type_paid:${obj_cart.type_paid},billing_type: ${obj_cart.billing_type},product_id: ${obj_cart.id}`);
 
-                            $.post("https://cmversiontwo.cmadvocates.com/controller/Payment.php", { refrence: data.tx_ref, amount: obj_cart.price, type_paid: obj_cart.type_paid, billing_type: obj_cart.billing_type, product_id: obj_cart.id })
+                            $.post("https://cmversiontwo.cmadvocates.com/controller/Payment.php", { refrence: data.tx_ref, amount: obj_cart.price, type_paid: obj_cart.type_paid, billing_type: obj_cart.billing_type, product_id: obj_cart.id, service_id : obj_cart.service_id })
                                 .done(function(data) {
                                     const obj = JSON.parse(data);
                                     if (obj.result == 'success') {

@@ -1343,16 +1343,614 @@ function assign_business_unit(){
 
 
 
-  function assign_unit(){
-    ui=``;
+  function add_benefits(){
+    ui=`<div class="container-fluid">
+    <div class="row">
+<div class="alert d-none" role="alert"></div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">New Benefits</h4>
+          </div>
+          <div class="card-body">
+       <form action="" method="POST" id="" class="row" enctype="multiple/form-data">
+<div class=" form-group col-12" id="show_item">
+<div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12">
+<label for="inputAddress2">Benefit Name</label>
+<input type="text" class="form-control mt-2" name="desc" id="inputAddress2">
+</div>
+<div class="row">
+<div class="col-12">
+</div>
+    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-3">
+        <input type="text" name="description[]" class="form-control" placeholder="Benefit Description" required>
+    </div>
+    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-3">
+        <input type="text" name="price[]" class="form-control" placeholder="Benefit Price" required>
+    </div>
+
+    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-grid">
+    <p class="text-center"> <button class="btn btn-primary  add_item_btn">Add more</button></p>
+        
+    </div>
+</div>
+</div>
+
+<div class="form-group   col-xl-6 col-lg-6 col-md-6 col-sm-12 form-file-upload form-file-multiple">
+<input type="file" multiple="" accept="video/mp4,video/x-m4v,video/*" name="videofile" class="inputFileHidden">
+<div class="input-group">
+  <input type="text" name="videofile" class="form-control inputFileVisible" placeholder="Choose Logo">
+  <span class="input-group-btn">
+      <button type="button" class="btn btn-fab btn-round btn-primary">
+          <i class="material-icons">videocam</i>
+      </button>
+  </span>
+</div>
+</div>
+
+<div class="form-group   col-xl-6 col-lg-6 col-md-6 col-sm-12 form-file-upload form-file-multiple">
+<input type="file" multiple="" accept="video/mp4,video/x-m4v,video/*" name="videofile" class="inputFileHidden">
+<div class="input-group">
+  <input type="text" name="videofile" class="form-control inputFileVisible" placeholder="Choose Benefit Image">
+  <span class="input-group-btn">
+      <button type="button" class="btn btn-fab btn-round btn-primary">
+          <i class="material-icons">videocam</i>
+      </button>
+  </span>
+</div>
+</div>
+
+<div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12"> 
+<select class=" form-control selectpicker col-12" multiple  data-style="btn btn-link" id="sub exampleFormControlSelect2" name="sub">
+${$.get("https://cmversiontwo.cmadvocates.com/controller/Subscriptions.php", { getSubscriptions: "Donald", token1: sessionStorage.getItem("token") }, function (data) {
+const obj = JSON.parse(data);
+if(obj.result == "session"){
+$("#reauth").modal();
+return;
+}
+
+if(obj.result == "session"){
+$("#reauth").modal();
+return;
+}
+$("#sub").empty();
+
+$("#sub").append(`<option >Choose subscription</option>`);
+
+obj.subscriptions.forEach(element => {
+  $("#sub").append(`<option value="${element.id}">${element.Name}</option>`);
+});
+})
+
+
+}
+</select>
+</div>  
+
+    <div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12"> 
+<select class=" form-control col-12" name="video_status">
+                    <option>Status</option>
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                    </select>
+</div>  
+<input type="submit" name="insert-btn" class="btn btn-primary"/>
+</form>
+
+
+        
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>`;
+
+     $(content).html(ui);
+
+    
+  $(document).ready(function() {
+    $(".add_item_btn").click(function(e) {
+        e.preventDefault();
+        $("#show_item").append(`<div class="form-group col-12" id="show_item">
+        <div class="row">
+          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-3">
+            <input type="text" name="name[]" class="form-control" placeholder="Benefit Name">
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-3">
+            <input type="text" name="price[]" class="form-control" placeholder="Benefit Price">
+          </div>
+
+          <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-grid">
+    <p class="text-center"> <button class="btn btn-danger remove_item_btn">Remove</button></p>      
+    </div>
+        </div>
+      </div>`);
+
+    });
+
+    $(document).on('click', '.remove_item_btn', function(e) {
+        $(this).css("background-color","black");
+        $(this).parent().parent().parent().remove();
+    })
+});
+
+// FileInput
+$('.form-file-simple .inputFileVisible').click(function () {
+  $(this).siblings('.inputFileHidden').trigger('click');
+});
+
+$('.form-file-simple .inputFileHidden').change(function () {
+  var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+  $(this).siblings('.inputFileVisible').val(filename);
+});
+
+$('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function () {
+  $(this).parent().parent().find('.inputFileHidden').trigger('click');
+  $(this).parent().parent().addClass('is-focused');
+});
+
+$('.form-file-multiple .inputFileHidden').change(function () {
+  var names = '';
+  for (var i = 0; i < $(this).get(0).files.length; ++i) {
+    if (i < $(this).get(0).files.length - 1) {
+      names += $(this).get(0).files.item(i).name + ',';
+    } else {
+      names += $(this).get(0).files.item(i).name;
+    }
+  }
+  $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+});
+
+$('.form-file-multiple .btn').on('focus', function () {
+  $(this).parent().siblings().trigger('focus');
+});
+
+$('.form-file-multiple .btn').on('focusout', function () {
+  $(this).parent().siblings().trigger('focusout');
+});
+
+
+
+  }
+
+   function edit_benefits(){
+    ui=`<div class="container-fluid">
+    <div class="row">
+<div class="alert d-none" role="alert"></div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">New Benefits</h4>
+          </div>
+          <div class="card-body">
+       <form action="" method="POST" id="" class="row" enctype="multiple/form-data">
+<div class=" form-group col-12" id="show_item">
+<div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12">
+<label for="inputAddress2">Benefit Name</label>
+<input type="text" class="form-control" name="desc" id="inputAddress2">
+</div>
+<div class="row">
+<div class="col-12">
+</div>
+    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-3">
+        <input type="text" name="description[]" class="form-control" placeholder="Benefit Description" required>
+    </div>
+    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-3">
+        <input type="text" name="price[]" class="form-control" placeholder="Benefit Price" required>
+    </div>
+
+    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-grid">
+    <p class="text-center"> <button class="btn btn-primary  add_item_btn">Add more</button></p>
+        
+    </div>
+</div>
+</div>
+
+<div class="form-group   col-xl-6 col-lg-6 col-md-6 col-sm-12 form-file-upload form-file-multiple">
+<input type="file" multiple="" accept="video/mp4,video/x-m4v,video/*" name="videofile" class="inputFileHidden">
+<div class="input-group">
+  <input type="text" name="videofile" class="form-control inputFileVisible" placeholder="Choose Logo">
+  <span class="input-group-btn">
+      <button type="button" class="btn btn-fab btn-round btn-primary">
+          <i class="material-icons">videocam</i>
+      </button>
+  </span>
+</div>
+</div>
+
+<div class="form-group   col-xl-6 col-lg-6 col-md-6 col-sm-12 form-file-upload form-file-multiple">
+<input type="file" multiple="" accept="video/mp4,video/x-m4v,video/*" name="videofile" class="inputFileHidden">
+<div class="input-group">
+  <input type="text" name="videofile" class="form-control inputFileVisible" placeholder="Choose Benefit Image">
+  <span class="input-group-btn">
+      <button type="button" class="btn btn-fab btn-round btn-primary">
+          <i class="material-icons">videocam</i>
+      </button>
+  </span>
+</div>
+</div>
+
+
+<div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12"> 
+<select class=" form-control selectpicker col-12" multiple  data-style="btn btn-link" id="sub exampleFormControlSelect2" name="sub">
+${$.get("https://cmversiontwo.cmadvocates.com/controller/Subscriptions.php", { getSubscriptions: "Donald", token1: sessionStorage.getItem("token") }, function (data) {
+const obj = JSON.parse(data);
+if(obj.result == "session"){
+$("#reauth").modal();
+return;
+}
+
+if(obj.result == "session"){
+$("#reauth").modal();
+return;
+}
+$("#sub").empty();
+
+$("#sub").append(`<option >Choose subscription</option>`);
+
+obj.subscriptions.forEach(element => {
+  $("#sub").append(`<option value="${element.id}">${element.Name}</option>`);
+});
+})
+
+
+}
+</select>
+</div>  
+
+    <div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12"> 
+<select class=" form-control col-12" name="video_status">
+                    <option>Status</option>
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                    </select>
+</div>  
+
+
+
+<input type="submit" name="insert-btn" class="btn btn-primary"/>
+</form>
+
+
+        
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>`;
+
+     $(content).html(ui);
+
+     $(document).ready(function() {
+      $(".add_item_btn").click(function(e) {
+          e.preventDefault();
+          $("#show_item").append(`<div class="form-group col-12" id="show_item">
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-3">
+              <input type="text" name="name[]" class="form-control" placeholder="Benefit Name">
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-3">
+              <input type="text" name="price[]" class="form-control" placeholder="Benefit Price">
+            </div>
+  
+            <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-grid">
+      <p class="text-center"> <button class="btn btn-danger remove_item_btn">Remove</button></p>      
+      </div>
+          </div>
+        </div>`);
+  
+      });
+  
+      $(document).on('click', '.remove_item_btn', function(e) {
+          $(this).css("background-color","black");
+          $(this).parent().parent().parent().remove();
+      })
+  });
+
+  // FileInput
+  $('.form-file-simple .inputFileVisible').click(function () {
+    $(this).siblings('.inputFileHidden').trigger('click');
+  });
+
+  $('.form-file-simple .inputFileHidden').change(function () {
+    var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+    $(this).siblings('.inputFileVisible').val(filename);
+  });
+
+  $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function () {
+    $(this).parent().parent().find('.inputFileHidden').trigger('click');
+    $(this).parent().parent().addClass('is-focused');
+  });
+
+  $('.form-file-multiple .inputFileHidden').change(function () {
+    var names = '';
+    for (var i = 0; i < $(this).get(0).files.length; ++i) {
+      if (i < $(this).get(0).files.length - 1) {
+        names += $(this).get(0).files.item(i).name + ',';
+      } else {
+        names += $(this).get(0).files.item(i).name;
+      }
+    }
+    $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+  });
+
+  $('.form-file-multiple .btn').on('focus', function () {
+    $(this).parent().siblings().trigger('focus');
+  });
+
+  $('.form-file-multiple .btn').on('focusout', function () {
+    $(this).parent().siblings().trigger('focusout');
+  });
+
+
+  }
+
+  function view_benefits(){
+    ui=`<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Additional Benefits</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+          <form class="navbar-form">
+        <div class="input-group no-border">
+          <input type="text" value="" class="form-control" placeholder="Search...">
+          <button type="submit" class="btn btn-white btn-round btn-just-icon">
+            <i class="material-icons">search</i>
+            <button class="btn btn-primary" id="main_id_in" data-op="add_benefits">Add New</button>
+            <div class="ripple-container"></div>
+          </button>
+            <div class="ripple-container"></div>
+          </button>
+        </div>
+      </form>
+                  <th>
+                    ID
+                  </th>
+                  <th>
+                  Subscription Name
+                  </th>
+                  <th>
+                    status
+                  </th>
+                    <th>
+                  Actions
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                    Standard
+                    </td>
+                    <td>
+                      Active
+                    </td>
+                    <td>
+              <button class="btn btn-primary" data-op="edit_benefits" id="main_id_in" ><span class="material-icons">edit</span></button>
+                     </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+     $(content).html(ui);
+
+     $( ".input-group").on( "click", "#main_id_in",function() {
+      console.log( $( this ).attr( 'data-op') );
+      let myatt = $( this ).attr( 'data-op');
+      eval(`${myatt}("${$( this ).attr( 'data_op')}",${$( this ).attr( 'data_id')})`);
+      
+    });
+
+    $( "#mytable" ).on( "click", "#main_id_in", function() {
+      console.log( $( this ).attr( 'data-op') );
+      let myatt = $( this ).attr( 'data-op');
+      eval(`${myatt}("${$( this ).attr( 'data_op')}","${$( this ).attr( 'data_code')}",${$( this ).attr( 'data_id')})`);
+      
+    });
+  }
+
+  function add_most_popular(){
+    ui=`<div class="container-fluid">
+    <div class="row">
+<div class="alert d-none" role="alert"></div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Choose Popular Documents</h4>
+          </div>
+          <div class="card-body">
+       <form action="" method="POST" id="" class="row" enctype="multiple/form-data">
+<div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12"> 
+<select class=" form-control selectpicker col-12" multiple  data-style="btn btn-link" id="sub exampleFormControlSelect2" name="sub">
+${$.get("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { getDocument: "Donald", token1: sessionStorage.getItem("token") }, function (data) {
+const obj = JSON.parse(data);
+if(obj.result == "session"){
+$("#reauth").modal();
+return;
+}
+
+if(obj.result == "session"){
+$("#reauth").modal();
+return;
+}
+$("#sub").empty();
+
+$("#sub").append(`<option >Choose documents</option>`);
+
+obj.subscriptions.forEach(element => {
+  $("#sub").append(`<option value="${element.id}">${element.Name}</option>`);
+});
+})
+
+
+}
+</select>
+</div>  
+<div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12">
+<label for="inputAddress2">Brief Description</label>
+<input type="text" class="form-control mt-2" name="desc" id="inputAddress2">
+</div>
+<input type="submit" name="insert-btn" class="btn btn-primary"/>
+</form>
+
+
+        
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>`;
 
      $(content).html(ui);
   }
 
-   function edit_unit(){
-    ui=``;
+   function edit_most_popular(){
+    ui=`<div class="container-fluid">
+    <div class="row">
+<div class="alert d-none" role="alert"></div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Choose Popular Documents</h4>
+          </div>
+          <div class="card-body">
+       <form action="" method="POST" id="" class="row" enctype="multiple/form-data">
+<div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12"> 
+<select class=" form-control selectpicker col-12" multiple  data-style="btn btn-link" id="sub exampleFormControlSelect2" name="sub">
+${$.get("https://cmversiontwo.cmadvocates.com/controller/Documents.php", { getDocument: "Donald", token1: sessionStorage.getItem("token") }, function (data) {
+const obj = JSON.parse(data);
+if(obj.result == "session"){
+$("#reauth").modal();
+return;
+}
+
+if(obj.result == "session"){
+$("#reauth").modal();
+return;
+}
+$("#sub").empty();
+
+$("#sub").append(`<option >Choose documents</option>`);
+
+obj.subscriptions.forEach(element => {
+  $("#sub").append(`<option value="${element.id}">${element.Name}</option>`);
+});
+})
+
+
+}
+</select>
+</div>  
+<div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12">
+<label for="inputAddress2">Brief Description</label>
+<input type="text" class="form-control mt-2" name="desc" id="inputAddress2">
+</div>
+<input type="submit" name="insert-btn" class="btn btn-primary"/>
+</form>
+
+
+        
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>`;
 
      $(content).html(ui);
+  }
+
+  function view_most_popular(){
+    ui=`<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Most Popular Documents</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+          <form class="navbar-form">
+        <div class="input-group no-border">
+          <input type="text" value="" class="form-control" placeholder="Search...">
+          <button type="submit" class="btn btn-white btn-round btn-just-icon">
+            <i class="material-icons">search</i>
+            <button class="btn btn-primary" id="main_id_in" data-op="add_most_popular">Add New</button>
+            <div class="ripple-container"></div>
+          </button>
+            <div class="ripple-container"></div>
+          </button>
+        </div>
+      </form>
+                  <th>
+                    ID
+                  </th>
+                  <th>
+                  Document Name
+                  </th>
+                  <th>
+                    status
+                  </th>
+                    <th>
+                  Actions
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                    Standard
+                    </td>
+                    <td>
+                      Active
+                    </td>
+                    <td>
+              <button class="btn btn-primary" data-op="edit_benefits" id="main_id_in" ><span class="material-icons">edit</span></button>
+                     </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+     $(content).html(ui);
+
+     $( ".input-group").on( "click", "#main_id_in",function() {
+      console.log( $( this ).attr( 'data-op') );
+      let myatt = $( this ).attr( 'data-op');
+      eval(`${myatt}("${$( this ).attr( 'data_op')}",${$( this ).attr( 'data_id')})`);
+      
+    });
+
+    $( "#mytable" ).on( "click", "#main_id_in", function() {
+      console.log( $( this ).attr( 'data-op') );
+      let myatt = $( this ).attr( 'data-op');
+      eval(`${myatt}("${$( this ).attr( 'data_op')}","${$( this ).attr( 'data_code')}",${$( this ).attr( 'data_id')})`);
+      
+    });
   }
 
 
@@ -1801,6 +2399,17 @@ view_lawyer_type();
   <div class="form-group">
     <input type="text" name="categoryName" class="form-control" placeholder="Category Name">
   </div>
+  <div class="form-group form-file-upload form-file-multiple col-xl-12 col-lg-12 col-md-6 col-sm-12">
+  <input type="file" name="add_category_image" class="inputFileHidden">
+  <div class="input-group">
+      <input type="text" name="docu" class="form-control inputFileVisible" placeholder="Choose category image">
+      <span class="input-group-btn">
+          <button type="button" class="btn btn-fab btn-round btn-primary">
+              <i class="material-icons">attach_file</i>
+          </button>
+      </span>
+  </div>
+</div>
     <div class="form-group">
     <input type="text" name="category_code" class="form-control" placeholder="Category Code">
   </div>
@@ -1888,6 +2497,41 @@ view_lawyer_type();
       });
     });
 
+     // FileInput
+     $('.form-file-simple .inputFileVisible').click(function () {
+      $(this).siblings('.inputFileHidden').trigger('click');
+    });
+
+    $('.form-file-simple .inputFileHidden').change(function () {
+      var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+      $(this).siblings('.inputFileVisible').val(filename);
+    });
+
+    $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function () {
+      $(this).parent().parent().find('.inputFileHidden').trigger('click');
+      $(this).parent().parent().addClass('is-focused');
+    });
+
+    $('.form-file-multiple .inputFileHidden').change(function () {
+      var names = '';
+      for (var i = 0; i < $(this).get(0).files.length; ++i) {
+        if (i < $(this).get(0).files.length - 1) {
+          names += $(this).get(0).files.item(i).name + ',';
+        } else {
+          names += $(this).get(0).files.item(i).name;
+        }
+      }
+      $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+    });
+
+    $('.form-file-multiple .btn').on('focus', function () {
+      $(this).parent().siblings().trigger('focus');
+    });
+
+    $('.form-file-multiple .btn').on('focusout', function () {
+      $(this).parent().siblings().trigger('focusout');
+    });
+
   }
 
   function edit_category(name,code ,id) {
@@ -1905,6 +2549,17 @@ view_lawyer_type();
   <div class="form-group">
     <input type="text" name="editcategoryName" value="${name}" class="form-control" id="exampleFormControlInput1" placeholder="Category Name">
   </div>
+  <div class="form-group form-file-upload form-file-multiple col-xl-12 col-lg-12 col-md-6 col-sm-12">
+  <input type="file" name="edit_category_name" class="inputFileHidden">
+  <div class="input-group">
+      <input type="text" name="docu" class="form-control inputFileVisible" placeholder="Choose category image">
+      <span class="input-group-btn">
+          <button type="button" class="btn btn-fab btn-round btn-primary">
+              <i class="material-icons">attach_file</i>
+          </button>
+      </span>
+  </div>
+</div>
     <div class="form-group">
     <input type="text" name="category_code" value="${code}" class="form-control" placeholder="Category Code">
   </div>
@@ -1990,6 +2645,41 @@ view_lawyer_type();
       });
 
       view_category();
+    });
+
+     // FileInput
+     $('.form-file-simple .inputFileVisible').click(function () {
+      $(this).siblings('.inputFileHidden').trigger('click');
+    });
+
+    $('.form-file-simple .inputFileHidden').change(function () {
+      var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+      $(this).siblings('.inputFileVisible').val(filename);
+    });
+
+    $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function () {
+      $(this).parent().parent().find('.inputFileHidden').trigger('click');
+      $(this).parent().parent().addClass('is-focused');
+    });
+
+    $('.form-file-multiple .inputFileHidden').change(function () {
+      var names = '';
+      for (var i = 0; i < $(this).get(0).files.length; ++i) {
+        if (i < $(this).get(0).files.length - 1) {
+          names += $(this).get(0).files.item(i).name + ',';
+        } else {
+          names += $(this).get(0).files.item(i).name;
+        }
+      }
+      $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+    });
+
+    $('.form-file-multiple .btn').on('focus', function () {
+      $(this).parent().siblings().trigger('focus');
+    });
+
+    $('.form-file-multiple .btn').on('focusout', function () {
+      $(this).parent().siblings().trigger('focusout');
     });
   }
 
@@ -3202,6 +3892,18 @@ view_lawyer_type();
   <div class="form-group">
     <input type="text" class="form-control" id="exampleFormControlInput1" name="pa_name" placeholder="Practise Area Name">
   </div>
+  <div class="form-group form-file-upload form-file-multiple col-xl-12 col-lg-12 col-md-6 col-sm-12">
+  <input type="file" name="add_practice" class="inputFileHidden">
+  <div class="input-group">
+      <input type="text" name="docu" class="form-control inputFileVisible" placeholder="Choose practice area image">
+      <span class="input-group-btn">
+          <button type="button" class="btn btn-fab btn-round btn-primary">
+              <i class="material-icons">attach_file</i>
+          </button>
+      </span>
+  </div>
+</div>
+  
         <div class="input-group"> 
                           <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -3287,6 +3989,41 @@ view_lawyer_type();
       });
     });
 
+      // FileInput
+      $('.form-file-simple .inputFileVisible').click(function () {
+        $(this).siblings('.inputFileHidden').trigger('click');
+      });
+  
+      $('.form-file-simple .inputFileHidden').change(function () {
+        var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+        $(this).siblings('.inputFileVisible').val(filename);
+      });
+  
+      $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function () {
+        $(this).parent().parent().find('.inputFileHidden').trigger('click');
+        $(this).parent().parent().addClass('is-focused');
+      });
+  
+      $('.form-file-multiple .inputFileHidden').change(function () {
+        var names = '';
+        for (var i = 0; i < $(this).get(0).files.length; ++i) {
+          if (i < $(this).get(0).files.length - 1) {
+            names += $(this).get(0).files.item(i).name + ',';
+          } else {
+            names += $(this).get(0).files.item(i).name;
+          }
+        }
+        $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+      });
+  
+      $('.form-file-multiple .btn').on('focus', function () {
+        $(this).parent().siblings().trigger('focus');
+      });
+  
+      $('.form-file-multiple .btn').on('focusout', function () {
+        $(this).parent().siblings().trigger('focusout');
+      });
+
   }
 
 
@@ -3301,6 +4038,17 @@ view_lawyer_type();
                 </div>
                 <div class="card-body">
              <form action="" method="POST" id="edit_pa" enctype="multiple/form-data">
+             <div class="form-group form-file-upload form-file-multiple col-xl-12 col-lg-12 col-md-6 col-sm-12">
+             <input type="file" name="edit_practice" class="inputFileHidden">
+             <div class="input-group">
+                 <input type="text" name="docu" class="form-control inputFileVisible" placeholder="Choose category image">
+                 <span class="input-group-btn">
+                     <button type="button" class="btn btn-fab btn-round btn-primary">
+                         <i class="material-icons">attach_file</i>
+                     </button>
+                 </span>
+             </div>
+           </div>
   <div class="form-group">
     <input type="text" class="form-control" value="${name}" name="edit_practise_name" required placeholder="Practise Area Name">
   </div>
@@ -3384,6 +4132,41 @@ view_lawyer_type();
 
       view_practise_areas();
     });
+
+      // FileInput
+      $('.form-file-simple .inputFileVisible').click(function () {
+        $(this).siblings('.inputFileHidden').trigger('click');
+      });
+  
+      $('.form-file-simple .inputFileHidden').change(function () {
+        var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+        $(this).siblings('.inputFileVisible').val(filename);
+      });
+  
+      $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function () {
+        $(this).parent().parent().find('.inputFileHidden').trigger('click');
+        $(this).parent().parent().addClass('is-focused');
+      });
+  
+      $('.form-file-multiple .inputFileHidden').change(function () {
+        var names = '';
+        for (var i = 0; i < $(this).get(0).files.length; ++i) {
+          if (i < $(this).get(0).files.length - 1) {
+            names += $(this).get(0).files.item(i).name + ',';
+          } else {
+            names += $(this).get(0).files.item(i).name;
+          }
+        }
+        $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+      });
+  
+      $('.form-file-multiple .btn').on('focus', function () {
+        $(this).parent().siblings().trigger('focus');
+      });
+  
+      $('.form-file-multiple .btn').on('focusout', function () {
+        $(this).parent().siblings().trigger('focusout');
+      });
   }
 
   function view_practise_areas() {

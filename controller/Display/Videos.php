@@ -45,7 +45,7 @@ class Videos{
         }
     public function getvideos(){
         
-        $query = "SELECT `id`,`video_name`,`video_preview`,`price`,`video` FROM `vw_videos_service`";
+        $query = "SELECT `id`,`video_name`,`video_preview`,`price`,`video`,`service_id` FROM `vw_videos_service`";
         $result = $this->db->query($query);
         $video = array();
         if (!$result) {
@@ -55,7 +55,7 @@ class Videos{
         }else {
             while($row=$result -> fetch_assoc()){
                 
-                array_push($video,array("id"=>$row['id'],"Name"=>$row['video_name'],"preview"=>$row['video_preview'],"price" => $row['price']));
+                array_push($video,array("id"=>$row['id'],"Name"=>$row['video_name'],"service_id" => $row['service_id'],"preview"=>$row['video_preview'],"price" => $row['price']));
                 
         }
         echo json_encode(array("videos" => $video));
@@ -64,7 +64,7 @@ class Videos{
     
     public function getServicevideos($data){
         
-        $query = "SELECT `id`,`video_name`,`video_preview`,`price`,`video` FROM `vw_videos_service` WHERE service_id = ".$data;
+        $query = "SELECT `id`,`video_name`,`video_preview`,`price`,`video`,`service_id` FROM `vw_videos_service` WHERE service_id = ".$data;
         $result = $this->db->query($query);
         $video = array();
         if (!$result) {
@@ -75,7 +75,7 @@ class Videos{
             while($row=$result -> fetch_assoc()){
         
           //
-          array_push($video,array("id"=>$row['id'],"Name"=>$row['video_name'],"preview"=>$row['video_preview'],"price" => $row['price']));
+          array_push($video,array("id"=>$row['id'],"Name"=>$row['video_name'],"preview"=>$row['video_preview'],"price" => $row['price'],"service_id" => $row['service_id']));
             
 
         //        

@@ -155,7 +155,7 @@ class Videos{
                 if($row['type_paid'] == "videos"){
                     
 
-                  $query = "SELECT `id`,`video_name`,`video` FROM `vw_videos` WHERE id = ".$row['product_id'];
+                  $query = "SELECT `id`,`video_name`,`video` FROM `vw_videos_service` WHERE id = ".$row['product_id'];
                   
                   $resultt = $this->db->query($query);
 

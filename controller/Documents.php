@@ -255,7 +255,7 @@ class Documents{
                   if($row['type_paid'] == "documents"){
                       
                     
-                    $query = "SELECT `id`, `document_name`,`document`,`category_name`, `service_downloads` AS download_count,`service_id` FROM
+                    $query = "SELECT ref_no, `id`, `document_name`,`document`,`category_name`, `service_downloads` AS download_count,`service_id`,`user_id` FROM
                      `vw_document_service_bought` WHERE id = ".$row['product_id']." AND user_id = ".$_SESSION['id'];
                     
                   $my_type = "solo";

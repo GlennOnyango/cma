@@ -4,9 +4,6 @@ session_start();
 require_once(__DIR__ . '/../controller/Connection.php');
 require_once(__DIR__ . '/../controller/libs.php');
 
-
-
-
   $mood = new Mpayment($db);
 
 //  $mood->initiateLipaNaMpesa(1,'glenn','254719458873');
@@ -40,6 +37,7 @@ if(isset($_POST['name'])){
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'GET',
             CURLOPT_HTTPHEADER => array(
+              
               'Authorization: Basic QXpzMktlalUxQVJ2SUw1SmRKc0FSYlYyZ0RyV21wT0I6aGlwR3ZGSmJPeHJpMzMwYw==',
               'Cookie: incap_ses_1022_2742146=we5QPQRWem0MXp3IP+AuDg/NKGIAAAAAxMhMTOwis+hmJdtx/UuE3w==; visid_incap_2742146=PaO8wtm+QyScaONQrU2qnw/NKGIAAAAAQUIPAAAAAAAjchx4LPi41mjx0q/skWWA'
             ),
@@ -55,6 +53,7 @@ if(isset($_POST['name'])){
     public function initiateLipaNaMpesa($price,$name,$phone){
 
       date_default_timezone_set('Africa/Nairobi');
+      
       $consumerKey = 'toej0smpRrvoS7GOWz8TEO2OTQ2GEGZy'; //Fill with your app Consumer Key
       $consumerSecret = 'bS6aowqL1FBJUO3D'; // Fill with your app Secret
       # define the variales
@@ -76,7 +75,7 @@ if(isset($_POST['name'])){
       $headers = ['Content-Type:application/json; charset=utf8'];
           # M-PESA endpoint urls
       $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-      $CallBackURL = 'https://cmversiontwo.cmadvocates.com/controller/callback.php';
+      $CallBackURL = 'https://cmversiontwo.cmadvocates.com/controller/callback.php?key=peng';
       
       # header for stk push
       $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$this->access_token];
@@ -93,13 +92,15 @@ if(isset($_POST['name'])){
           'Password' => $Password,
           'Timestamp' => $Timestamp,
           'TransactionType' => 'CustomerPayBillOnline',
-          'Amount' => $Amount,
+          //'Amount' => $Amount,
+          'Amount' => 1,
           'PartyA' => $mobile,
           'PartyB' => $BusinessShortCode,
           'PhoneNumber' => $mobile,
           'CallBackURL' => $CallBackURL,
           'AccountReference' => $AccountReference,
           'TransactionDesc' => $TransactionDesc
+
       );
       $data_string = json_encode($curl_post_data);
       curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -125,8 +126,17 @@ if(isset($_POST['name'])){
 
 
       if($response["ResponseCode"] == 0){
-      
-        echo json_encode(array("result" => "success","value" => "STK sent"));
+
+        $query ="INSERT INTO `mpesa`(phone_number,reciept_number,MerchantRequestID,sta) VALUES (".$phone.",'".$response['CheckoutRequestID']."','".$response["MerchantRequestID"]."','pending') ";
+        $result = $this->db-> query( $query);
+
+        if(!$result){
+          echo json_encode(array("result" => "error","value" => $query));
+        
+        }
+        else{
+          echo json_encode(array("result" => "success","value" => "STK sent"));
+        }
                 
        exit();
 

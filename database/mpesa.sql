@@ -1,12 +1,19 @@
 DROP TABLE mpesa;
 CREATE TABLE `mpesa` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `phone_number` int DEFAULT '4',
-  `resultcode` varchar(255) NOT NULL,
-  `reciept_number` varchar(255) NOT NULL,
-  `date_sent` varchar(255) NOT NULL,
-  `amount` varchar(10) NOT NULL,
-  `all` varchar(10000) NOT NULL,
+  `phone_number` bigint ,
+  `reciept_number` varchar(255),
+  `date_sent` varchar(255),
+  `amount` varchar(100),
+  `item` varchar(100),
+  `MerchantRequestID` varchar(100) ,
+  `all` varchar(10000),
+  `sta` varchar(100) DEFAULT 'pending',
   PRIMARY KEY (`id`),
   UNIQUE KEY `reciept_number` (`reciept_number`)
 );
+
+      
+      
+      
+  

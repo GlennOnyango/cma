@@ -54,35 +54,11 @@ class Category{
 
         }
 
-    public function alterTable(){
-           
-        $query = "ALTER TABLE category ADD COLUMN `category_code` varchar(255) NOT NULL DEFAULT '0';";
-
-        $result = $this->db->query($query);
-
-        $category = array();
-
-        if (!$result) {
-    
-            echo json_encode(array("result" => "alert-danger","value" => $this->db->error));
-
-            exit();
-
-        }else {
-            while($row=$result -> fetch_assoc()){
-                
-                 array_push($category,array("id"=>$row['id'],"Name"=>$row['category_name'],"code"=>$row['category_code'],"status"=>$row['category_status']));
-               
-                
-        }
-        echo json_encode(array("categories" => $category));
-
-        } 
-        }
-
     public function addCategory($data){
 
-     $query ="INSERT INTO `category`(`category_name`,`category_code` ,`category_status`) VALUES ('".$data['categoryName']."','".$data['category_code']."','".$data['categoryStatus']."') ";
+    $image = libs :: uploadFile($_FILES['add_category_image'],"categoryImages");
+
+     $query ="INSERT INTO `category`(`category_name`,`image_cat`,`category_code` ,`category_status`) VALUES ('".$data['categoryName']."','".$image."','".$data['category_code']."','".$data['categoryStatus']."') ";
                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 
        $result = $this->db-> query( $query);
@@ -128,7 +104,25 @@ class Category{
     }
 
     public function editCategories($data){
-       $query = "UPDATE `category` SET `category_name`='".$data['editcategoryName']."',`category_code`='".$data['category_code']."',`category_status`='".$data['exampleRadios']."' WHERE id = ".$data['id']; 
+        
+        
+        if(!empty($_FILES['edit_category_name']['name'])){
+        
+            $image = libs :: uploadFile($_FILES['edit_category_name'],"categoryImages");
+
+        }else{
+
+            $query="SELECT image_cat FROM category WHERE id = ".$data['id'];
+            
+            $result = $this->db-> query( $query);
+
+            while($row=$result -> fetch_assoc()){
+                $image = $row['image_cat'];   
+            }
+        }
+
+
+       $query = "UPDATE `category` SET `category_name`='".$data['editcategoryName']."',`image_cat` = '".$image."',`category_code`='".$data['category_code']."',`category_status`='".$data['exampleRadios']."' WHERE id = ".$data['id']; 
       
        $result = $this->db-> query( $query);
 

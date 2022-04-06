@@ -29,7 +29,7 @@ class Category{
     public function getCategories(){
         
         
-        $query = "SELECT `id`, `category_name`,`category_code` ,`category_status` FROM `category` ";
+        $query = "SELECT `id`, `category_name`,`category_code` ,`category_status`,`image_cat` FROM `category` ";
 
         $result = $this->db->query($query);
 
@@ -44,7 +44,7 @@ class Category{
         }else {
             while($row=$result -> fetch_assoc()){
                 
-                 array_push($category,array("id"=>$row['id'],"Name"=>$row['category_name']));
+                 array_push($category,array("id"=>$row['id'],"Name"=>$row['category_name'],"image_cat"=>$row["image_cat"]));
                
                 
         }
