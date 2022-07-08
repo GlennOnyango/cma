@@ -1,6 +1,4 @@
 ## Name
-</hr>
-
 what you do
 
 ## Screenshots
@@ -8,3 +6,7 @@ what you do
 ![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 ![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 
+## Enter Technology used
+. Java 
+. Javascript
+. PHP
